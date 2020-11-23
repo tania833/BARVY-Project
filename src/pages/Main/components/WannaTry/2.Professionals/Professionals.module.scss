@@ -1,0 +1,42 @@
+.professionals {
+  width: 100%;
+  padding: 0 2.4375rem 0 4.0625rem;
+  display: flex;
+  justify-content: center;
+  &__titleAndIcon {
+    display: flex;
+    align-items: flex-end;
+    max-height: 13.75rem;
+  }
+  &__iconContainer {
+    max-width: 21.875rem;
+    height: auto;
+  }
+  &__icon {
+    width: 100%;
+    height: 100%;
+  }
+  &__title {
+    margin-bottom: 2.125rem;
+    max-width: 13.125rem;
+    font-family: "Montserrat";
+    font-size: 1.625rem;
+    font-weight: 400;
+    line-height: 31, 4.3125rem;
+  }
+  &__para {
+    max-width: 22.5rem;
+    font-family: "Montserrat";
+    font-weight: 300;
+    font-size: 1.125rem;
+    line-height: 21, 5.875rem;
+  }
+  &__photoBlock {
+    max-width: 50rem;
+    height: 100%;
+  }
+  &__photo {
+    width: 100%;
+    height: 100%;
+  }
+}

@@ -1,0 +1,48 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("/src/fonts/Montserrat-Medium.ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Mak";
+  src: url("/src/fonts/MAK.otf");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/src/fonts/Montserrat-Light.ttf");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: url("/src/fonts/OpenSans-Light.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: url("/src/fonts/OpenSans-SemiBold.ttf");
+  font-weight: 600;
+}
+
+* {
+  text-decoration: none;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: #000000;
+}

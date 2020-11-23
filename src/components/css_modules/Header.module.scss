@@ -1,0 +1,57 @@
+@mixin flex ($jc, $ai, $fd, $fw) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+  flex-direction: $fd;
+  flex-wrap: $fw;
+}
+
+.header {
+  padding: 1rem 2.5rem 1rem 2.9375rem;
+  height: 11vh;
+  width: 100vw;
+  @include flex(space-between, center, row, nowrap);
+
+  &_logo {
+    padding-right: 8rem;
+    font-family: Mak;
+    font-size: 40px;
+    font-weight: 300;
+    text-align: left;
+    color: #000000;
+    text-transform: uppercase;
+    @include flex(space-between, center, row, wrap);
+  }
+  &_icons {
+    margin-left: 4rem;
+    margin-right: 5.75rem;
+    width: 5.9063rem;
+    @include flex(space-between, center, row, wrap);
+  }
+  &_localization {
+    margin-left: 4rem;
+    margin-right: 2rem;
+    width: 5.4375rem;
+    @include flex(space-between, center, row, wrap);
+  }
+}
+
+nav {
+  @include flex(space-between, center, row, wrap);
+}
+
+.menu {
+  &_list {
+    @include flex(space-between, center, row, wrap);
+    width: 32rem;
+  }
+  &_item {
+    /* margin-right: 5.1875rem; */
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: normal;
+    text-align: left;
+    color: #000000;
+    text-transform: uppercase;
+  }
+}

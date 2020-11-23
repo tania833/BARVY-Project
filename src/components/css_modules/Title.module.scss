@@ -1,0 +1,35 @@
+.mainTitle_wrapper {
+  padding-bottom: 4.9375rem;
+  padding-top: 8.4375rem;
+}
+
+.mainTitle {
+  font-family: "Mak";
+  font-size: 8.75rem;
+  font-weight: 300;
+  line-height: 0.88;
+  text-align: left;
+  color: #e6f1f5;
+  text-transform: uppercase;
+}
+
+.mainSubtitle {
+  font-family: "Montserrat";
+  font-size: 40px;
+  font-weight: 300;
+  text-align: center;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 1400px) {
+  .mainTitle {
+    font-size: 8rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .mainTitle {
+    font-size: 6rem;
+  }
+}

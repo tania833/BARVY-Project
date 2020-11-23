@@ -1,0 +1,23 @@
+.button {
+  &_block {
+    width: 13rem;
+    height: 3.0625rem;
+    border-radius: 3px;
+    border: none;
+    background-color: #000000;
+    cursor: pointer;
+  }
+
+  &_text {
+    font-family: 'OpenSans';
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: #ffffff;
+    height: 100%;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+  }
+}

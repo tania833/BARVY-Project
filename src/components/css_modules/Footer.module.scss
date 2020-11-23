@@ -1,0 +1,79 @@
+@mixin flex($jc, $ai, $fd, $fw) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+  flex-direction: $fd;
+  flex-wrap: $fw;
+}
+
+.footer {
+  &__wrapper {
+    @include flex(space-between, center, row, nowrap);
+    padding: 2.5rem 2.4375rem 1.8125rem 5.4375rem;
+  }
+
+  &__logo {
+    margin-bottom: 0.0625rem;
+    font-family: Mak;
+    font-size: 1.875rem;
+    font-weight: 300;
+    color: #000000;
+    text-transform: uppercase;
+
+    &_block {
+      @include flex(flex-start, flex-start, column, wrap);
+      margin-right: 9.4375rem;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 0.125rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: 0.875rem;
+    font-weight: 300;
+    color: #000000;
+  }
+
+  &__year {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: 0.875rem;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000000;
+  }
+
+  &__menu {
+    @include flex(flex-start, flex-start, row, wrap);
+
+    &_column {
+      @include flex(flex-start, flex-start, column, wrap);
+      margin-right: 7rem;
+    }
+
+    &_item {
+      margin-bottom: 1px;
+      margin-top: 2px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  color: #000000;
+    }
+
+  }
+
+  &__socials {
+    @include flex(space-between, center, row, nowrap);
+
+    &_item {
+      margin-right: 1.5625rem;
+    }
+  }
+
+
+}

@@ -1,0 +1,87 @@
+@mixin flex($jc, $ai, $fd, $fw) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+  flex-direction: $fd;
+  flex-wrap: $fw;
+}
+
+.courseCard__wrapper {
+  @include flex(space-between, center, row, wrap);
+}
+
+.courseCard__component {
+  border: solid 1px #bdd9e4;
+  width: 32%;
+  margin-bottom: 1.875rem;
+}
+
+.courseCard_photo_wrapper {
+  position: relative;
+  height: 328px;
+  display: block;
+  overflow: hidden;
+}
+
+.courseCard__photo {
+  min-width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.courseCard__info {
+  padding: 0.9375rem 1rem 0.8125rem 0.875rem;
+}
+
+.courseCard__author_info {
+  @include flex(space-between, center, row, wrap);
+  font-family: "OpenSans";
+  font-size: 0.875rem;
+  font-weight: 300;
+}
+
+.courseCard__author,
+.courseCard__technique {
+  color: #7e7a7a;
+}
+
+.courseCard__title_info {
+  padding-top: 0.8125rem;
+  @include flex(space-between, center, row, wrap);
+  font-family: "Montserrat";
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #000000;
+}
+
+.courseCard__cart {
+  padding-top: 1rem;
+  @include flex(space-between, center, row, wrap);
+}
+
+.courseCard__price_number {
+  font-family: "OpenSans";
+  font-size: 1.375rem;
+  font-weight: 600;
+  color: #000000;
+}
+
+.courseCard_button_block {
+  width: 8.4375rem;
+  height: 2.6875rem;
+  border-radius: 3px;
+  border: none;
+  background-color: #000000;
+  cursor: pointer;
+}
+
+.courseCard_button_text {
+  font-family: "OpenSans";
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #ffffff;
+  height: 100%;
+  text-transform: uppercase;
+  @include flex(center, center, row, wrap);
+  text-transform: uppercase;
+}
