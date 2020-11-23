@@ -1,11 +1,14 @@
 language: node_js
 node_js:
-  - 12.16.1
+- 12.16.1
 cache: npm
-
 install:
-  - npm ci
-
+- npm ci
 script:
-  - npm test
-  - npm run build
+- npm test
+- npm run build
+deploy:
+  provider: heroku
+  app: barvy
+  api_key:
+    secure: al9ipfcZpctdK0ro90pATimSKjj1mIBJB4axd0CGgw/BJJo+U4806bTbyau97xaDMRdI5k8q+oyJqJ2q/RxHOiPF8WggpK49DPVMW4WiK5v3FAH+DCuIsQ7hA33UXvOk39ZJSH/jGoEr2N2NjHdfdV7b7xUVlCMsCBp9eAk+35ZELa7zJrEVvnpNr7s6R7HvQi/eMdGT56QQ3BBZi3f3FM2TYMXJGorDGJn6cbbTQ5zLsVLF+nzxMAObIzGUQN1HYJvf+bxUq/NgTSqhSuyNb/v7ll6zgUZ6sX92M6UKbkaPUcxQw/zfqFaHOgZTaTaXoncmNAe1xQZaZrP0PVsUhlmjtFKpD9hHJz7spl7qDjH7e3+Bb0iJDi+0fuxBzfK5mPxE/5BqZca4rmJ/ThBfsMDg3Rm8Xi2n4DMPN5bj+jovjXL71+o6CKZ3FhEHmqMI8elZQpO57H+KNLRaL1edoJuaQp72ejJthaLB1y+XTy9A6U93OBEH998s9nm01wpsPoqxzKZLYbu7fzJ5iaQthkDWjF2cKvnDBqse5MdG+kAXoskVdzpw0wMVS4XIDAqtNQS8zHqW2ZBq7vnDRd32HQXL8RpA3P0jQ5IK5IPV0voO2quTTCyiLqbl8ohddBng4zNG+a3fqSt0uegULg60EgyvEN9jNWrDsyCPduopqFI=
