@@ -1,0 +1,35 @@
+.mainTechnos {
+    padding-left: 2.3125rem;
+    padding-right: 2.3125rem;
+}
+.technoPic {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    &__Cont {
+        display: flex;
+        position: relative;
+        width: 32.7%;
+        max-height: 24.0625rem;
+        margin: 0.375rem 0;
+    }
+    &__ContBig {
+        display: flex;
+        position: relative;
+        width: 49.523%;
+        max-height: 24.0625rem;
+        margin: 0.375rem 0;
+    }
+    &__Img {
+        width: 100%;
+        object-fit: cover;
+        object-position: center 15%;
+    }
+}
+
+.mainCourses_buttonWrapper {
+    padding-top: 5.0938rem;
+    display: flex;
+    justify-content: center;
+}

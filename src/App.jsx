@@ -1,8 +1,7 @@
 import React from 'react';
 import './normalize.css';
 import './App.css';
-import '../src/components/css_modules/mixins.scss'
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route} from 'react-router-dom';
 import Header from './components/Header';
 import Main from './pages/Main/Main';
 import Artists from './pages/Artists/Artists';

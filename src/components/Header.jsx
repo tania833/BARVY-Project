@@ -1,25 +1,24 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./css_modules/Header.module.scss";
 
 const Header = () => {
   return (
     <header className={styles.header}>
-      <a href="/" className={styles.header_logo}>
-        Барви
-      </a>
+      <Link className={styles.header_logo} to="/">Барви</Link>
       <nav className={styles.nav_main}>
         <ul className={styles.menu_list}>
           <li className={styles.menu_item}>
-            <a href="/artists">Митці</a>
+            <Link to="/artists">Митці</Link>
           </li>
           <li className={styles.menu_item}>
-            <a href="/techniques">Техніки</a>
+            <Link to="/techniques">Техніки</Link>
           </li>
           <li className={styles.menu_item}>
-            <a href="/events">Події</a>
+            <Link to="/events">Події</Link>
           </li>
           <li className={styles.menu_item}>
-            <a href="/about">Про нас</a>
+            <Link to="/about">Про нас</Link>
           </li>
         </ul>
       </nav>

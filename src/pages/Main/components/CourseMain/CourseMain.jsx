@@ -1,9 +1,9 @@
 import React from 'react';
-import card_info from "../../../components/card_info_obj";
-import MainTitle from "../../../components/Title";
-import Button from "../../../components/Button";
-import CourseCardViewerForMain from '../../../components/CourseCard';
-import styles from '../css.modules/CourseMain.module.scss'
+import card_info from "../../../../components/card_info_obj";
+import MainTitle from "../../../../components/Title";
+import Button from "../../../../components/Button";
+import CourseCardViewerForMain from '../../../../components/CourseCard';
+import styles from './CourseMain.module.scss'
 
 const CourseMain = () => {
   return (
