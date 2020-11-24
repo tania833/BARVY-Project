@@ -8,6 +8,7 @@ const Main = () => {
     <TopBar />
     <CourseMain/>
     <WannaTry />
+    <WannaTry />
   </div>
   );
 };
