@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import styles from "../components/css_modules/Footer.module.scss";
+import styles from "./css_modules/Footer.module.scss";
 
 const Footer = () => {
   return (
@@ -29,16 +29,16 @@ const Footer = () => {
         </ul>
         <ul className={styles.footer__menu_column}>
           <li className={styles.footer__menu_item} href="/about">
-          <Link to="/about">Співпраця</Link>
+            <Link to="/about">Співпраця</Link>
           </li>
           <li className={styles.footer__menu_item} href="/about">
-          <Link to="/about">Умови використання</Link>
+            <Link to="/about">Умови використання</Link>
           </li>
           <li className={styles.footer__menu_item} href="/about">
-          <Link to="/about">Конфіденційність</Link>
+            <Link to="/about">Конфіденційність</Link>
           </li>
           <li className={styles.footer__menu_item} href="/about">
-          <Link to="/about">Партнерство</Link>
+            <Link to="/about">Партнерство</Link>
           </li>
         </ul>
       </nav>

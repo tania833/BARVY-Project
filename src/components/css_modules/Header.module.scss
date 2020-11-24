@@ -1,4 +1,4 @@
-@mixin flex ($jc, $ai, $fd, $fw) {
+@mixin flex($jc, $ai, $fd, $fw) {
   display: flex;
   justify-content: $jc;
   align-items: $ai;
@@ -14,7 +14,7 @@
 
   &_logo {
     padding-right: 8rem;
-    font-family: Mak;
+    font-family: "Mak";
     font-size: 2.5rem;
     font-weight: 300;
     text-align: left;
@@ -46,7 +46,7 @@ nav {
     width: 32rem;
   }
   &_item {
-    font-family: Montserrat;
+    font-family: "Montserrat";
     font-size: 1rem;
     font-weight: normal;
     text-align: left;

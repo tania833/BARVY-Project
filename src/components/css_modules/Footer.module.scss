@@ -15,7 +15,7 @@
 
   &__logo {
     margin-bottom: 0.0625rem;
-    font-family: Mak;
+    font-family: "Mak";
     font-size: 1.875rem;
     font-weight: 300;
     color: #000000;
@@ -29,14 +29,14 @@
 
   &__subtitle {
     margin-bottom: 0.125rem;
-    font-family: "Open Sans";
+    font-family: "OpenSans";
     font-size: 0.875rem;
     font-weight: 300;
     color: #000000;
   }
 
   &__year {
-    font-family: "Open Sans";
+    font-family: "OpenSans";
     font-size: 0.875rem;
     font-weight: normal;
     text-align: left;
@@ -54,7 +54,7 @@
     &_item {
       margin-bottom: 0.1875rem;
       margin-top: 0.125rem;
-      font-family: "Open Sans";
+      font-family: "OpenSans";
       font-size: 1rem;
       font-weight: 300;
       color: #000000;

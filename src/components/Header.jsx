@@ -5,7 +5,9 @@ import styles from "./css_modules/Header.module.scss";
 const Header = () => {
   return (
     <header className={styles.header}>
-      <Link className={styles.header_logo} to="/">Барви</Link>
+      <Link className={styles.header_logo} to="/">
+        Барви
+      </Link>
       <nav className={styles.nav_main}>
         <ul className={styles.menu_list}>
           <li className={styles.menu_item}>

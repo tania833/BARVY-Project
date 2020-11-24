@@ -2,7 +2,7 @@ import React from "react";
 import artists_info_main from "../../../../components/artists_main_obj";
 import MainTitle from "../../../../components/Title";
 import Button from "../../../../components/Button";
-import styles from "../ArtistsMain/ArtistsMain.module.scss";
+import styles from "./ArtistsMain.module.scss";
 import TeachersCardViewerForMain from "./TeacherCard";
 
 const ArtistsMain = () => {

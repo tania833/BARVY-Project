@@ -1,6 +1,6 @@
 import React from "react";
-import styles from "../ArtistsMain/ArtistsMain.module.scss";
-import "../../../../components/css_modules/slider.scss"
+import styles from "./ArtistsMain.module.scss";
+import "../../../../components/css_modules/slider.scss";
 import Slider from "react-slick";
 
 const TeachersCardPhoto = (props) => {
@@ -47,8 +47,11 @@ const TeachersCardViewerForMain = (props) => {
   const teacherCardInfo = props.artists_info_main.map((teacher_card) => (
     <div className={styles.teacherCard__wrapper}>
       <div key={teacher_card.id} className={styles.teacherCard__component}>
-        <TeachersCardPhoto img_info={teacher_card.img} teacher_info={teacher_card.artist}/>
-  
+        <TeachersCardPhoto
+          img_info={teacher_card.img}
+          teacher_info={teacher_card.artist}
+        />
+
         <TeachersCardInfo className={styles.teacherCard__info}>
           <AuthorInfo teacher_info={teacher_card.artist} />
           <LinkToDetails />
@@ -58,20 +61,16 @@ const TeachersCardViewerForMain = (props) => {
   ));
 
   const settings = {
-      className: "center",
-      centerMode: true,
-      infinite: true,
-      centerPadding: "0px",
-      slidesToShow: 3,
-      speed: 500,
-      selectionColor: 'green'
+    className: "center",
+    centerMode: true,
+    infinite: true,
+    centerPadding: "0px",
+    slidesToShow: 3,
+    speed: 500,
+    selectionColor: "green",
   };
 
-  return (
-    <Slider {...settings}>
-      {teacherCardInfo}
-    </Slider>
-  );
+  return <Slider {...settings}>{teacherCardInfo}</Slider>;
 };
 
 export default TeachersCardViewerForMain;
