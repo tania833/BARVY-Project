@@ -1,0 +1,43 @@
+@mixin flex($jc, $ai, $fd, $fw) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+  flex-direction: $fd;
+  flex-wrap: $fw;
+}
+
+.footerBlue {
+  &__container {
+    padding-top: 4rem;
+    padding-bottom: 3.4063rem;
+    padding-left: 6.25rem;
+    background-color: #e6f1f5;
+    @include flex(flex-start, stretch, row, nowrap);
+  }
+
+  &__text_block {
+    @include flex(space-around, flex-start, column, nowrap);
+  }
+
+  &__text {
+    width: 32.3125rem;
+    font-family: Montserrat;
+    font-size: 1.125rem;
+    font-weight: 300;
+    color: #000000;
+
+    &_paragraph {
+      margin-bottom: 3.3125rem;
+    }
+  }
+
+  &__photo {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  &__buttonWrapper {
+    margin: 0 auto;
+  }
+}

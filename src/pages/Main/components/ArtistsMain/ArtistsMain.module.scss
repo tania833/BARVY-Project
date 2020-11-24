@@ -1,0 +1,75 @@
+@mixin flex($jc, $ai, $fd, $fw) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+  flex-direction: $fd;
+  flex-wrap: $fw;
+}
+
+.mainTeachers_buttonWrapper {
+  padding-top: 5.5313rem;
+  padding-bottom: 6.7813rem;
+  display: flex;
+  justify-content: center;
+}
+
+.main_artists {
+  padding-left: 2.3125rem;
+  padding-right: 2.3125rem;
+}
+
+.teacherCard {
+  &__wrapper {
+    @include flex(space-between, center, row, wrap);
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+  }
+  &__component {
+    border: solid 0.0625rem #bdd9e4;
+    width: 100%;
+    padding: 2.25rem 1.5rem 2.75rem 1.5rem;
+    @include flex(center, stretch, row, nowrap);
+  }
+  &__photo_wrapper {
+    width: 46%;
+    position: relative;
+    width: 12.375rem;
+    height: 17.1875rem;
+    display: block;
+    overflow: hidden;
+  }
+  &__photo {
+    min-width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__info {
+    width: 46%;
+    padding: 0.9375rem 0rem 0.8125rem 0.875rem;
+    @include flex(space-between, flex-start, column, nowrap);
+
+  }
+  
+ &__artist {
+  margin-bottom: 1rem;
+  font-family: Montserrat;
+  font-size: 1.375rem;
+  font-weight: 500;
+  color: #000000;
+ }
+&__profession, &__technique  {
+  font-family: 'Open Sans';
+  font-size: 1rem;
+  font-weight: 300;
+  color: #000000;
+}
+
+&_link_to_details {
+  margin-bottom: 1.625rem;
+  font-family: 'Open Sans';
+  font-size: 1rem;
+  font-weight: 300;
+  text-decoration: underline;
+  color: #7e7a7a;
+}
+}

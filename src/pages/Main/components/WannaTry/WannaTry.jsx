@@ -6,10 +6,12 @@ import MainTitle from "../../../../components/Title";
 
 const WannaTry = () => {
   return (
-    <div className={styles.tryContainer}>
+    <div className={styles.WannaTry}>
       <MainTitle title='хочу спробувати'/>
-      <WhatToChoose />
-      <Professionals />
+      <div className={styles.tryContainer}>
+        <WhatToChoose />
+        <Professionals />
+      </div>
     </div>
   );
 };

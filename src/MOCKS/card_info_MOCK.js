@@ -10,7 +10,6 @@ const card_info = [
     },
     title: "Яблука червоні. Натюрморт",
     price: "500",
-    // button_text: "КУПИТИ",
   },
   {
     id: 2,

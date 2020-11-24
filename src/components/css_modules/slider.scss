@@ -1,0 +1,36 @@
+.slick-arrow {
+  position: absolute;
+  top: 50%;
+  margin: 0 -1.25rem 0 -1.25rem;
+  z-index: 5;
+  font-size: 0;
+  width: 1.875rem;
+  min-height: 3.75rem;
+  cursor: pointer;
+}
+
+.slick-arrow.slick-prev {
+  left: 0;
+  background: url("../../img_background/Vector1.svg") 0 0 / 100% no-repeat;
+}
+
+.slick-arrow.slick-next {
+  right: 0;
+  background: url("../../img_background/Vector2.svg") 0 0 / 100% no-repeat;
+}
+
+.slick-next:before,
+.slick-prev:before {
+  content: "";
+}
+
+.slick-list {
+  margin: 0 auto;
+  width: 98%;
+}
+
+.slick-center {
+  background-color: #e6f1f5;
+  margin-top: -1.25rem;
+  padding-bottom: 1.875rem;
+}

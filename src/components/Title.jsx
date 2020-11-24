@@ -1,5 +1,5 @@
-import React from 'react';
-import styles from './css_modules/Title.module.scss'
+import React from "react";
+import styles from "./css_modules/Title.module.scss";
 
 const MainTitle = (props) => {
   return (
@@ -10,4 +10,4 @@ const MainTitle = (props) => {
   );
 };
 
-export default MainTitle
+export default MainTitle;
