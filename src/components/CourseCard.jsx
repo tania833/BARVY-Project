@@ -3,7 +3,7 @@ import styles from "./css_modules/CourseCard.module.scss"
 
 const CardPhoto = (props) => {
   return (
-    <a className={styles.courseCard_photo_wrapper} href="#">
+    <a className={styles.courseCard_photo_wrapper} href="google.com">
       <img
         className={styles.courseCard__photo}
         src={props.img_info.url}

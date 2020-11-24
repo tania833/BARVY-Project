@@ -40,22 +40,22 @@ const Footer = () => {
         </div>
       </nav>
       <div className={styles.footer__socials}>
-      <a href="#">
+      <a href="google.com">
         <img className={styles.footer__socials_item} src="../icons/messenger.svg" alt="messenger"/>
       </a>
-      <a href="#">
+      <a href="google.com">
         <img className={styles.footer__socials_item} src="../icons/telegram.svg" alt="messenger"/>
       </a>
-      <a href="#">
+      <a href="google.com">
         <img className={styles.footer__socials_item} src="../icons/facebook.svg" alt="messenger"/>
       </a>
-      <a href="#">
+      <a href="google.com">
         <img className={styles.footer__socials_item} src="../icons/instagram.svg" alt="messenger"/>
       </a>
-      <a href="#">
+      <a href="google.com">
         <img className={styles.footer__socials_item} src="../icons/pinterest.svg" alt="messenger"/>
       </a>
-      <a href="#">
+      <a href="google.com">
         <img className={styles.footer__socials_item} src="../icons/twitter.svg" alt="messenger"/>
       </a>
       </div>
