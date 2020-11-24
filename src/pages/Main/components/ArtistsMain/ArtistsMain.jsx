@@ -1,5 +1,5 @@
 import React from "react";
-import artists_info_main from "../../../../components/artists_main_obj";
+import artists_info_main from "../../../../MOCKS/artist_main_MOCK";
 import MainTitle from "../../../../components/Title";
 import Button from "../../../../components/Button";
 import styles from "./ArtistsMain.module.scss";

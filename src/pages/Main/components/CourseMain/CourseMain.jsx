@@ -1,5 +1,5 @@
 import React from 'react';
-import card_info from "../../../../components/card_info_obj";
+import card_info from "../../../../MOCKS/card_info_MOCK";
 import MainTitle from "../../../../components/Title";
 import Button from "../../../../components/Button";
 import CourseCardViewerForMain from '../../../../components/CourseCard';
