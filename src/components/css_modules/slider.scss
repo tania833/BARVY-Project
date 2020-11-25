@@ -31,4 +31,16 @@
 
 .slick-center {
   background-color: #e6f1f5;
+  padding-top: 1.5625rem;
+  padding-bottom: 1.5625rem;
+  transform: translateY(-1.5625rem);
+}
+
+.slick-center .teacherCard__newComponent {
+  border:none !important;
+}
+
+.slick-slide {
+  margin-top: 1.5625rem;
+  margin-bottom: 1.5625rem;
 }

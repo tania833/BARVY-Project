@@ -21,8 +21,8 @@
 .teacherCard {
   &__wrapper {
     @include flex(space-between, center, row, wrap);
-    padding-left: 0.625rem;
-    padding-right: 0.625rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   &__component {
     border: solid 0.0625rem #bdd9e4;
