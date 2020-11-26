@@ -47,41 +47,38 @@
     width: 46%;
     padding: 0.9375rem 0rem 0.8125rem 0.875rem;
     @include flex(space-between, flex-start, column, nowrap);
-
   }
-  
- &__artist {
-  margin-bottom: 1rem;
-  font-family: 'Montserrat';
-  font-size: 1.375rem;
-  font-weight: 500;
-  color: #000000;
- }
-&__profession, &__technique  {
-  font-family: 'OpenSans';
-  font-size: 1rem;
-  font-weight: 300;
-  color: #000000;
-}
 
-&_link_to_details {
-  position: relative;
-  margin-bottom: 1.625rem;
-  font-family: 'OpenSans';
-  font-size: 1rem;
-  font-weight: 300;
-  color: #7e7a7a;
-  &::after{
-    content: '';
-  position: absolute;
-  background-color: #7e7a7a;
-  bottom: 0px;
-  left: 0;
-  height: 0.5px;
-  width: 90px;
-  
+  &__artist {
+    margin-bottom: 1rem;
+    font-family: "Montserrat";
+    font-size: 1.375rem;
+    font-weight: 500;
+    color: #000000;
+  }
+  &__profession,
+  &__technique {
+    font-family: "OpenSans";
+    font-size: 1rem;
+    font-weight: 300;
+    color: #000000;
+  }
+
+  &_link_to_details {
+    position: relative;
+    margin-bottom: 1.625rem;
+    font-family: "OpenSans";
+    font-size: 1rem;
+    font-weight: 300;
+    color: #7e7a7a;
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: #7e7a7a;
+      bottom: 0px;
+      left: 0;
+      height: 0.5px;
+      width: 90px;
+    }
   }
 }
-}
-
-
