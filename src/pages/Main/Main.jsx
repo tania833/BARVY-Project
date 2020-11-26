@@ -10,7 +10,7 @@ import LearnAndChoose from './components/LearnAndChoose/LearnAndChoose';
 
 const Main = () => {
   return (
-    <div>
+    <>
       <TopBar />
       <Technologies />
       <HowItWorks />
@@ -19,7 +19,7 @@ const Main = () => {
       <WannaTry />
       <ArtistsMain />
       <FooterMainBlue />
-    </div>
+    </>
   );
 };
 
