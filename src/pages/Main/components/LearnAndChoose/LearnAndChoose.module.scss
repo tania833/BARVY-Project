@@ -1,92 +1,90 @@
 .learnAndChoose {
-    padding-top: 10.625rem;
-    padding-left: 2.3125rem;
-    padding-right: 2.3125rem;
-    padding-bottom: 4.6875rem;
+  padding-top: 10.625rem;
+  padding-left: 2.3125rem;
+  padding-right: 2.3125rem;
+  padding-bottom: 4.6875rem;
 }
 
 .infoTitle {
-    font-family: 'Montserrat';
-    font-weight: 400;
-    font-size: 1.625rem;
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 1.625rem;
 }
 
 .infoText {
-    font-family: 'Montserrat';
-    font-size: 1.125rem;
-    font-weight: 300;
-    padding-top: 1.875rem;
+  font-family: "Montserrat";
+  font-size: 1.125rem;
+  font-weight: 300;
+  padding-top: 1.875rem;
 }
 
 .infoIcon {
-    padding-top: 1.875rem;
-    max-width: 25.875rem;
-    max-height: 18.8125rem;
+  padding-top: 1.875rem;
+  max-width: 25.875rem;
+  max-height: 18.8125rem;
 }
 
 .infoIconImg {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .learn {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+  display: flex;
+  justify-content: space-between;
 
-    &__info {
-        width: 36%;
-    }
+  &__info {
+    width: 36%;
+  }
 
-    &__card {
-        max-width: 64%;
-        max-height: 25rem;
-        display: block;
-        overflow: hidden;
-    }
+  &__card {
+    max-width: 64%;
+    max-height: 25rem;
+    display: block;
+    overflow: hidden;
+  }
 
-    &__cardImg {
-        min-width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+  &__cardImg {
+    min-width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 .choose {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    padding-top: 6.25rem;
-    margin-left: 3.4375rem;
+  display: flex;
+  justify-content: center;
+  padding-top: 6.25rem;
+  margin-left: 3.4375rem;
 
-    &__picture {
-        width: 29rem;
-        height: 24.0625rem;
-        position: relative;
-        overflow: hidden;
-    }
+  &__picture {
+    width: 29rem;
+    height: 24.0625rem;
+    position: relative;
+    overflow: hidden;
+  }
 
-    &__pictureImg {
-        height: 100%;
-        position: absolute;
-        right: 0;
-    }
+  &__pictureImg {
+    height: 100%;
+    position: absolute;
+    right: 0;
+  }
 
-    &__info {
-        width: 57%;
-        padding-left: 4.375rem;
-        padding-top: 2.5rem;
-    }
+  &__info {
+    width: 57%;
+    padding-left: 4.375rem;
+    padding-top: 2.5rem;
+  }
 }
 
 .choose .infoText {
-    width: 60%;
-    padding-top: 0.9375rem;
+  width: 60%;
+  padding-top: 0.9375rem;
 }
 
 .choose .infoIcon {
-    max-width: 34.375rem;
-    max-height: 21.875rem;
-    margin-left: -3.125rem;
-    margin-top: -5.9375rem;
+  max-width: 34.375rem;
+  max-height: 21.875rem;
+  margin-left: -3.125rem;
+  margin-top: -5.9375rem;
 }
