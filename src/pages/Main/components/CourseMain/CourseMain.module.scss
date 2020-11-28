@@ -5,7 +5,25 @@
 
 .mainCourses_buttonWrapper {
   padding-top: 5.0938rem;
+  // padding-bottom: 10.6563rem;
   display: flex;
   justify-content: center;
+}
+
+@media all and (max-width: 360px) {
+  .main_courses {
+    padding-left: 1.5625rem;
+    padding-right: 1.5625rem;
   }
-  
+
+  .mainCourses_buttonWrapper {
+    padding-top: 2.5rem;
+    // padding-bottom: 5.875rem;
+  }
+
+  // @media all and (max-width: 680px) {
+  //   .mainCourses_buttonWrapper {
+  //     padding-bottom: 7.875rem;
+  //   }
+  // }
+}

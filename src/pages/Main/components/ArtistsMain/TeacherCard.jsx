@@ -67,7 +67,33 @@ const TeachersCardViewerForMain = (props) => {
     centerPadding: "0px",
     slidesToShow: 3,
     speed: 500,
-    selectionColor: "green",
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          centerMode: false,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          centerMode: false,
+        }
+      },
+      {
+        breakpoint: 575,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: false,
+        }
+      }
+    ]
   };
 
   return <Slider {...settings}>{teacherCardInfo}</Slider>;

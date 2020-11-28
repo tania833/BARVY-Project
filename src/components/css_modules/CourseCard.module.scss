@@ -47,7 +47,7 @@
 
 .courseCard__title_info {
   padding-top: 0.8125rem;
-  @include flex(space-between, center, row, wrap);
+  @include flex(space-between, center, row, nowrap);
   font-family: "Montserrat";
   font-size: 1.25rem;
   font-weight: 500;
@@ -77,7 +77,7 @@
 
 .courseCard_button_text {
   font-family: "OpenSans";
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 600;
   color: #ffffff;
   height: 100%;
@@ -85,3 +85,67 @@
   @include flex(center, center, row, wrap);
   text-transform: uppercase;
 }
+
+@media all and (max-width: 575px) {
+  .courseCard__wrapper {
+    @include flex(space-between, center, column, nowrap);
+    // height: 173vh;
+    overflow: hidden;
+  }
+  .courseCard__component {
+    width: 100%;
+    margin-bottom: 1.25rem;
+  }
+  .courseCard__info {
+    padding-bottom: 1.625rem;
+    cursor: pointer;
+  }
+
+  .courseCard__author_info {
+    font-size: 0.75rem;
+  }
+
+  .courseCard__title_info {
+    padding-top: 2.125rem;
+  }
+
+  .courseCard_button_block {
+    width: 11.1875rem;
+    height: 2.875rem;
+  }
+}
+
+@media all and (max-width: 360px) {
+//   .courseCard__wrapper {
+//     height: 160vh;
+// }
+
+.courseCard_button_block {
+  display: none;
+}
+
+.courseCard__like_icon {
+  display: none;
+}
+
+.courseCard__cart {
+  padding-top: 0rem;
+  display: block;
+  text-align: right;
+  margin-top: -0.9375rem;
+}
+}
+
+@media all and (min-width: 576px) {
+  .courseCard__component {
+    width: 49%;
+    margin-bottom: 1.25rem;
+  }
+
+  .courseCard__info {
+    height: 195px;
+    padding: 0.9375rem 1rem 0.8125rem 0.875rem;
+    @include flex(space-between, stretch, column, nowrap);
+  }
+}
+
