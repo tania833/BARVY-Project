@@ -1,18 +1,20 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import styles from './TopBar.module.scss';
 
 const TopBar = () => {
-  const [value, setValue] = useState("");
+  const [value, setValue] = useState('');
   return (
     <div className={styles.topbarWrapper}>
       <div className={styles.topbar}>
         <div className={styles.topbar__title}>БАРВИ</div>
-        <div className={styles.topbar__subtitle}>сайт про українських митців</div>
+        <div className={styles.topbar__subtitle}>
+          сайт про українських митців
+        </div>
         <form
           onSubmit={(e) => {
             e.preventDefault();
             // search will come here
-            setValue("");
+            setValue('');
           }}
           className={styles.topbar__form}
         >
