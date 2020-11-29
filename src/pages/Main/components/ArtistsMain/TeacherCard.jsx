@@ -46,7 +46,10 @@ const LinkToDetails = () => {
 const TeachersCardViewerForMain = (props) => {
   const teacherCardInfo = props.artists_info_main.map((teacher_card) => (
     <div className={styles.teacherCard__wrapper}>
-      <div key={teacher_card.id} className={`${styles.teacherCard__component} teacherCard__newComponent`}>
+      <div
+        key={teacher_card.id}
+        className={`${styles.teacherCard__component} teacherCard__newComponent`}
+      >
         <TeachersCardPhoto
           img_info={teacher_card.img}
           teacher_info={teacher_card.artist}

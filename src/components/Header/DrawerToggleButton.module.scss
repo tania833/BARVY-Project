@@ -7,8 +7,10 @@
 }
 
 .toggle_button {
-  @include flex(space-between, stretch, column, nowrap);
-  height: 1.7rem;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  @include flex(space-around, stretch, column, nowrap);
+  height: 27.2px;
   width: 2.25rem;
   background-color: transparent;
   border: none;

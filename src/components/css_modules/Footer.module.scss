@@ -8,6 +8,7 @@
 
 .footer {
   &__wrapper {
+    margin-top: auto;
     height: 23.8vh;
     @include flex(space-between, center, row, nowrap);
     padding: 2.5rem 2.4375rem 1.8125rem 5.4375rem;
