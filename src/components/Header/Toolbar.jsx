@@ -1,28 +1,35 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import styles from "./css_modules/Header.module.scss";
+import DrawerToggleButton from "./DrawerToggleButton";
 
-const Header = () => {
+import styles from "./Toolbar.module.scss";
+
+const Toolbar = (props) => {
   return (
     <header className={styles.header}>
+      <nav className={styles.nav_main}>
+      <div className={styles.toggle_button}>
+        <DrawerToggleButton click={props.drawerClickHandler}/>
+      </div>
       <Link className={styles.header_logo} to="/">
         Барви
       </Link>
-      <nav className={styles.nav_main}>
-        <ul className={styles.menu_list}>
-          <li className={styles.menu_item}>
-            <Link to="/artists">Митці</Link>
-          </li>
-          <li className={styles.menu_item}>
-            <Link to="/techniques">Техніки</Link>
-          </li>
-          <li className={styles.menu_item}>
-            <Link to="/events">Події</Link>
-          </li>
-          <li className={styles.menu_item}>
-            <Link to="/about">Про нас</Link>
-          </li>
-        </ul>
+        <div className={styles.navigation_items}>
+          <ul className={styles.menu_list}>
+            <li className={styles.menu_item}>
+              <Link to="/artists">Митці</Link>
+            </li>
+            <li className={styles.menu_item}>
+              <Link to="/techniques">Техніки</Link>
+            </li>
+            <li className={styles.menu_item}>
+              <Link to="/events">Події</Link>
+            </li>
+            <li className={styles.menu_item}>
+              <Link to="/about">Про нас</Link>
+            </li>
+          </ul>
+        </div>
       </nav>
       <div className={styles.header_icons}>
         <a href="/">
@@ -59,4 +66,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Toolbar;

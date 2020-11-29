@@ -1,0 +1,38 @@
+@mixin flex($jc, $ai, $fd, $fw) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+  flex-direction: $fd;
+  flex-wrap: $fw;
+}
+
+.side_drawer {
+  height: 50%;
+  box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  background-color: rgb(255, 255, 255);
+  z-index: 200;
+  top: 0;
+  left: 0;
+  width: 80%;
+  max-width: 300px;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-out;
+
+  &__list {
+    list-style: none;
+    height: 100%;
+    @include flex(space-around, flex-start, column, nowrap);
+  }
+}
+
+.side_drawer.open {
+  transform: translateX(0);
+
+}
+
+@media (min-width: 769px) {
+  .side_drawer {
+    display: none;
+  }
+}
