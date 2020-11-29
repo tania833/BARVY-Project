@@ -68,11 +68,18 @@
     font-size: 6.5rem;
     line-height: 6rem;
   }
-  .topbar__input {
-    width: 23.75rem;
-  }
   .topbar__subtitle {
     margin-bottom: 20vh;
+  }
+  .topbar__input{
+    width: 24rem;
+    padding: 0.8rem;
+  }
+  .topbar__input::placeholder {
+    font-size: 1.3rem;
+  }
+  .topbar__submit{
+    height: 2.85rem;
   }
 }
 
@@ -84,11 +91,11 @@
     font-size: 5.5rem;
     line-height: 6rem;
   }
-  .topbar__input {
-    width: 22rem;
-  }
   .topbar__subtitle {
     margin-bottom: 25vh;
+  }
+    .topbar__input::placeholder {
+    font-size: 1.5rem;
   }
 }
 
@@ -101,11 +108,7 @@
     line-height: 5rem;
   }
   .topbar__input {
-    width: 24rem;
     padding: 1.1rem;
-  }
-  .topbar__input::placeholder {
-    font-size: 1.5rem;
   }
   .topbar__subtitle {
     margin-bottom: 35vh;
