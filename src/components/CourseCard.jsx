@@ -1,5 +1,6 @@
-import React from "react";
-import styles from "./css_modules/CourseCard.module.scss";
+import React from 'react';
+import styles from './css_modules/CourseCard.module.scss';
+import PropTypes from 'prop-types';
 
 const CardPhoto = (props) => {
   return (
@@ -11,6 +12,11 @@ const CardPhoto = (props) => {
       />
     </a>
   );
+};
+
+CardPhoto.propTypes = {
+  img_info: PropTypes.object,
+  title_info: PropTypes.string,
 };
 
 const AuthorInfo = (props) => {
@@ -30,6 +36,10 @@ const AuthorInfo = (props) => {
   );
 };
 
+AuthorInfo.propTypes = {
+  author_info: PropTypes.object,
+};
+
 const TitleInfo = (props) => {
   return (
     <div className={styles.courseCard__title_info}>
@@ -43,6 +53,10 @@ const TitleInfo = (props) => {
   );
 };
 
+TitleInfo.propTypes = {
+  title_info: PropTypes.string,
+};
+
 const PriceInfo = (props) => {
   return (
     <div className={styles.courseCard__price}>
@@ -54,8 +68,16 @@ const PriceInfo = (props) => {
   );
 };
 
+PriceInfo.propTypes = {
+  price_info: PropTypes.string,
+};
+
 const CartInfo = (props) => {
   return <div className={styles.courseCard__cart}>{props.children}</div>;
+};
+
+CartInfo.propTypes = {
+  children: PropTypes.string,
 };
 
 const CourseButton = () => {
@@ -86,6 +108,10 @@ const CourseCardViewerForMain = (props) => {
       </div>
     ));
   return <div className={styles.courseCard__wrapper}>{courseCardInfo}</div>;
+};
+
+CourseCardViewerForMain.propTypes = {
+  card_info: PropTypes.array,
 };
 
 export default CourseCardViewerForMain;
