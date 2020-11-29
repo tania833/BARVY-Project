@@ -15,14 +15,24 @@
   top: 0;
   left: 0;
   width: 80%;
-  max-width: 300px;
+  max-width: 18.75rem;
   transform: translateX(-100%);
   transition: transform 0.3s ease-out;
 
   &__list {
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem;
     list-style: none;
     height: 100%;
-    @include flex(space-around, flex-start, column, nowrap);
+    @include flex(space-between, flex-start, column, nowrap);
+  }
+
+  &__item {
+    font-family: Montserrat;
+    font-size: 1.125rem;
+    font-weight: 300;
+    line-height: 1.4;
+    color: #000000;
   }
 }
 

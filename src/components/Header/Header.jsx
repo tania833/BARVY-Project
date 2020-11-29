@@ -19,11 +19,9 @@ class Header extends Component {
   }
 
   render() {
-    let sideDrawer;
     let backdrop;
 
     if (this.state.sideDrawerOpen) {
-      sideDrawer = <SideDrawer />;
       backdrop = <Backdrop click={this.backdropClickHandler} />
     }
     return (

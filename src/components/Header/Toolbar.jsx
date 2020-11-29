@@ -32,35 +32,37 @@ const Toolbar = (props) => {
         </div>
       </nav>
       <div className={styles.header_icons}>
+        <div className={styles.header_icons_items}>
+          <a href="/">
+            <img
+              className={styles.header_icon_left}
+              src="../icons/search.svg"
+              alt="like_icon"
+            />
+          </a>
+          <a href="/">
+            <img
+              className={styles.header_icon_left}
+              src="../icons/heart.svg"
+              alt="like_icon"
+            />
+          </a>
+        </div>
         <a href="/">
           <img
-            className={styles.header_icon}
-            src="../icons/search.svg"
+            className={styles.header_cart}
+            src="../icons/empty_cart.svg"
             alt="like_icon"
           />
         </a>
-        <a href="/">
-          <img
-            className={styles.header_icon}
-            src="../icons/heart.svg"
-            alt="like_icon"
-          />
-        </a>
-      </div>
-      <a href="/">
-        <img
-          className={(styles.header_icon, styles.header_cart)}
-          src="../icons/empty_cart.svg"
-          alt="like_icon"
-        />
-      </a>
-      <div className={styles.header_localization}>
-        <a href="/">
-          <p>Укр</p>
-        </a>
-        <a href="/">
-          <p>Eng</p>
-        </a>
+        <div className={styles.header_localization}>
+          <a href="/">
+            <p className={styles.header_icon_right}>Укр</p>
+          </a>
+          <a href="/">
+            <p className={styles.header_icon_right}>Eng</p>
+          </a>
+        </div>
       </div>
     </header>
   );
