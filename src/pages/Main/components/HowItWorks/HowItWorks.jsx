@@ -14,7 +14,7 @@ const HowItWorks = () => {
               <img
                 className={styles.letsStart__img}
                 src="https://i.imgur.com/hDb15qV.png"
-                alt="icon1"
+                alt="woman_with_drawing"
               />
             </div>
             <div className={styles.letsStart__text}>
@@ -28,7 +28,7 @@ const HowItWorks = () => {
               <img
                 className={styles.letsStart__img}
                 src="https://i.imgur.com/nQJBboH.png"
-                alt="icon2"
+                alt="woman_at_the_desk"
               />
             </div>
             <div className={styles.letsStart__text}>
@@ -41,7 +41,7 @@ const HowItWorks = () => {
               <img
                 className={styles.letsStart__img}
                 src="https://i.imgur.com/kFo5pPg.png"
-                alt="icon3"
+                alt="man_with_cart"
               />
             </div>
             <div className={styles.letsStart__text}>
@@ -54,7 +54,7 @@ const HowItWorks = () => {
               <img
                 className={styles.letsStart__img}
                 src="https://i.imgur.com/VxI6XsL.png"
-                alt="icon4"
+                alt="woman_behind_an_easel"
               />
             </div>
             <div className={styles.letsStart__text}>
