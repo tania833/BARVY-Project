@@ -48,7 +48,12 @@
 
     &_column {
       @include flex(flex-start, flex-start, column, wrap);
-      margin-right: 6.9rem;
+      padding-right: 8vw;
+      padding-left: 8vw;
+
+      &_left {
+        padding: 0;
+      }
     }
 
     &_item {
@@ -80,7 +85,7 @@
     }
 
     &__logo_block {
-      margin: 0 auto;
+      @include flex(center, center, column, wrap);
     }
 
     &__subtitle {
@@ -89,8 +94,7 @@
 
     &__menu {
       order: 1;
-      @include flex(flex-start, flex-start, row, nowrap);
-      
+      @include flex(space-around, center, row, nowrap);
 
       &_column {
         margin: 0;
@@ -98,8 +102,8 @@
 
         &_left {
           margin: 0;
-        padding-left: 0;
-        padding-right: 2rem;
+          padding-left: 0;
+          padding-right: 1rem;
         }
       }
 
@@ -112,7 +116,7 @@
     &__socials {
       padding-top: 2.5rem;
       padding-bottom: 3.5625rem;
-      @include flex(space-between, flex-start, row, nowrap);
+      @include flex(space-around, flex-start, row, nowrap);
 
       &_item {
         margin: 0;
@@ -141,7 +145,46 @@
       &_item_telegram {
         order: 2;
       }
+    }
+  }
+}
 
+@media screen and (max-width: 992px) {
+  .footer__wrapper {
+    padding: 1.5rem;
+  }
+
+  .footer__logo_block {
+    margin-right: 20px;
+  }
+
+  .footer__menu_column,
+  .footer__menu_column_left {
+    padding-left: 20px;
+    margin: 0;
+  }
+
+  .footer__socials {
+    &_item_pinterest {
+      display: none;
+    }
+
+    &_item_twitter {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .footer {
+    &__logo_block {
+      margin-right: 20px;
+    }
+    &__menu {
+      &_column {
+        padding-right: 3vw;
+        padding-left: 3vw;
+      }
     }
   }
 }

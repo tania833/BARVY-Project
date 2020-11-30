@@ -71,9 +71,8 @@ ul {
 a {
   color: #000000;
 }
-
-/* @media all and (max-width: 20rem) {
-  html {
-   font-size: 100%;
-  }
-} */
+.container {
+  min-height: 89vh;
+  display: flex;
+  flex-direction: column;
+} 

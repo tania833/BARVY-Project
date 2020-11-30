@@ -89,7 +89,6 @@
 @media all and (max-width: 575px) {
   .courseCard__wrapper {
     @include flex(space-between, center, column, nowrap);
-    // height: 173vh;
     overflow: hidden;
   }
   .courseCard__component {
@@ -116,10 +115,6 @@
 }
 
 @media all and (max-width: 360px) {
-//   .courseCard__wrapper {
-//     height: 160vh;
-// }
-
 .courseCard_button_block {
   display: none;
 }
@@ -149,3 +144,8 @@
   }
 }
 
+@media all and (min-width: 992px) {
+  .courseCard__component {
+    width: 32%;
+  }
+}

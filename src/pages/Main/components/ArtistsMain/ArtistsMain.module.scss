@@ -75,6 +75,11 @@
 }
 
 @media all and (max-width: 992px){
+  .mainTeachers_buttonWrapper {
+    padding-top: 4.5313rem;
+    padding-bottom: 4.7813rem;
+  }
+
   .teacherCard {
     &__info {
     height: 9.375rem;
@@ -95,7 +100,7 @@
   }
 }
 
-@media all and (min-width: 360px) {
+@media all and (min-width: 320px) {
   .teacherCard {
     &__photo_wrapper {
       width: 80%;
@@ -127,8 +132,12 @@
 }
 
 @media all and (min-width: 576px) {
-  .teacherCard {
+  .mainTeachers_buttonWrapper {
+    padding-top: 2.5313rem;
+    padding-bottom: 2.7813rem;
+  }
 
+  .teacherCard {
     &_link_to_details {
       margin: 0;
     }

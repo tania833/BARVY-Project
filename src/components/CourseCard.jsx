@@ -67,9 +67,21 @@ const CourseButton = () => {
 };
 
 const CourseCardViewerForMain = (props) => {
-  const courseCardInfo = props.card_info
-    .filter((card, index) => index <= 5)
-    .map((card) => (
+  const width = window.innerWidth;
+  const courseCardInfoProps = props.card_info;
+  let courseCardInfo;
+
+  if (width < 992 && width > 576) {
+    courseCardInfo = courseCardInfoProps.filter((card, index) => index <= 3)
+  }
+  else if (width <= 576) {
+    courseCardInfo = courseCardInfoProps.filter((card, index) => index <= 2)
+  }
+  else {
+    courseCardInfo = courseCardInfoProps.filter((card, index) => index <= 5)
+  }
+  
+  const courseCardInfoView = courseCardInfo.map((card) => (
       <div key={card.id} className={styles.courseCard__component}>
         <div>
           <CardPhoto img_info={card.img} />
@@ -85,7 +97,7 @@ const CourseCardViewerForMain = (props) => {
         </div>
       </div>
     ));
-  return <div className={styles.courseCard__wrapper}>{courseCardInfo}</div>;
+  return <div className={styles.courseCard__wrapper}>{courseCardInfoView}</div>;
 };
 
 export default CourseCardViewerForMain;

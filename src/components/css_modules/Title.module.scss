@@ -24,7 +24,7 @@
 
 @media all { 
   .mainTitle {
-      font-size: calc(50px + (90 + 11 * 0.7) *((100vw - 320px) / 1280));
+      font-size: calc(50px + (60 + 11 * 0.7) *((100vw - 320px) / 1280));
     }
 
     .mainSubtitle {
@@ -38,17 +38,3 @@
     padding-top: 6.0625rem;
   }
 }
-
-@media screen and (max-width: 1400px) {
-  .mainTitle {
-    font-size: 8rem;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .mainTitle {
-    font-size: 6rem;
-  }
-}
-
-
