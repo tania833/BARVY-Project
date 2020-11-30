@@ -1,19 +1,20 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import DrawerToggleButton from "./DrawerToggleButton";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import DrawerToggleButton from './DrawerToggleButton';
+import PropTypes from 'prop-types';
 
-import styles from "./Toolbar.module.scss";
+import styles from './Toolbar.module.scss';
 
 const Toolbar = (props) => {
   return (
     <header className={styles.header}>
       <nav className={styles.nav_main}>
-      <div className={styles.toggle_button}>
-        <DrawerToggleButton click={props.drawerClickHandler}/>
-      </div>
-      <Link className={styles.header_logo} to="/">
-        Барви
-      </Link>
+        <div className={styles.toggle_button}>
+          <DrawerToggleButton click={props.drawerClickHandler} />
+        </div>
+        <Link className={styles.header_logo} to="/">
+          Барви
+        </Link>
         <div className={styles.navigation_items}>
           <ul className={styles.menu_list}>
             <li className={styles.menu_item}>
@@ -66,6 +67,10 @@ const Toolbar = (props) => {
       </div>
     </header>
   );
+};
+
+Toolbar.propTypes = {
+  drawerClickHandler: PropTypes.object,
 };
 
 export default Toolbar;

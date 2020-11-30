@@ -1,6 +1,6 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import styles from "./css_modules/Footer.module.scss";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import styles from './css_modules/Footer.module.scss';
 
 const Footer = () => {
   return (
@@ -52,7 +52,7 @@ const Footer = () => {
         </a>
         <a href="/about" className={styles.footer__socials_item_telegram}>
           <img
-            className={styles.footer__socials_item }
+            className={styles.footer__socials_item}
             src="../icons/telegram.svg"
             alt="telegram"
           />

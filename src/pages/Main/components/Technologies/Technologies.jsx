@@ -1,7 +1,7 @@
-import React from "react";
-import Title from "../../../../components/Title";
-import Button from "../../../../components/Button";
-import styles from "./Technologies.module.scss";
+import React from 'react';
+import Title from '../../../../components/Title';
+import Button from '../../../../components/Button';
+import styles from './Technologies.module.scss';
 
 const Technologies = () => {
   return (
