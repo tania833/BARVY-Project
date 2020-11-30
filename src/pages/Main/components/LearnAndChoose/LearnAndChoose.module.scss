@@ -88,3 +88,27 @@
   margin-left: -3.125rem;
   margin-top: -5.9375rem;
 }
+
+@media all and (max-width: 1200px) {
+  .learnAndChoose {
+    padding-bottom: 1.5rem;
+  }
+}
+
+@media all and (max-width: 992px) {
+  .learnAndChoose {
+    padding-bottom: 0.5rem;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .learnAndChoose {
+    padding-bottom: 0;
+  }
+}
+
+@media all and (max-width: 650px) {
+  .learnAndChoose {
+    display: none;
+  }
+}

@@ -1,48 +1,63 @@
 .letsStart {
-    &__wrapper {
-        padding-left: 2.3125rem;
-        padding-right: 2.3125rem;
-    }
+  &__wrapper {
+    padding-left: 2.3125rem;
+    padding-right: 2.3125rem;
+  }
 
-    &__container {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-    }
+  &__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
 
-    &__card {
-        width: 25%;
-        position: relative;
-    }
+  &__card {
+    width: 25%;
+    position: relative;
+  }
 
-    &__number {
-        font-family: 'OpenSans';
-        font-weight: 800;
-        font-size: 9.375rem;
-        color: #bdd9e4;
-        padding-left: 2.5rem;
-        position: absolute;
-    }
+  &__number {
+    font-family: "OpenSans";
+    font-weight: 800;
+    font-size: 9.375rem;
+    color: #bdd9e4;
+    padding-left: 2.5rem;
+    position: absolute;
+  }
 
-    &__img {
-        max-width: 100%;
-        max-height: 100%;
-    }
+  &__img {
+    max-width: 100%;
+    max-height: 100%;
+  }
 
-    &__icon {
-        width: 100%;
-        position: relative;
-        height: 15.625rem;
-        text-align: center;
-        margin-top: 6.875rem;
-    }
+  &__icon {
+    width: 100%;
+    position: relative;
+    height: 15.625rem;
+    text-align: center;
+    margin-top: 6.875rem;
+  }
 
-    &__text {
-        font-family: 'Montserrat';
-        font-weight: 300;
-        font-size: 1.125rem;
-        font-weight: 300;
-        line-height: 1.4;
-        padding-left: 1.25rem;
-    }
+  &__text {
+    font-family: "Montserrat";
+    font-weight: 300;
+    font-size: 1.125rem;
+    font-weight: 300;
+    line-height: 1.4;
+    padding-left: 1.25rem;
+  }
+}
+
+// @media all and (max-width: 992px) {
+//     .learnAndChoose {
+//       padding-bottom: 0.5rem;
+//     }
+//   }
+
+@media all and (max-width: 768px) {
+  .letsStart__container {
+    flex-wrap: wrap;
+  }
+  .letsStart__card {
+    width: 50%;
+  }
 }
