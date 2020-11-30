@@ -6,18 +6,20 @@ import ArtistsMain from "./components/ArtistsMain/ArtistsMain";
 import FooterMainBlue from "./components/FooterMainBlue/FooterMainBlue";
 import HowItWorks from "./components/HowItWorks/HowItWorks";
 import Technologies from "./components/Technologies/Technologies";
+import LearnAndChoose from "./components/LearnAndChoose/LearnAndChoose";
 
 const Main = () => {
   return (
-    <div>
+    <>
       <TopBar />
       <Technologies />
       <HowItWorks />
       <CourseMain />
+      <LearnAndChoose />
       <WannaTry />
       <ArtistsMain />
       <FooterMainBlue />
-    </div>
+    </>
   );
 };
 

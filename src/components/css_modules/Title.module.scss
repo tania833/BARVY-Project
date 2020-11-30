@@ -22,6 +22,18 @@
   text-transform: uppercase;
 }
 
+@media screen and (max-width: 1400px) {
+  .mainTitle {
+    font-size: 7.5rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .mainTitle {
+    font-size: 6rem;
+  }
+}
+
 @media all { 
   .mainTitle {
       font-size: calc(50px + (60 + 11 * 0.7) *((100vw - 320px) / 1280));
@@ -30,7 +42,7 @@
     .mainSubtitle {
       font-size: calc(20px + (20 + 5 * 0.7) *((100vw - 320px) / 1280));
     }
-}
+  }
 
 @media screen and (max-width: 680px) {
   .mainTitle_wrapper {

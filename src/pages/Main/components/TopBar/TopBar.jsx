@@ -1,18 +1,29 @@
 import React, { useState } from "react";
-import styles from './TopBar.module.scss';
+import styles from "./TopBar.module.scss";
 
 const TopBar = () => {
   const [value, setValue] = useState("");
+  let width = window.innerWidth;
+  let renderedText;
+  if (width > 576) {
+    renderedText = (
+      <div className={styles.topbar__subtitle}>сайт про українських митців</div>
+    );
+  } else {
+    renderedText = (
+      <div className={styles.topbar__subtitle}>творчі курси онлайн</div>
+    );
+  }
   return (
     <div className={styles.topbarWrapper}>
       <div className={styles.topbar}>
         <div className={styles.topbar__title}>БАРВИ</div>
-        <div className={styles.topbar__subtitle}>сайт про українських митців</div>
+        {renderedText}
         <form
           onSubmit={(e) => {
             e.preventDefault();
             // search will come here
-            setValue("");
+            setValue('');
           }}
           className={styles.topbar__form}
         >
