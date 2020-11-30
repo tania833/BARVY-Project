@@ -7,15 +7,15 @@
 }
 
 .side_drawer {
-  height: 50%;
+  height: 90%;
   box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5);
   position: fixed;
   background-color: rgb(255, 255, 255);
   z-index: 200;
   top: 0;
   left: 0;
-  width: 80%;
-  max-width: 18.75rem;
+  width: 100%;
+  max-width: 75vw;
   transform: translateX(-100%);
   transition: transform 0.3s ease-out;
 
@@ -38,7 +38,6 @@
 
 .side_drawer.open {
   transform: translateX(0);
-
 }
 
 @media (min-width: 769px) {
@@ -46,3 +45,25 @@
     display: none;
   }
 }
+
+@media all { 
+  .side_drawer__item {
+      font-size: calc(18px + (5 + 11 * 0.7) *((100vw - 320px) / 1280)) ;
+    }
+}
+
+@media (min-width: 500px) {
+  .side_drawer {
+    max-width: 60vw;
+  }
+}
+
+@media (min-width: 576px) {
+  .side_drawer {
+    max-width: 50vw;
+    &__item {
+      font-size: 22px;
+    }
+  }
+}
+
