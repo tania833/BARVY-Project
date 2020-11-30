@@ -10,7 +10,6 @@ import About from "./pages/About/About";
 import Techniques from "./pages/Techniques/Techniques";
 import Footer from "./components/Footer";
 
-
 function App() {
   return (
     <BrowserRouter>
