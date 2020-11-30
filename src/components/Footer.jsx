@@ -21,7 +21,7 @@ const Footer = () => {
             <Link to="/about">Як це працює</Link>
           </li>
           <li className={styles.footer__menu_item} href="/about">
-            <Link to="/about">Зв'язатися з нами</Link>
+            <Link to="/about">Зв&apos;язатися з нами</Link>
           </li>
           <li className={styles.footer__menu_item} href="/about">
             <Link to="/about">Контакти</Link>

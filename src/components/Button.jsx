@@ -1,5 +1,6 @@
 import React from 'react';
-import styles from './css_modules/Button.module.scss'
+import styles from './css_modules/Button.module.scss';
+import PropTypes from 'prop-types';
 
 const Button = (props) => {
   return (
@@ -9,4 +10,8 @@ const Button = (props) => {
   );
 };
 
-export default Button
+Button.propTypes = {
+  text: PropTypes.string,
+};
+
+export default Button;
