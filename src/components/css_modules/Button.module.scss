@@ -21,3 +21,13 @@
     text-transform: uppercase;
   }
 }
+
+@media all and (max-width: 35.9375rem) {
+  .button_block {
+    width: 11.0625rem;
+    height: 2.875rem;
+  }
+  .button_text {
+   font-size: 1rem;
+  }
+}
