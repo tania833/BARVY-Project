@@ -47,17 +47,47 @@
   }
 }
 
-// @media all and (max-width: 992px) {
-//     .learnAndChoose {
-//       padding-bottom: 0.5rem;
-//     }
-//   }
-
 @media all and (max-width: 768px) {
   .letsStart__container {
     flex-wrap: wrap;
   }
   .letsStart__card {
     width: 50%;
+  }
+  .letsStart__number {
+    font-size: 7.5rem;
+  }
+  .letsStart__icon {
+    width: 100%;
+    position: relative;
+    height: 12.625rem;
+    margin-top: 2.5rem;
+  }
+  .letsStart__text {
+    font-size: 1.5rem;
+  }
+}
+
+@media all and (max-width: 576px) {
+  .letsStart__number {
+    font-size: 5.5rem;
+    padding-left: 0.5rem;
+  }
+  .letsStart__icon {
+    width: 100%;
+    position: relative;
+    height: 12.625rem;
+    margin-top: 2.5rem;
+  }
+  .letsStart__img {
+    max-width: 90%;
+    max-height: 90%;
+    padding-left: 1.25rem;
+  }
+  .letsStart__text {
+    font-size: 1.3rem;
+    padding-left: 0;
+    line-height: 1.2;
+    margin-top: -45px;
   }
 }
