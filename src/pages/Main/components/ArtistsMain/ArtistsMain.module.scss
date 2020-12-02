@@ -76,10 +76,6 @@
 
 @media all and (max-width: 992px) {
   .teacherCard {
-    &__info {
-      height: 9.375rem;
-    }
-
     &__artist {
       font-size: calc(16px + (8 + 11 * 0.7) * ((100vw - 320px) / 1280));
       margin-bottom: 1rem;

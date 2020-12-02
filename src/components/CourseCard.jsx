@@ -88,30 +88,40 @@ const CourseButton = () => {
   );
 };
 
-const CourseCardViewer = (props) => {
-  const courseCardInfo = props.card_info
-    .filter((card, index) => index <= 5)
-    .map((card) => (
-      <div key={card.id} className={styles.courseCard__component}>
-        <div>
-          <CardPhoto img_info={card.img} />
-        </div>
-        <div className={styles.courseCard__info}>
-          <AuthorInfo author_info={card.author} />
-          <TitleInfo title_info={card.title} />
+const CourseCardViewerForMain = (props) => {
+  const width = window.innerWidth;
+  const courseCardInfoProps = props.card_info;
+  let courseCardInfo;
 
-          <CartInfo>
-            <PriceInfo price_info={card.price} />
-            <CourseButton />
-          </CartInfo>
-        </div>
+  if (width < 768 && width > 576) {
+    courseCardInfo = courseCardInfoProps.filter((card, index) => index <= 3);
+  } else if (width <= 576) {
+    courseCardInfo = courseCardInfoProps.filter((card, index) => index <= 2);
+  } else {
+    courseCardInfo = courseCardInfoProps.filter((card, index) => index <= 5);
+  }
+
+  const courseCardInfoView = courseCardInfo.map((card) => (
+    <div key={card.id} className={styles.courseCard__component}>
+      <div>
+        <CardPhoto img_info={card.img} />
       </div>
-    ));
-  return <div className={styles.courseCard__wrapper}>{courseCardInfo}</div>;
+      <div className={styles.courseCard__info}>
+        <AuthorInfo author_info={card.author} />
+        <TitleInfo title_info={card.title} />
+
+        <CartInfo>
+          <PriceInfo price_info={card.price} />
+          <CourseButton />
+        </CartInfo>
+      </div>
+    </div>
+  ));
+  return <div className={styles.courseCard__wrapper}>{courseCardInfoView}</div>;
 };
 
-CourseCardViewer.propTypes = {
+CourseCardViewerForMain.propTypes = {
   card_info: PropTypes.array,
 };
 
-export default CourseCardViewer;
+export default CourseCardViewerForMain;

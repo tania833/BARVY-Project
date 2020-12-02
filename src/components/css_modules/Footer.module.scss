@@ -49,7 +49,12 @@
 
     &_column {
       @include flex(flex-start, flex-start, column, wrap);
-      margin-right: 6.9rem;
+      padding-right: 8vw;
+      padding-left: 8vw;
+
+      &_left {
+        padding: 0;
+      }
     }
 
     &_item {
@@ -81,7 +86,7 @@
     }
 
     &__logo_block {
-      margin: 0 auto;
+      @include flex(center, center, column, nowrap);
     }
 
     &__subtitle {
@@ -90,8 +95,8 @@
 
     &__menu {
       order: 1;
-      @include flex(flex-start, flex-start, row, nowrap);
-      
+      @include flex(space-around, center, row, nowrap);
+      width: auto;
 
       &_column {
         margin: 0;
@@ -99,21 +104,23 @@
 
         &_left {
           margin: 0;
-        padding-left: 0;
-        padding-right: 2rem;
+          padding-left: 0;
+          padding-right: 1rem;
         }
       }
 
       &_item {
         margin-bottom: 1.25rem;
         font-size: 14px;
+        padding: 0;
       }
+  
     }
 
     &__socials {
       padding-top: 2.5rem;
       padding-bottom: 3.5625rem;
-      @include flex(space-between, flex-start, row, nowrap);
+      @include flex(space-around, flex-start, row, nowrap);
 
       &_item {
         margin: 0;
@@ -141,6 +148,72 @@
 
       &_item_telegram {
         order: 2;
+      }
+
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer__wrapper {
+    padding: 1.5rem;
+  }
+
+  .footer__logo_block {
+    margin-right: 0px;
+  }
+
+  .footer__menu_column,
+  .footer__menu_column_left {
+    padding-left: 0px;
+    margin: 0;
+  }
+
+  .footer__menu_item {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 12px !important;
+  }
+
+  .footer__socials {
+    &_item_pinterest {
+      display: none;
+    }
+
+    &_item_twitter {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .footer__menu_item {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 14px !important;
+  }
+  .footer {
+    &__logo_block {
+      margin-right: 40px;
+    }
+  }
+  .footer__menu_column,
+  .footer__menu_column_left {
+    padding-left: 10px;
+    padding-right: 0px;
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 993px) {
+  .footer {
+    &__logo_block {
+      margin-right: 80px;
+    }
+    &__menu {
+      &_column {
+        padding-right: 3vw;
+        padding-left: 3vw;
       }
 
     }
