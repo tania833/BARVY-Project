@@ -1,6 +1,6 @@
-import React from "react";
-import Button from "../../../../../components/Button";
-import styles from "./WhatToChoose.module.scss";
+import React from 'react';
+import Button from '../../../../../components/Button';
+import styles from './WhatToChoose.module.scss';
 
 const WhatToChoose = () => {
   return (

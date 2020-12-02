@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import styles from "./TopBar.module.scss";
+import React, { useState } from 'react';
+import styles from './TopBar.module.scss';
 
 const TopBar = () => {
-  const [value, setValue] = useState("");
+  const [value, setValue] = useState('');
   let width = window.innerWidth;
   let renderedText;
   if (width > 576) {

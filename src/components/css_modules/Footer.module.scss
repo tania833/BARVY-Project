@@ -49,7 +49,12 @@
 
     &_column {
       @include flex(flex-start, flex-start, column, wrap);
-      margin-right: 6.9rem;
+      padding-right: 8vw;
+      padding-left: 8vw;
+
+      &_left {
+        padding: 0;
+      }
     }
 
     &_item {
@@ -67,6 +72,125 @@
 
     &_item {
       margin-right: 1.5625rem;
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .footer {
+    &__wrapper {
+      height: auto;
+      background-color: #e6f1f5;
+      padding: 2.1875rem 2.3rem 2.5rem 2.3125rem;
+      @include flex(space-between, stretch, column-reverse, nowrap);
+    }
+
+    &__logo_block {
+
+      margin: 0 auto;
+
+
+    }
+
+    &__subtitle {
+      display: none;
+    }
+
+    &__menu {
+      order: 1;
+      @include flex(space-around, center, row, nowrap);
+
+      &_column {
+        margin: 0;
+        padding-left: 0;
+
+        &_left {
+          margin: 0;
+          padding-left: 0;
+          padding-right: 1rem;
+        }
+      }
+
+      &_item {
+        margin-bottom: 1.25rem;
+        font-size: 14px;
+      }
+    }
+
+    &__socials {
+      padding-top: 2.5rem;
+      padding-bottom: 3.5625rem;
+      @include flex(space-around, flex-start, row, nowrap);
+
+      &_item {
+        margin: 0;
+      }
+
+      &_item_pinterest {
+        display: none;
+      }
+
+      &_item_twitter {
+        display: none;
+      }
+
+      &_item_facebook {
+        order: 1;
+      }
+
+      &_item_messenger {
+        order: 3;
+      }
+
+      &_item_instagram {
+        order: 4;
+      }
+
+      &_item_telegram {
+        order: 2;
+      }
+
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .footer__wrapper {
+    padding: 1.5rem;
+  }
+
+  .footer__logo_block {
+    margin-right: 20px;
+  }
+
+  .footer__menu_column,
+  .footer__menu_column_left {
+    padding-left: 20px;
+    margin: 0;
+  }
+
+  .footer__socials {
+    &_item_pinterest {
+      display: none;
+    }
+
+    &_item_twitter {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .footer {
+    &__logo_block {
+      margin-right: 20px;
+    }
+    &__menu {
+      &_column {
+        padding-right: 3vw;
+        padding-left: 3vw;
+      }
+
     }
   }
 }

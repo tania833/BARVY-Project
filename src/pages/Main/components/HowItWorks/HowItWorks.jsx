@@ -1,6 +1,6 @@
-import React from "react";
-import MainTitle from "../../../../components/Title";
-import styles from "./HowItWorks.module.scss";
+import React from 'react';
+import MainTitle from '../../../../components/Title';
+import styles from './HowItWorks.module.scss';
 
 const HowItWorks = () => {
   return (

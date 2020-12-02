@@ -1,0 +1,30 @@
+@mixin flex($jc, $ai, $fd, $fw) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+  flex-direction: $fd;
+  flex-wrap: $fw;
+}
+
+.toggle_button {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  @include flex(space-around, stretch, column, nowrap);
+  height: 27.2px;
+  width: 2.25rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  box-sizing: border-box;
+
+  &:focus {
+    outline: none;
+  }
+
+  &__line {
+    width: 2.25rem;
+    height: 0.125rem;
+    background-color: rgb(0, 0, 0);
+  }
+}
