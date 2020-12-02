@@ -24,12 +24,14 @@
     padding-left: 1rem;
     padding-right: 1rem;
   }
+
   &__component {
     border: solid 0.0625rem #bdd9e4;
     width: 100%;
     padding: 2.25rem 1.5rem 2.75rem 1.5rem;
     @include flex(center, stretch, row, nowrap);
   }
+
   &__photo_wrapper {
     width: 46%;
     position: relative;
@@ -38,11 +40,13 @@
     display: block;
     overflow: hidden;
   }
+
   &__photo {
     min-width: 100%;
     height: 100%;
     object-fit: cover;
   }
+
   &__info {
     width: 46%;
     padding: 0.9375rem 0rem 0.8125rem 0.875rem;
@@ -56,6 +60,7 @@
     font-weight: 500;
     color: #000000;
   }
+
   &__profession,
   &__technique {
     font-family: "Open Sans";
@@ -63,7 +68,7 @@
     font-weight: 300;
     color: #000000;
   }
-
+ 
   &_link_to_details {
     margin-bottom: 1.625rem;
     font-family: "Open Sans";
@@ -135,6 +140,89 @@
 
 @media all and (min-width: 992px) {
   .teacherCard {
+    &__component {
+      @include flex(center, stretch, row, nowrap);
+      padding: 0.5rem;
+    }
+
+    &__photo_wrapper {
+      width: 90%;
+    }
+
+    &_link_to_details {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media all and (max-width: 992px){
+  .mainTeachers_buttonWrapper {
+    padding-top: 4.5313rem;
+    padding-bottom: 4.7813rem;
+  }
+
+  .teacherCard {
+    &__info {
+    height: 12.375rem;
+    }
+
+    &__artist {
+      margin-bottom: 1rem;
+    }
+
+    &_link_to_details {
+      margin-top: 1.625rem;
+    }
+  }
+}
+
+@media all and (min-width: 320px) {
+  .teacherCard {
+    &__photo_wrapper {
+      width: 80%;
+    }
+
+    &__component {
+      @include flex(space-between, center, column, wrap);
+      padding: 0.5rem;
+    }
+
+    &__info {
+      width: 100%;
+    }
+
+    &__artist {
+      margin-bottom: 0.5rem;
+    }
+
+    &__profession,
+    &__technique {
+      padding-top: 4px;
+      padding-bottom: 4px;
+    }
+
+    &_link_to_details {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media all and (min-width: 576px) {
+  .mainTeachers_buttonWrapper {
+    padding-top: 2.5313rem;
+    padding-bottom: 2.7813rem;
+  }
+
+  .teacherCard {
+    &_link_to_details {
+      margin: 0;
+    }
+  }
+}
+
+@media all and (min-width: 992px) {
+  .teacherCard {
+
     &__component {
       @include flex(center, stretch, row, nowrap);
       padding: 0.5rem;

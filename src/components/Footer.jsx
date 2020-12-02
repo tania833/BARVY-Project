@@ -52,7 +52,7 @@ const Footer = () => {
         </a>
         <a href="/about" className={styles.footer__socials_item_telegram}>
           <img
-            className={styles.footer__socials_item}
+            className={styles.footer__socials_item }
             src="../icons/telegram.svg"
             alt="telegram"
           />

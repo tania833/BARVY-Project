@@ -13,7 +13,10 @@ const WhatToChoose = () => {
         <p className={styles.choose__paragraph}>
           Не дізнаєшся, поки не спробуєш. Ми підготували тест, який допоможе
         </p>
-        <Button text="Пройти тест" />
+        <div className={styles.buttonContainer}>
+          {" "}
+          <Button text="Пройти тест" />
+        </div>
       </div>
       <div className={styles.choose__pictureContainer}>
         <img
