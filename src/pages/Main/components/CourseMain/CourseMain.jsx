@@ -2,7 +2,7 @@ import React from 'react';
 import card_info from '../../../../MOCKS/card_info_MOCK';
 import MainTitle from '../../../../components/Title';
 import Button from '../../../../components/Button';
-import CourseCardViewerForMain from '../../../../components/CourseCard';
+import CourseCardViewer from '../../../../components/CourseCard';
 import styles from './CourseMain.module.scss';
 
 const CourseMain = () => {
@@ -10,7 +10,7 @@ const CourseMain = () => {
     // <div>
     <section className={styles.main_courses}>
       <MainTitle title="курси" subtitle="нові уроки" />
-      <CourseCardViewerForMain card_info={card_info} />
+      <CourseCardViewer card_info={card_info} />
       <div className={styles.mainCourses_buttonWrapper}>
         <Button text="до каталогу" />
       </div>

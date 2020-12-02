@@ -88,7 +88,7 @@ const CourseButton = () => {
   );
 };
 
-const CourseCardViewerForMain = (props) => {
+const CourseCardViewer = (props) => {
   const courseCardInfo = props.card_info
     .filter((card, index) => index <= 5)
     .map((card) => (
@@ -110,8 +110,8 @@ const CourseCardViewerForMain = (props) => {
   return <div className={styles.courseCard__wrapper}>{courseCardInfo}</div>;
 };
 
-CourseCardViewerForMain.propTypes = {
+CourseCardViewer.propTypes = {
   card_info: PropTypes.array,
 };
 
-export default CourseCardViewerForMain;
+export default CourseCardViewer;
