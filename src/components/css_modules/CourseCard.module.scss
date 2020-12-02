@@ -115,7 +115,6 @@
 }
 
 @media all and (max-width: 360px) {
-
 .courseCard_button_block {
   display: none;
 }
@@ -133,6 +132,7 @@
 }
 
 @media all and (max-width: 768px) {
+
   .courseCard__component {
     width: 49%;
     margin-bottom: 1.25rem;
@@ -145,3 +145,8 @@
   }
 }
 
+@media all and (min-width: 992px) {
+  .courseCard__component {
+    width: 32%;
+  }
+}
