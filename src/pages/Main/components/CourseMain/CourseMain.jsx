@@ -1,9 +1,9 @@
 import React from 'react';
-import card_info from "../../../../MOCKS/card_info_MOCK";
-import MainTitle from "../../../../components/Title";
-import Button from "../../../../components/Button";
+import card_info from '../../../../MOCKS/card_info_MOCK';
+import MainTitle from '../../../../components/Title';
+import Button from '../../../../components/Button';
 import CourseCardViewerForMain from '../../../../components/CourseCard';
-import styles from './CourseMain.module.scss'
+import styles from './CourseMain.module.scss';
 
 const CourseMain = () => {
   return (

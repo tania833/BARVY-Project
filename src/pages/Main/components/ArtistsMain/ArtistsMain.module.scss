@@ -55,7 +55,7 @@
 
   &__artist {
     margin-bottom: 1rem;
-    font-family: "Montserrat";
+    font-family: Montserrat;
     font-size: 1.375rem;
     font-weight: 500;
     color: #000000;
@@ -70,20 +70,91 @@
   }
  
   &_link_to_details {
-    position: relative;
     margin-bottom: 1.625rem;
-    font-family: "OpenSans";
+    font-family: "Open Sans";
     font-size: 1rem;
     font-weight: 300;
+    text-decoration: underline;
     color: #7e7a7a;
-    &::after {
-      content: "";
-      position: absolute;
-      background-color: #7e7a7a;
-      bottom: 0px;
-      left: 0;
-      height: 0.5px;
-      width: 90px;
+  }
+}
+
+@media all and (max-width: 992px) {
+  .teacherCard {
+    &__info {
+      height: 9.375rem;
+    }
+
+    &__artist {
+      font-size: calc(16px + (8 + 11 * 0.7) * ((100vw - 320px) / 1280));
+      margin-bottom: 1rem;
+    }
+
+    &__profession,
+    &__technique {
+      font-size: calc(12px + (4 + 11 * 0.7) * ((100vw - 320px) / 1280));
+    }
+
+    &_link_to_details {
+      margin-top: 1.625rem;
+      font-size: calc(12px + (4 + 11 * 0.7) * ((100vw - 320px) / 1280));
+    }
+    
+  }
+}
+
+@media all and (min-width: 360px) {
+  .teacherCard {
+    &__photo_wrapper {
+      width: 80%;
+    }
+
+    &__component {
+      @include flex(space-between, center, column, wrap);
+      padding: 0.5rem;
+    }
+
+    &__info {
+      width: 100%;
+    }
+
+    &__artist {
+      margin-bottom: 0.5rem;
+    }
+
+    &__profession,
+    &__technique {
+      padding-top: 4px;
+      padding-bottom: 4px;
+    }
+
+    &_link_to_details {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media all and (min-width: 576px) {
+  .teacherCard {
+    &_link_to_details {
+      margin: 0;
+    }
+  }
+}
+
+@media all and (min-width: 992px) {
+  .teacherCard {
+    &__component {
+      @include flex(center, stretch, row, nowrap);
+      padding: 0.5rem;
+    }
+
+    &__photo_wrapper {
+      width: 90%;
+    }
+
+    &_link_to_details {
+      margin-bottom: 0;
     }
   }
 }

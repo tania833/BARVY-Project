@@ -131,7 +131,8 @@
 }
 }
 
-@media all and (min-width: 576px) {
+@media all and (max-width: 768px) {
+
   .courseCard__component {
     width: 49%;
     margin-bottom: 1.25rem;

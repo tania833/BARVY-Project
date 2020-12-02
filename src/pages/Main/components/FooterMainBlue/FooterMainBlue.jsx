@@ -1,6 +1,6 @@
-import React from "react";
-import Button from "../../../../components/Button";
-import styles from "./FooterMainBlue.module.scss";
+import React from 'react';
+import Button from '../../../../components/Button';
+import styles from './FooterMainBlue.module.scss';
 
 const FooterMainBlue = () => {
   return (
@@ -17,7 +17,7 @@ const FooterMainBlue = () => {
           <p className={styles.footerBlue__text_paragraph}>
             Нам важливо підтримати та заявити про талановитих митців,
             художників, дизайнерів з різних куточків України, які готові
-            ділитись та навчати.{" "}
+            ділитись та навчати.{' '}
           </p>
           <p>
             Долучайтесь до викладачів та поділіться власними знаннями і технікою
