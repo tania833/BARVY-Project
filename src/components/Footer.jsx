@@ -1,6 +1,6 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import styles from "./css_modules/Footer.module.scss";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import styles from './css_modules/Footer.module.scss';
 
 const Footer = () => {
   return (
@@ -13,7 +13,7 @@ const Footer = () => {
         <p className={styles.footer__year}>2020</p>
       </div>
       <nav className={styles.footer__menu}>
-        <ul className={styles.footer__menu_column}>
+        <ul className={styles.footer__menu_column_left}>
           <li className={styles.footer__menu_item} href="/about">
             <Link to="/about">Про нас</Link>
           </li>
@@ -21,7 +21,7 @@ const Footer = () => {
             <Link to="/about">Як це працює</Link>
           </li>
           <li className={styles.footer__menu_item} href="/about">
-            <Link to="/about">Зв'язатися з нами</Link>
+            <Link to="/about">Зв&apos;язатися з нами</Link>
           </li>
           <li className={styles.footer__menu_item} href="/about">
             <Link to="/about">Контакти</Link>
@@ -43,46 +43,46 @@ const Footer = () => {
         </ul>
       </nav>
       <div className={styles.footer__socials}>
-        <a href="/about">
+        <a href="/about" className={styles.footer__socials_item_messenger}>
           <img
             className={styles.footer__socials_item}
             src="../icons/messenger.svg"
             alt="messenger"
           />
         </a>
-        <a href="/about">
+        <a href="/about" className={styles.footer__socials_item_telegram}>
           <img
-            className={styles.footer__socials_item}
+            className={styles.footer__socials_item }
             src="../icons/telegram.svg"
-            alt="messenger"
+            alt="telegram"
           />
         </a>
-        <a href="/about">
+        <a href="/about" className={styles.footer__socials_item_facebook}>
           <img
             className={styles.footer__socials_item}
             src="../icons/facebook.svg"
-            alt="messenger"
+            alt="facebook"
           />
         </a>
-        <a href="/about">
+        <a href="/about" className={styles.footer__socials_item_instagram}>
           <img
             className={styles.footer__socials_item}
             src="../icons/instagram.svg"
-            alt="messenger"
+            alt="instagram"
           />
         </a>
-        <a href="/about">
+        <a href="/about" className={styles.footer__socials_item_pinterest}>
           <img
             className={styles.footer__socials_item}
             src="../icons/pinterest.svg"
-            alt="messenger"
+            alt="pinterest"
           />
         </a>
-        <a href="/about">
+        <a href="/about" className={styles.footer__socials_item_twitter}>
           <img
             className={styles.footer__socials_item}
             src="../icons/twitter.svg"
-            alt="messenger"
+            alt="twitter"
           />
         </a>
       </div>

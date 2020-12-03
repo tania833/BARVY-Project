@@ -1,5 +1,5 @@
-import React from "react";
-import styles from "./Professionals.module.scss";
+import React from 'react';
+import styles from './Professionals.module.scss';
 const Professionals = () => {
   return (
     <div className={styles.professionals}>
