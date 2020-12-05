@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import DrawerToggleButton from './DrawerToggleButton';
 import PropTypes from 'prop-types';
-
 import styles from './Toolbar.module.scss';
 
 const Toolbar = (props) => {

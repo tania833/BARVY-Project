@@ -1,0 +1,68 @@
+@mixin flex($jc, $ai, $fd, $fw) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+  flex-direction: $fd;
+  flex-wrap: $fw;
+}
+
+.sideDrawer {
+  // height: 90%;
+  box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  background-color: rgb(255, 255, 255);
+  z-index: 200;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 253px;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-out;
+
+  &List {
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem;
+    list-style: none;
+    height: 100%;
+    @include flex(space-between, flex-start, column, nowrap);
+  }
+
+  &Item {
+    font-family: 'Open Sans';
+    font-size: 1.125rem;
+    font-weight: 300;
+    line-height: 1.4;
+    color: #000000;
+  }
+}
+
+.sideDrawer.open {
+  transform: translateX(0);
+}
+
+// @media (min-width: 769px) {
+//   .side_drawer {
+//     display: none;
+//   }
+// }
+
+// @media all { 
+//   .sideDrawerItem {
+//       font-size: calc(18px + (5 + 11 * 0.7) *((100vw - 320px) / 1280)) ;
+//     }
+// }
+
+// @media (min-width: 500px) {
+//   .sideDrawer {
+//     max-width: 60vw;
+//   }
+// }
+
+// @media (min-width: 576px) {
+//   .sideDrawer {
+//     max-width: 50vw;
+//     &__item {
+//       font-size: 22px;
+//     }
+//   }
+// }
