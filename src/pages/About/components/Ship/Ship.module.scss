@@ -1,0 +1,86 @@
+.shipContainer{
+    width: 100vw;
+    height: 40.625rem;
+    display: flex;
+}
+
+.blueContainer{
+    margin-top: auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    height: 30.9375rem;
+    background-color: #E7F4FA;
+}
+
+.photoBlock{
+    margin-top: -9.6875rem; 
+    height: 40.625rem;
+
+}
+
+.photo{
+    height: 100%;
+    width: auto;
+}
+
+.textBlock{
+    display: flex;
+    flex-direction: column;
+    width: 50rem;
+}
+
+.textBlockSubtitle{
+    margin: 9.25rem auto 2.125rem;
+    width: 20.625rem;
+    font-family: 'Montserrat';
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.textBlockPara{
+    margin: 0 auto;
+    width: 30rem;
+    font-family: 'Montserrat';
+    font-size: 1.125rem;
+    font-weight: 300;  
+}
+
+@media all and (max-width: 1024px) {
+  .textBlock{
+      width: 31.25rem;
+  }
+  .photoBlock{
+      height: 35rem;
+  }  
+}
+
+@media all and (max-width: 768px) {
+    .textBlock{
+        width: 300px;
+    }
+    .textBlockPara{
+        width: 23rem;
+    }
+    .photoBlock{
+        height: 35rem;
+    }  
+    .blueContainer{
+        justify-content: space-around;
+    }
+  }
+
+
+@media all and (max-width: 576px) {
+    .shipContainer,
+    .blueContainer{
+        height:  20rem;
+}
+.textBlockSubtitle{
+    margin-top: 2rem;
+}
+    .photoBlock{
+        display: none;
+    }  
+  }

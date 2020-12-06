@@ -1,0 +1,91 @@
+.startContainer {
+    width: 100vw;
+    padding: 0 2rem;
+}
+
+.workingContainer {
+    padding: 8.5rem 0 2.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.workingIllustrationContainer, .photographingIllustrationContainer {
+    max-width: 15.625rem;
+    max-height: 16.875rem;
+    overflow: hidden;
+}
+
+.workingIllustration, .photographingIllustration {
+    height: 100%;
+    width: auto;
+}
+
+.workingPara {
+    max-width: 19.375rem;
+    font-family: 'OpenSans';
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.workingPictureContainer {
+    max-width: 35.9375rem;
+    max-height: 18.75rem;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.workingPicture {
+    width: 100%;
+    height: auto;
+}
+
+.photographingPictureContainer {
+    max-width: 24.375rem;
+    max-height: 32.5rem;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.photographingPicture {
+    width: 100%;
+    height: 100%;
+}
+
+.photographingPara {
+    max-width: 25rem;
+    font-family: 'OpenSans';
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.photographingContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media all and (max-width: 1140px) {
+    .workingContainer, .photographingContainer {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
+
+@media all and (max-width: 768px) {
+    .workingIllustrationContainer, .photographingIllustrationContainer {
+        display: none;
+    }
+}
+
+@media all and (max-width: 576px) {
+    .workingContainer {
+        padding: 2rem 0;
+    }
+    .workingPictureContainer, .photographingPictureContainer {
+        margin: 2rem auto;
+    }
+    .workingPara, .photographingPara {
+        font-size: 1.125rem;
+        max-width: 23rem;
+    }
+}
