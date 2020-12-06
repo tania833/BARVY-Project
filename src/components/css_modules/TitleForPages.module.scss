@@ -1,0 +1,30 @@
+.mainTitle {
+  font-family: "Mak";
+  font-size: 7.5rem;
+  font-weight: 300;
+  line-height: 0.88;
+  text-align: left;
+  color: #e6f1f5;
+  text-transform: uppercase;
+}
+
+.mainSubtitle {
+  font-family: "Montserrat";
+  font-size: 2.5rem;
+  font-weight: 300;
+  text-align: center;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+@media all { 
+  .mainTitle {
+      font-size: calc(40px + (90 + 11 * 0.7) *((100vw - 320px) / 1280));
+    }
+
+    .mainSubtitle {
+      font-size: calc(20px + (20 + 5 * 0.7) *((100vw - 320px) / 1280));
+    }
+}
+
+

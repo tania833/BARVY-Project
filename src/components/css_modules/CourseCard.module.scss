@@ -86,6 +86,21 @@
   text-transform: uppercase;
 }
 
+@media all and (max-width: 1200px) {
+  .courseCard__info {
+    height: 170px;
+  }
+  .courseCard__technique, .courseCard__author {
+    font-size: 13px;
+  }
+}
+
+@media all and (max-width: 992px) {
+  .courseCard__info {
+    height: 130px;
+  }
+}
+
 @media all and (max-width: 575px) {
   .courseCard__wrapper {
     @include flex(space-between, center, column, nowrap);
@@ -98,6 +113,7 @@
   .courseCard__info {
     padding-bottom: 1.625rem;
     cursor: pointer;
+    height: auto;
   }
 
   .courseCard__author_info {
@@ -114,7 +130,7 @@
   }
 }
 
-@media all and (max-width: 360px) {
+@media all and (max-width: 375px) {
 .courseCard_button_block {
   display: none;
 }
@@ -131,22 +147,22 @@
 }
 }
 
-@media all and (max-width: 768px) {
-
+@media all and (min-width: 576px) {
   .courseCard__component {
     width: 49%;
     margin-bottom: 1.25rem;
   }
 
   .courseCard__info {
-    height: 195px;
+    // height: 150px;
     padding: 0.9375rem 1rem 0.8125rem 0.875rem;
     @include flex(space-between, stretch, column, nowrap);
   }
 }
 
-@media all and (min-width: 992px) {
+@media all and (min-width: 768px) {
   .courseCard__component {
     width: 32%;
   }
+
 }
