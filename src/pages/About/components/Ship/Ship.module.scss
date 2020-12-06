@@ -51,6 +51,7 @@
   .textBlock{
       width: 31.25rem;
   }
+
   .photoBlock{
       height: 35rem;
   }  
@@ -60,12 +61,15 @@
     .textBlock{
         width: 300px;
     }
+
     .textBlockPara{
         width: 23rem;
     }
+
     .photoBlock{
         height: 35rem;
-    }  
+    }
+
     .blueContainer{
         justify-content: space-around;
     }
@@ -77,9 +81,11 @@
     .blueContainer{
         height:  20rem;
 }
-.textBlockSubtitle{
+
+    .textBlockSubtitle{
     margin-top: 2rem;
 }
+
     .photoBlock{
         display: none;
     }  

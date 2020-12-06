@@ -9,7 +9,8 @@
     justify-content: space-between;
 }
 
-.workingIllustrationContainer, .photographingIllustrationContainer {
+.workingIllustrationContainer, 
+.photographingIllustrationContainer {
     max-width: 15.625rem;
     max-height: 16.875rem;
     overflow: hidden;
@@ -81,9 +82,11 @@
     .workingContainer {
         padding: 2rem 0;
     }
+
     .workingPictureContainer, .photographingPictureContainer {
         margin: 2rem auto;
     }
+
     .workingPara, .photographingPara {
         font-size: 1.125rem;
         max-width: 23rem;
