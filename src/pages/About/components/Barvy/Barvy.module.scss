@@ -67,6 +67,12 @@
   }
 }
 
+@media all and (max-width: 768px) {
+  .textBlock__para{
+    font-size: 1.5rem;
+  }
+}
+
 @media all and (max-width: 576px) {
   .subContainer{
       width: 38rem;
@@ -79,6 +85,7 @@
 
   .textBlock__para{
   width: 35rem;
+  font-size: 1.8rem;
 }
 
   .textBlock{

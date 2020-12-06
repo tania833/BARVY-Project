@@ -76,6 +76,10 @@
     .workingIllustrationContainer, .photographingIllustrationContainer {
         display: none;
     }
+    .workingPara, .photographingPara {
+        font-size: 1.5rem;
+    }
+
 }
 
 @media all and (max-width: 576px) {
@@ -88,7 +92,7 @@
     }
 
     .workingPara, .photographingPara {
-        font-size: 1.125rem;
-        max-width: 23rem;
+        font-size: 1.8rem;
+        max-width: 25rem;
     }
 }

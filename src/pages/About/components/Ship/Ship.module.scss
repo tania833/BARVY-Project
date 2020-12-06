@@ -60,9 +60,14 @@
     .textBlock{
         width: 300px;
     }
+    
+    .textBlockSubtitle{
+        font-size: 1.8rem;
+    }
 
     .textBlockPara{
         width: 23rem;
+        font-size: 1.5rem;
     }
 
     .photoBlock{
@@ -78,14 +83,20 @@
 @media all and (max-width: 576px) {
     .shipContainer,
     .blueContainer{
-        height:  20rem;
+        height:  35rem;
 }
 
     .textBlockSubtitle{
-    margin-top: 2rem;
+        width: 40rem;
+        margin-top: 2rem;
+        font-size: 2rem;
 }
 
     .photoBlock{
         display: none;
-    }  
+    }
+    
+    .textBlockPara{
+        font-size: 1.8rem;
+    }
   }
