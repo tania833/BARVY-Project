@@ -1,0 +1,29 @@
+ul.breadcrumb {
+  padding: 7px 0 0 7px;
+  list-style: none;
+}
+
+ul.breadcrumb li {
+  display: inline;
+  font-size: 12px;
+  font-family: 'Open Sans';
+}
+
+ul.breadcrumb li+li:before {
+  padding: 3px;
+  color: black;
+  content: "/\00a0";
+}
+
+ul.breadcrumb li a {
+  color: #000000;
+  text-decoration: none;
+}
+
+ul.breadcrumb li:last-child {
+  font-weight: bold;
+}
+
+ul.breadcrumb li a:hover {
+  text-decoration: underline;
+}
