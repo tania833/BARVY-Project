@@ -20,7 +20,7 @@ const Main = () => {
     <>
       <TopBar />
       <Technologies />
-      <HowItWorks />
+      <HowItWorks title="починаємо" subtitle="як це працює?"/>
       <CourseMain />
       <LearnAndChoose />
       {renderedWannaTry}

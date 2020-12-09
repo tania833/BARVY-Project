@@ -1,0 +1,94 @@
+@mixin flex($jc, $ai, $fd, $fw) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+    flex-direction: $fd;
+    flex-wrap: $fw;
+  }
+
+ .generalContainer{
+   width: 100vw;
+   padding-top: 6.25rem;
+   margin-bottom: 3rem;
+ } 
+
+ .subContainer{
+  margin: 0 auto;
+  width: 62.5rem;
+}
+
+.textContainer{
+    @include flex(space-between, flex-start, row, nowrap);
+}
+
+.logo{
+    margin-right: 4rem;
+    font-family: "Mak";
+    font-size: 2.5rem;
+    font-weight: 300;
+    line-height: 2.2rem;
+    box-sizing: border-box;
+    text-align: left;
+    color: #000000;
+    text-transform: uppercase;
+
+}
+
+.textBlock{ 
+    margin-right: 3rem;
+  @include flex(center, center, column, nowrap);
+
+  &__para{
+      margin-bottom: 3rem;
+      width: 32.5rem;
+      font-family: 'Montserrat';
+      font-size: 1.125rem;
+      font-weight: 300;
+  }
+}
+
+.imageContainer{
+    height: 21rem;
+    width: 30rem;
+    overflow: hidden;
+    object-fit: contain;
+  @include flex(center, flex-end, row, nowrap);
+
+}
+
+.barvyPhoto{
+  width: 100%;
+  height: auto;
+}
+
+@media all and (max-width: 1024px) {
+  .subContainer{
+      width: 60rem;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .textBlock__para{
+    font-size: 1.5rem;
+  }
+}
+
+@media all and (max-width: 576px) {
+  .subContainer{
+      width: 38rem;
+  }
+
+  .imageContainer,
+  .logo{
+    display: none;
+  }
+
+  .textBlock__para{
+  width: 35rem;
+  font-size: 1.8rem;
+}
+
+  .textBlock{
+    margin: 0 auto;
+  }
+}
