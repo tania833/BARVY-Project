@@ -69,7 +69,7 @@ const Toolbar = (props) => {
 };
 
 Toolbar.propTypes = {
-  drawerClickHandler: PropTypes.object,
+  drawerClickHandler: PropTypes.func,
 };
 
 export default Toolbar;

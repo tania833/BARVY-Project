@@ -10,6 +10,10 @@
   &__wrapper {
     margin-top: auto;
     height: 18vh;
+    
+  }
+
+  &__position {
     @include flex(space-between, center, row, nowrap);
     padding: 2.5rem 2.4375rem 1.8125rem 5.4375rem;
   }
@@ -88,6 +92,9 @@
     &__wrapper {
       height: auto;
       background-color: #e6f1f5;
+    }
+
+    &__position {
       padding: 2.1875rem 2.3rem 2.5rem 2.3125rem;
       @include flex(space-between, stretch, column-reverse, nowrap);
     }

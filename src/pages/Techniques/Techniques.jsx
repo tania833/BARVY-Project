@@ -25,7 +25,7 @@ class Techniques extends Component {
       backdrop = <BackdropTechniques click={this.backdropClickHandler} />;
     }
     return (
-      <div style={{ height: '50%' }}>
+      <div style={{ height: '100%' }}>
         <TechniquesMarkUp drawerClickHandler={this.drawerToggleClickHandler} />
         <SideDrawerTechniques show={this.state.sideDrawerOpen} />
         {backdrop}

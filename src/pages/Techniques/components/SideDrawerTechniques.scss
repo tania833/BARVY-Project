@@ -7,33 +7,85 @@
 }
 
 .sideDrawer {
-  // height: 90%;
-  box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5);
+  padding-top: 3.3125rem;
+  padding-bottom: 4.2188rem;
+  box-shadow: 0.0625rem 0px 0.4375rem rgba(0, 0, 0, 0.5);
   position: fixed;
   background-color: rgb(255, 255, 255);
   z-index: 200;
   top: 0;
   left: 0;
   width: 100%;
-  max-width: 253px;
+  max-width: 16.5rem;
   transform: translateX(-100%);
   transition: transform 0.3s ease-out;
 
+  &Wrapper {
+    padding-left: 1.5625rem;
+    padding-right: 1.5625rem;
+  }
+
+  &Title {
+    display: block;
+    @include flex(center, center, row, nowrap);
+    text-transform: uppercase;
+    font-family: 'Open Sans';
+    font-size: 1.375rem;
+    font-weight: 300;
+    margin-bottom: 2.625rem;
+  }
+
   &List {
-    padding-top: 3.75rem;
-    padding-bottom: 3.75rem;
     list-style: none;
+    padding-inline-start: 0;
     height: 100%;
     @include flex(space-between, flex-start, column, nowrap);
   }
 
   &Item {
+    width: 100%;
+    height: 45px;
+    @include flex(flex-start, center, row, nowrap);
+    
+
+    &:hover {
+      background-color: #e7f4fa;
+    }
+
+    &Text {
+      padding-left: 15%;
     font-family: 'Open Sans';
     font-size: 1.125rem;
     font-weight: 300;
     line-height: 1.4;
     color: #000000;
+    }
+
+    &Artist {
+      margin-bottom: 1.5625rem;
+      font-family: 'Open Sans';
+      font-size: 1rem;
+      font-weight: 300;
+      line-height: 1.4;
+      color: #000000;
+      font-size: 1rem;
+      @include flex(flex-start, center, row, nowrap);
+    }
   }
+}
+
+input#name {
+  margin-right: 8px;
+  width: 1.375rem;
+  height: 1.375rem;
+}
+
+.sideDrawerLine {
+  margin-top: 28px;
+  margin-bottom: 44px;
+  width: 100%;
+  height: 2px;
+  background-color: #e7dfdf;
 }
 
 .sideDrawer.open {

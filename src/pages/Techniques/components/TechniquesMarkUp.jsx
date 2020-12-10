@@ -23,6 +23,17 @@ const ButtonSort = (props) => {
   );
 };
 
+const FilterIcon = (props) => {
+  return (
+    <img
+      onClick={props.click}
+      src="../icons/filter.svg"
+      alt="filter_icon"
+      className={styles.filterIcon}
+    />
+  );
+};
+
 ButtonFilter.propTypes = {
   text: PropTypes.string,
   click: PropTypes.event,
@@ -30,6 +41,10 @@ ButtonFilter.propTypes = {
 
 ButtonSort.propTypes = {
   text: PropTypes.string,
+  click: PropTypes.event,
+};
+
+FilterIcon.propTypes = {
   click: PropTypes.event,
 };
 
@@ -58,11 +73,7 @@ const TechniquesMarkUp = (props) => {
         <Title title="Усі" subtitle="Курси" />
       </div>
       <div className={styles.searchBlock}>
-        <img
-          src="../icons/filter.svg"
-          alt="filter_icon"
-          className={styles.filterIcon}
-        />
+        <FilterIcon click={props.drawerClickHandler} />
         {buttonFilter}
         <Form />
         {buttonSort}
@@ -73,7 +84,7 @@ const TechniquesMarkUp = (props) => {
 };
 
 TechniquesMarkUp.propTypes = {
-  drawerClickHandler: PropTypes.object,
+  drawerClickHandler: PropTypes.func,
 };
 
 export default TechniquesMarkUp;

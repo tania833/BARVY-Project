@@ -84,7 +84,7 @@ const card_info = [
     price: '500',
   },
   {
-    id: 6,
+    id: 9,
     img: {
       url: 'https://i.imgur.com/6uMeU5o.jpg',
     },
@@ -96,7 +96,7 @@ const card_info = [
     price: '500',
   },
   {
-    id: 6,
+    id: 10,
     img: {
       url: 'https://i.imgur.com/6uMeU5o.jpg',
     },
@@ -108,7 +108,7 @@ const card_info = [
     price: '500',
   },
   {
-    id: 6,
+    id: 11,
     img: {
       url: 'https://i.imgur.com/6uMeU5o.jpg',
     },
