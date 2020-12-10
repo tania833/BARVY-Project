@@ -44,7 +44,13 @@ const sideDrawerTechniques = (props) => {
   console.log(technique);
 
   return (
-    <form className={drawerClasses.join(' ')}>
+    <form
+      action="#"
+      name="myFilterList"
+      acceptCharset="utf-8"
+      method="GET"
+      className={drawerClasses.join(' ')}
+    >
       <div className="sideDrawerTitle">Категорії</div>
       <ul className="sideDrawerList">
         <li className="sideDrawerItem">
@@ -101,6 +107,12 @@ const sideDrawerTechniques = (props) => {
         </div>
         <Button text="Застосувати" />
       </div>
+      <input
+        className="clearButton"
+        type="reset"
+        name="username"
+        value="Скинути фільтри"
+      />
     </form>
   );
 };
