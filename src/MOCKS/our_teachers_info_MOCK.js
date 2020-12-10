@@ -1,4 +1,4 @@
-const OurTeachers = [
+const our_teachers_info = [
   {
     id: 1,
     img: {
@@ -101,4 +101,4 @@ const OurTeachers = [
   },
 ];
 
-export default OurTeachers;
+export default our_teachers_info;
