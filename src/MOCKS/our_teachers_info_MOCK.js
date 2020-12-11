@@ -3,7 +3,7 @@ const our_teachers_info = [
     id: 1,
     img: {
       url: 'https://i.imgur.com/nY2JpK0.png',
-      alt: 'Khrystyna_Strynadyuk',
+      alt: 'Khrystyna Strynadyuk',
     },
     teacher: {
       name: 'Христина Стринадюк',
@@ -15,7 +15,7 @@ const our_teachers_info = [
     id: 2,
     img: {
       url: 'https://i.imgur.com/8zzEEkV.jpg',
-      alt: 'Pavlo_Benedyuk',
+      alt: 'Pavlo Benedyuk',
     },
     teacher: {
       name: 'Павло Бенедюк',
@@ -26,7 +26,7 @@ const our_teachers_info = [
     id: 3,
     img: {
       url: 'https://i.imgur.com/fHsKJ66.png',
-      alt: 'Natalia_Brichuk',
+      alt: 'Natalia Brichuk',
     },
     teacher: {
       name: 'Наталя Брічук',
@@ -37,7 +37,7 @@ const our_teachers_info = [
     id: 4,
     img: {
       url: 'https://i.imgur.com/o7K9Wk2.png',
-      alt: 'Stepan_Karpyuk',
+      alt: 'Stepan Karpyuk',
     },
     teacher: {
       name: 'Степан Карпюк',
@@ -48,7 +48,7 @@ const our_teachers_info = [
     id: 5,
     img: {
       url: 'https://i.imgur.com/ZsHo1OM.png',
-      alt: 'Oleksandra_Promska',
+      alt: 'Oleksandra Promska',
     },
     teacher: {
       name: 'Олександра Промська',
@@ -59,7 +59,7 @@ const our_teachers_info = [
     id: 6,
     img: {
       url: 'https://i.imgur.com/tRcgha5.png',
-      alt: 'Natalia_Servetnyk',
+      alt: 'Natalia Servetnyk',
     },
     teacher: {
       name: 'Наталя Серветник',
@@ -70,7 +70,7 @@ const our_teachers_info = [
     id: 7,
     img: {
       url: 'https://i.imgur.com/GNJMt1t.png',
-      alt: 'Carolina_Bundash',
+      alt: 'Carolina Bundash',
     },
     teacher: {
       name: 'Кароліна Бундаш',
@@ -81,7 +81,7 @@ const our_teachers_info = [
     id: 8,
     img: {
       url: 'https://i.imgur.com/rYUWS6l.png',
-      alt: 'Olexander_Bobryshev',
+      alt: 'Olexander Bobryshev',
     },
     teacher: {
       name: 'Олександр Бобришев',
@@ -92,7 +92,7 @@ const our_teachers_info = [
     id: 9,
     img: {
       url: 'https://i.imgur.com/FxSvvrB.png',
-      alt: 'Anton_Filyk',
+      alt: 'Anton Filyk',
     },
     teacher: {
       name: 'Антон Філик',
