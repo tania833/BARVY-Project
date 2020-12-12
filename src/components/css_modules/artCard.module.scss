@@ -57,7 +57,13 @@
         object-position: center 15%;
     }
 }
-
+@media (max-width: 991px) {
+    .technoPic {
+        &__title {
+            right: 0;
+        }
+    }
+}
 @media (max-width: 767px) {
     .technoPic {
         &__Cont {
