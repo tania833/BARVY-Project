@@ -7,6 +7,8 @@
 }
 
 .sideDrawer {
+  height: 100%;
+  overflow: auto;
   padding-top: 3.3125rem;
   padding-bottom: 4.2188rem;
   box-shadow: 0.0625rem 0px 0.4375rem rgba(0, 0, 0, 0.5);
@@ -38,7 +40,6 @@
   &List {
     list-style: none;
     padding-inline-start: 0;
-    height: 100%;
     @include flex(space-between, flex-start, column, nowrap);
   }
 
