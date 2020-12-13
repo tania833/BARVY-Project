@@ -7,16 +7,16 @@ const TeachersPhoto = (props) => {
     <a className={styles.teachersPhoto__wrapper} href="/">
       <img
         className={styles.teachersPhoto__photo}
-        src={props.img_info.url}
-        alt={props.name_info.alt}
+        src={props.imgInfo.url}
+        alt={props.nameInfo.alt}
       />
     </a>
   );
 };
 
 TeachersPhoto.propTypes = {
-  img_info: PropTypes.object,
-  name_info: PropTypes.object,
+  imgInfo: PropTypes.object,
+  nameInfo: PropTypes.object,
 };
 
 const TeachersInfo = (props) => {
@@ -24,12 +24,12 @@ const TeachersInfo = (props) => {
     <div className={styles.teachersInfo}>
       <a href="/about">
         <div className={styles.teachersInfo__name}>
-          {props.teacher_info.name}
+          {props.teacherInfo.name}
         </div>
       </a>
       <a href="/about">
         <div className={styles.courseCard__technique}>
-          {props.teacher_info.technique}
+          {props.teacherInfo.technique}
         </div>
       </a>
     </div>
@@ -37,10 +37,24 @@ const TeachersInfo = (props) => {
 };
 
 TeachersInfo.propTypes = {
-  teacher_info: PropTypes.object,
+  teacherInfo: PropTypes.object,
 };
 
+
+
+const Technologies = () => {
+  const cards = TechArtCard_MOCKS.map( card => {
+    return <TechArtCard key={card.id} techImg={card.techImg} techTitle={card.techTitle} techLink={card.techLink} />
+  })
+
+  return (
+
+
 const AboutTeachers = () => {
+  const items = OurTeachersInfo_MOCK.map( item => {
+    return <AboutTeachersItem key={item.id} teachersPhoto={item.url}
+  });
+
   return (
     <div className={styles.teachersRow}>
       <div className={styles.teachersRow__item}>1</div>
