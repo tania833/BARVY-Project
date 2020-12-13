@@ -1,11 +1,11 @@
 const our_teachers_info = [
   {
     id: 1,
-    img: {
+    imgInfo: {
       url: 'https://i.imgur.com/nY2JpK0.png',
       alt: 'Khrystyna Strynadyuk',
     },
-    teacher: {
+    teacherInfo: {
       name: 'Христина Стринадюк',
       technique: 'Акварель, офорт, ілюстрація',
     },
