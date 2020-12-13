@@ -13,88 +13,88 @@ const our_teachers_info = [
 
   {
     id: 2,
-    img: {
+    imgInfo: {
       url: 'https://i.imgur.com/8zzEEkV.jpg',
       alt: 'Pavlo Benedyuk',
     },
-    teacher: {
+    teacherInfo: {
       name: 'Павло Бенедюк',
       technique: 'Академічний рисунок, скетчинг, акварель',
     },
   },
   {
     id: 3,
-    img: {
+    imgInfo: {
       url: 'https://i.imgur.com/fHsKJ66.png',
       alt: 'Natalia Brichuk',
     },
-    teacher: {
+    teacherInfo: {
       name: 'Наталя Брічук',
       technique: 'Графіка, фотографія',
     },
   },
   {
     id: 4,
-    img: {
+    imgInfo: {
       url: 'https://i.imgur.com/o7K9Wk2.png',
       alt: 'Stepan Karpyuk',
     },
-    teacher: {
+    teacherInfo: {
       name: 'Степан Карпюк',
       technique: 'Акварель',
     },
   },
   {
     id: 5,
-    img: {
+    imgInfo: {
       url: 'https://i.imgur.com/ZsHo1OM.png',
       alt: 'Oleksandra Promska',
     },
-    teacher: {
+    teacherInfo: {
       name: 'Олександра Промська',
       technique: 'Ілюстрація, колаж',
     },
   },
   {
     id: 6,
-    img: {
+    imgInfo: {
       url: 'https://i.imgur.com/tRcgha5.png',
       alt: 'Natalia Servetnyk',
     },
-    teacher: {
+    teacherInfo: {
       name: 'Наталя Серветник',
       technique: 'Акварель, графіка',
     },
   },
   {
     id: 7,
-    img: {
+    imgInfo: {
       url: 'https://i.imgur.com/GNJMt1t.png',
       alt: 'Carolina Bundash',
     },
-    teacher: {
+    teacherInfo: {
       name: 'Кароліна Бундаш',
       technique: 'Акварель',
     },
   },
   {
     id: 8,
-    img: {
+    imgInfo: {
       url: 'https://i.imgur.com/rYUWS6l.png',
       alt: 'Olexander Bobryshev',
     },
-    teacher: {
+    teacherInfo: {
       name: 'Олександр Бобришев',
       technique: 'Акварель',
     },
   },
   {
     id: 9,
-    img: {
+    imgInfo: {
       url: 'https://i.imgur.com/FxSvvrB.png',
       alt: 'Anton Filyk',
     },
-    teacher: {
+    teacherInfo: {
       name: 'Антон Філик',
       technique: 'Ілюстрація, скетчинг',
     },

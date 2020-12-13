@@ -3,36 +3,38 @@ import styles from './AboutTeachers.module.scss';
 import PropTypes from 'prop-types';
 
 const AboutTeachers = (props) => {
-  return (
-    <section className={styles.teachersRow}>
+  const items = props.our_teachers_info.map((item) => (
+    <section className={styles.teachersRow} key={item.id}>
       <div className={styles.teachersRow__item}>
         <a className={styles.teachersPhoto__wrapper} href="/">
           <img
             className={styles.teachersPhoto__photo}
-            src={props.imgInfo.url}
-            alt={props.imgInfo.alt}
+            src={item.imgInfo.url}
+            alt={item.imgInfo.alt}
           />
         </a>
         <div className={styles.teachersInfo}>
           <a href="/">
             <div className={styles.teachersInfo__name}>
-              {props.teacherInfo.name}
+              {item.teacherInfo.name}
             </div>
           </a>
           <a href="/">
             <div className={styles.teachersInfo__technique}>
-              {props.teacherInfo.technique}
+              {item.teacherInfo.technique}
             </div>
           </a>
         </div>
       </div>
     </section>
-  );
+  ));
+  return <div>{items}</div>;
 };
 
 AboutTeachers.propTypes = {
-  imgInfo: PropTypes.object,
-  teacherInfo: PropTypes.object,
+  // imgInfo: PropTypes.object,
+  // teacherInfo: PropTypes.object,
+  our_teachers_info: PropTypes.array,
 };
 
 export default AboutTeachers;
@@ -73,18 +75,6 @@ export default AboutTeachers;
 // TeachersInfo.propTypes = {
 //   teacherInfo: PropTypes.object,
 // };
-
-// const Technologies = () => {
-//   const cards = TechArtCard_MOCKS.map( card => {
-//     return <TechArtCard key={card.id} techImg={card.techImg} techTitle={card.techTitle} techLink={card.techLink} />
-//   })
-
-//   return (
-
-// const AboutTeachers = () => {
-//   const items = OurTeachersInfo_MOCK.map( item => {
-//     return <AboutTeachers key={item.id} teachersPhoto={item.url}
-//   });
 
 //   return (
 //     <div className={styles.teachersRow}>

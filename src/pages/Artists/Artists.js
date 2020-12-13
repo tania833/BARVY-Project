@@ -53,32 +53,31 @@ const Artists = () => {
 
 export default Artists;
 
+// const Technologies = () => {
+//   const cards = TechArtCard_MOCKS.map( card => {
+//     return <TechArtCard key={card.id} techImg={card.techImg} techTitle={card.techTitle} techLink={card.techLink} />
+//   })
 
-const Technologies = () => {
-  const cards = TechArtCard_MOCKS.map( card => {
-    return <TechArtCard key={card.id} techImg={card.techImg} techTitle={card.techTitle} techLink={card.techLink} />
-  })
+//   return (
+//     <div>
 
-  return (
-    <div>
+//       <section className={styles.introText}>
+//         <p>Це простір творчих курсів, уроків та майстер-класів українських художників, дизайнерів та митців у різних техніках і жанрах.</p>
+//         <p>Ми впевнені, що творити може кожен, а ми допоможемо знайти своє та спробувати щось нове.</p>
+//       </section>
+//       <section className={styles.mainTechnos}>
+//         <Title title="Популярні" subtitle="техніки" />
+//         <div className={styles.technoPic}>
 
-      <section className={styles.introText}>
-        <p>Це простір творчих курсів, уроків та майстер-класів українських художників, дизайнерів та митців у різних техніках і жанрах.</p>
-        <p>Ми впевнені, що творити може кожен, а ми допоможемо знайти своє та спробувати щось нове.</p>
-      </section>
-      <section className={styles.mainTechnos}>
-        <Title title="Популярні" subtitle="техніки" />
-        <div className={styles.technoPic}>
-      
-          {cards}
+//           {cards}
 
-        </div>
-        <div className={styles.mainCourses_buttonWrapper}>
-          <Button text="до каталогу" />
-        </div>
-      </section>
-    </div>
-  );
-};
+//         </div>
+//         <div className={styles.mainCourses_buttonWrapper}>
+//           <Button text="до каталогу" />
+//         </div>
+//       </section>
+//     </div>
+//   );
+// };
 
-export default Technologies;
+// export default Technologies;
