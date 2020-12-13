@@ -7,10 +7,10 @@ import artists_info_personal from '../../../MOCKS/artist_personal_page_MOCK';
 
 const ArtistName = (props) => {
   return (
-    <div className="sideDrawerItemArtist">
-      <input type="checkbox" id="name" name="author_name" />
-      <label htmlFor="name">{props.author_name}</label>
-    </div>
+    <>
+      <input type="checkbox" id={props.author_name} name="author_name" />
+      <label htmlFor={props.author_name}>{props.author_name}</label>
+    </>
   );
 };
 
@@ -20,11 +20,11 @@ ArtistName.propTypes = {
 
 const ArtistListViewer = (props) => {
   const artistList = props.artists_info_personal.map((card) => (
-    <div key={card.id}>
+    <div className="sideDrawerArtistItem" key={card.id}>
       <ArtistName author_name={card.artist.name} />
     </div>
   ));
-  return <div>{artistList}</div>;
+  return <>{artistList}</>;
 };
 
 ArtistListViewer.propTypes = {
@@ -52,46 +52,86 @@ const sideDrawerTechniques = (props) => {
       className={drawerClasses.join(' ')}
     >
       <div className="sideDrawerTitle">Категорії</div>
-      <ul className="sideDrawerList">
-        <li className="sideDrawerItem">
-          <span onClick={chooseTechnique} className="sideDrawerItemText">
+      <ul className="sideDrawerTechniqueList">
+        <li className="sideDrawerTechniqueItem">
+          <input type="checkbox" id="Акварель" name="technique" />
+          <label
+            htmlFor="Акварель"
+            onClick={chooseTechnique}
+            className="sideDrawerTechniqueItemText"
+          >
             Акварель
-          </span>
+          </label>
         </li>
-        <li className="sideDrawerItem">
-          <span onClick={chooseTechnique} className="sideDrawerItemText">
+        <li className="sideDrawerTechniqueItem">
+          <input type="checkbox" id="Рисунок" name="technique" />
+          <label
+            htmlFor="Рисунок"
+            onClick={chooseTechnique}
+            className="sideDrawerTechniqueItemText"
+          >
             Рисунок
-          </span>
+          </label>
         </li>
-        <li className="sideDrawerItem">
-          <span onClick={chooseTechnique} className="sideDrawerItemText">
+        <li className="sideDrawerTechniqueItem">
+          <input type="checkbox" id="Олійний живопис" name="technique" />
+          <label
+            htmlFor="Олійний живопис"
+            onClick={chooseTechnique}
+            className="sideDrawerTechniqueItemText"
+          >
             Олійний живопис
-          </span>
+          </label>
         </li>
-        <li className="sideDrawerItem">
-          <span onClick={chooseTechnique} className="sideDrawerItemText">
+        <li className="sideDrawerTechniqueItem">
+          <input type="checkbox" id="Фотографія" name="technique" />
+          <label
+            htmlFor="Фотографія"
+            onClick={chooseTechnique}
+            className="sideDrawerTechniqueItemText"
+          >
             Фотографія
-          </span>
+          </label>
         </li>
-        <li className="sideDrawerItem">
-          <span onClick={chooseTechnique} className="sideDrawerItemText">
+        <li className="sideDrawerTechniqueItem">
+          <input type="checkbox" id="Історія мистецтв" name="technique" />
+          <label
+            htmlFor="Історія мистецтв"
+            onClick={chooseTechnique}
+            className="sideDrawerTechniqueItemText"
+          >
             Історія мистецтв
-          </span>
+          </label>
         </li>
-        <li className="sideDrawerItem">
-          <span onClick={chooseTechnique} className="sideDrawerItemText">
+        <li className="sideDrawerTechniqueItem">
+          <input type="checkbox" id="Ілюстрація" name="technique" />
+          <label
+            htmlFor="Ілюстрація"
+            onClick={chooseTechnique}
+            className="sideDrawerTechniqueItemText"
+          >
             Ілюстрація
-          </span>
+          </label>
         </li>
-        <li className="sideDrawerItem">
-          <span onClick={chooseTechnique} className="sideDrawerItemText">
+        <li className="sideDrawerTechniqueItem">
+          <input type="checkbox" id="Декоративне" name="technique" />
+          <label
+            htmlFor="Декоративне"
+            onClick={chooseTechnique}
+            className="sideDrawerTechniqueItemText"
+          >
             Декоративне
-          </span>
+          </label>
         </li>
-        <li className="sideDrawerItem">
-          <span onClick={chooseTechnique} className="sideDrawerItemText">
+        <li className="sideDrawerTechniqueItem">
+          <input type="checkbox" id="Дитячі" name="technique" />
+          <label
+            htmlFor="Дитячі"
+            onClick={chooseTechnique}
+            className="sideDrawerTechniqueItemText"
+          >
             Дитячі
-          </span>
+          </label>
         </li>
       </ul>
       <div className="sideDrawerWrapper">
@@ -99,13 +139,15 @@ const sideDrawerTechniques = (props) => {
         <div className="sideDrawerTitle">Ціна</div>
         <RangeInput />
         <div className="sideDrawerLine"></div>
-        <div>
+        <div className="sideDrawerArtistList">
           <label htmlFor="teacher" className="sideDrawerTitle">
             За викладачем
           </label>
           <ArtistListViewer artists_info_personal={artists_info_personal} />
         </div>
-        <Button text="Застосувати" />
+        <div className="buttonWrapper">
+          <Button text="Застосувати" />
+        </div>
       </div>
       <input
         className="clearButton"

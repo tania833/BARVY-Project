@@ -37,17 +37,17 @@
     margin-bottom: 2.625rem;
   }
 
-  &List {
+  &TechniqueList {
     list-style: none;
     padding-inline-start: 0;
     @include flex(space-between, flex-start, column, nowrap);
   }
 
-  &Item {
+  &TechniqueItem {
     width: 100%;
     height: 45px;
     @include flex(flex-start, center, row, nowrap);
-    
+
 
     &:hover {
       background-color: #e7f4fa;
@@ -55,27 +55,45 @@
 
     &Text {
       padding-left: 15%;
-    font-family: 'Open Sans';
-    font-size: 1.125rem;
-    font-weight: 300;
-    line-height: 1.4;
-    color: #000000;
-    }
-
-    &Artist {
-      margin-bottom: 1.5625rem;
       font-family: 'Open Sans';
-      font-size: 1rem;
+      font-size: 1.125rem;
       font-weight: 300;
       line-height: 1.4;
       color: #000000;
-      font-size: 1rem;
-      @include flex(flex-start, center, row, nowrap);
     }
+  }
+
+  &ArtistList {
+    padding-bottom: 2.5625rem;
+  }
+
+  &ArtistItem {
+    margin-bottom: 1.5625rem;
+    font-family: 'Open Sans';
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.4;
+    color: #000000;
+    font-size: 1rem;
+    @include flex(flex-start, center, row, nowrap);
   }
 }
 
-input#name {
+.sideDrawerTechniqueItem input {
+  display: none;
+}
+
+.sideDrawerTechniqueItem label {
+  @include flex(flex-start, center, row, nowrap);
+  width: 100%;
+  height: 40px;
+}
+
+.sideDrawerTechniqueItem input:checked + label {
+  background-color: #bdd9e4
+}
+
+.sideDrawerArtistItem input {
   margin-right: 8px;
   width: 1.375rem;
   height: 1.375rem;
@@ -91,6 +109,20 @@ input#name {
 
 .sideDrawer.open {
   transform: translateX(0);
+}
+.buttonWrapper {
+  margin-bottom: 4.0938rem;
+}
+
+.clearButton {
+  border: none;
+  margin: 0 auto;
+  @include flex(center, center, row, nowrap);
+  width: 179px;
+  height: 30px;
+  font-family: 'OpenSans';
+  font-size: 22px;
+  color: #7e7a7a;
 }
 
 // @media (min-width: 769px) {

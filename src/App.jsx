@@ -9,6 +9,7 @@ import Events from './pages/Events/Events';
 import About from './pages/About/About';
 import Techniques from './pages/Techniques/Techniques';
 import Footer from './components/Footer';
+// import ArtistsFalse from './pages/ArtistsFalse/Artists';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Switch>
           <Route component={Main} path="/" exact />
           <Route component={Artists} path="/artists" />
+          {/* <Route component={ArtistsFalse} path="/artists" /> */}
           <Route component={Techniques} path="/techniques" />
           <Route component={Events} path="/events" />
           <Route component={About} path="/about" />
