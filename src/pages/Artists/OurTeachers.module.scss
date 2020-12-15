@@ -1,0 +1,16 @@
+@mixin flex($jc, $ai, $fd, $fw) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+    flex-direction: $fd;
+    flex-wrap: $fw;
+  }
+
+.teachersTitle .mainTitle {
+    padding-left: 319px;
+}
+
+.teachersRow {
+    @include flex(space-around, center, row, wrap);
+    padding: 83px 117px;
+}

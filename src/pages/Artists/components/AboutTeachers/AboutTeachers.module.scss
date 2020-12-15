@@ -1,0 +1,13 @@
+@mixin flex($jc, $ai, $fd, $fw) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+    flex-direction: $fd;
+    flex-wrap: $fw;
+}
+
+.teachersRow__item {
+    @include flex(space-between, center, column, wrap);
+    max-width: 20%;
+    max-height: 340px;
+}

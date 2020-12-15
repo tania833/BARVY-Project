@@ -4,10 +4,10 @@ import Button from './../../../../components/Button';
 
 const TeachersFooter = () => {
   return (
-    <div className={styles.teachersFooter}>
+    <section className={styles.teachersFooter}>
       <div className={styles.teachersFooter__container}>
         <div className={styles.teachersFooter__row}>
-          <div className={styles.teachersFooter__logo}></div>
+          <div className={styles.teachersFooter__logo}>барви</div>
           <div className={styles.teachersFooter__textContainer}>
             <p className={styles.teachersFooter__text}>
               Нам важливо підтримати та заявити про талановитих митців,
@@ -31,7 +31,7 @@ const TeachersFooter = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

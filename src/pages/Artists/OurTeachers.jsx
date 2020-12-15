@@ -7,17 +7,6 @@ import TeachersFooter from './components/TeachersFooter/TeachersFooter';
 import our_teachers_info from '../../MOCKS/our_teachers_info_MOCK';
 
 const OurTeachers = () => {
-  // const items = OurTeachersInfo_MOCK.map((item) => {
-  //   return (
-  //     <AboutTeachers
-  //       key={item.id}
-  //       src={item.imgInfo.url}
-  //       alt={item.imgInfo.alt}
-  //       teacherInfo={item.teacherInfo.name}
-  //       teachereTchnique={item.teacherInfo.technique}
-  //     />
-  //   );
-  // });
   return (
     <>
       <div className={styles.teachersContainer}>
@@ -29,7 +18,9 @@ const OurTeachers = () => {
           <Title title="Митці" subtitle="Наші викладачі" />
         </div>
         <TeachersSearch />
-        <AboutTeachers our_teachers_info={our_teachers_info} />
+        <section className={styles.teachersRow}>
+          <AboutTeachers our_teachers_info={our_teachers_info} />
+        </section>
         <TeachersFooter />
       </div>
     </>

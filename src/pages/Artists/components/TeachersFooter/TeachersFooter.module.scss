@@ -1,0 +1,17 @@
+@mixin flex($jc, $ai, $fd, $fw) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+    flex-direction: $fd;
+    flex-wrap: $fw;
+  }
+.teachersFooter {
+    background-color: #e6f1f5;
+    &__row {
+        @include flex(flex-start, stretch, row, nowrap);
+    }
+
+    &__textContainer {
+        @include flex(flex-start, stretch, column, nowrap);  
+    }
+}

@@ -4,7 +4,7 @@ import styles from './TeachersSearch.module.scss';
 const TeachersSearch = () => {
   const [value, setValue] = useState('');
   return (
-    <div className={styles.teachersSearch}>
+    <section className={styles.teachersSearch}>
       <form
         onSubmit={(e) => {
           e.preventDefault();
@@ -30,7 +30,7 @@ const TeachersSearch = () => {
           value=""
         />
       </form>
-    </div>
+    </section>
   );
 };
 
