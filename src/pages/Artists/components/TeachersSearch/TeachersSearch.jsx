@@ -8,7 +8,6 @@ const TeachersSearch = () => {
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          // search will come here
           setValue('');
         }}
         className={styles.teachersSearch__form}

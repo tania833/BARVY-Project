@@ -7,8 +7,30 @@
 }
 
 .teachersRow__item {
-    @include flex(space-between, center, column, wrap);
     width: 20%;
-    max-width: 230px;
-    // max-height: 340px;
+    max-width: 14.375rem;
+    height: 21.25rem;
+}
+
+.teachersPhoto__wrapper {
+    @include flex(space-between, center, column, wrap);
+}
+
+.teachersInfo__name {
+    padding-top: 2.3125rem;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+.teachersInfo__technique {
+    padding-top: 1.0625rem;
+    text-align: center;
+    font-family: OpenSans;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5;
+    max-width: 10.625rem;
+    margin: 0 auto;
 }

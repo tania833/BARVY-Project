@@ -10,13 +10,10 @@ const OurTeachers = () => {
   return (
     <>
       <div className={styles.teachersContainer}>
-        <p>
-          <span>Головна </span>
-          <span>/ Викладачі</span>
-        </p>
         <div className={styles.teachersTitle}>
-          <Title title="Митці" subtitle="Наші викладачі" />
+          <Title title="Митці" />
         </div>
+        <div className={styles.teachersSubTitle}>Наші викладачі</div>
         <TeachersSearch />
         <section className={styles.teachersRow}>
           <AboutTeachers our_teachers_info={our_teachers_info} />

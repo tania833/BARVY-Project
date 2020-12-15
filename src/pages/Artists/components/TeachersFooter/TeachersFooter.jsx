@@ -24,7 +24,7 @@ const TeachersFooter = () => {
           </div>
           <div className={styles.teachersFooter__imageBox}>
             <img
-              // src="https://i.imgur.com/4i9YzuU.png"
+              src="https://i.imgur.com/4i9YzuU.png"
               alt="Running man with flag"
               className={styles.teachersFooter__image}
             />
