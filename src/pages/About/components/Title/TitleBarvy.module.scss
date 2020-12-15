@@ -1,0 +1,25 @@
+.titleContainer{
+    margin-top: -7rem;
+    margin-bottom: -6.25rem;
+}
+
+.subContainer{
+    margin: 0 auto;
+    width: 62.5rem;
+  }
+
+  @media all and (max-width: 1024px) {
+      .subContainer{
+          width: 43.75rem;
+      }
+  }
+
+  @media all and (max-width: 576px) {
+    .subContainer{
+        width: 30rem;
+    }
+    
+    .titleContainer{
+        margin-top: -5rem;
+    }
+}

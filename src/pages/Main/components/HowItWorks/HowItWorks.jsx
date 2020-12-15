@@ -1,12 +1,13 @@
 import React from 'react';
 import MainTitle from '../../../../components/Title';
 import styles from './HowItWorks.module.scss';
+import PropTypes from 'prop-types';
 
-const HowItWorks = () => {
+const HowItWorks = (props) => {
   return (
     <div className={styles.letsStart}>
       <div className={styles.letsStart__wrapper}>
-        <MainTitle title="починаємо" subtitle="як це працює?" />
+        <MainTitle title={props.title} subtitle={props.subtitle} />
         <div className={styles.letsStart__container}>
           <div className={styles.letsStart__card}>
             <div className={styles.letsStart__number}>1</div>
@@ -65,6 +66,11 @@ const HowItWorks = () => {
       </div>
     </div>
   );
+};
+
+HowItWorks.propTypes = {
+  title: PropTypes.string,
+  subtitle: PropTypes.string,
 };
 
 export default HowItWorks;
