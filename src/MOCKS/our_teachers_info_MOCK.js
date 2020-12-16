@@ -10,7 +10,6 @@ const our_teachers_info = [
       technique: 'Акварель, офорт, ілюстрація',
     },
   },
-
   {
     id: 2,
     imgInfo: {
