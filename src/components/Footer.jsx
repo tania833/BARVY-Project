@@ -23,8 +23,8 @@ const Footer = () => {
           <li className={styles.footer__menu_item} href="/about">
             <Link to="/about">Зв&apos;язатися з нами</Link>
           </li>
-          <li className={styles.footer__menu_item} href="/about">
-            <Link to="/about">Контакти</Link>
+          <li className={styles.footer__menu_item}>
+            <Link to="/contacts">Контакти</Link>
           </li>
         </ul>
         <ul className={styles.footer__menu_column}>

@@ -9,6 +9,7 @@ import Events from './pages/Events/Events';
 import About from './pages/About/About';
 import Techniques from './pages/Techniques/Techniques';
 import Footer from './components/Footer';
+import { Contacts } from './pages/Contacts/Contacts';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route component={Techniques} path="/techniques" />
           <Route component={Events} path="/events" />
           <Route component={About} path="/about" />
+          <Route component={Contacts} path="/contacts" />
         </Switch>
         <Footer />
       </div>
