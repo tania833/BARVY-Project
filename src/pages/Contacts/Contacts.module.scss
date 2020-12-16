@@ -4,13 +4,13 @@
 
 .contactsContent{
     margin: 0 auto;
-    max-width: 800px;
+    max-width: 50rem;
     display: flex;
     justify-content: space-between;
 }
 
 .contactsForm{
-    width: 400px;
+    width: 25rem;
 }
 
 .contactsTextField{
@@ -20,13 +20,13 @@
     height: 2.625rem;
     font-family: 'OpenSans';
     font-weight: 300;
-    font-size: 14px;
+    font-size: 0.875rem;
     color: #7E7A7A;
     outline-color:#E6F1F5;
 }
 
 .contactsTextArea{
-    margin-bottom: 70px;
+    margin-bottom: 4.375rem;
     padding: 1rem;
     border-radius: 2%;
     width: 100%;
@@ -35,27 +35,27 @@
     outline-color:#E6F1F5;	
     font-family: 'OpenSans';
     font-weight: 300;
-    font-size: 14px;
+    font-size: 0.875rem;
     color: #7E7A7A;
 }
 
 .contactsError{
-    margin-bottom: 15px;
+    margin-bottom: 0.9375rem;
     font-family: 'Montserrat';
     font-weight: 300;
-    font-size: 16px;
+    font-size: 1rem;
     color: rgba(255, 0, 0, 0.692);
 }
 
 .contactsLabel{
     font-family: 'Montserrat';
     font-weight: 300;
-    font-size: 18px;
+    font-size: 1.125rem;
     color: #000000;
 }
 
 .contactsLabelContainer{
-    margin-bottom: 15px;
+    margin-bottom: 0.9375rem;
 }
 
 .contactsSubmitButton {
@@ -77,10 +77,10 @@
 }
 
 .contactsPara{
-    margin-bottom: 22px;
+    margin-bottom: 1.375rem;
     font-family: 'Montserrat';
     font-weight: 300;
-    font-size: 18px;
+    font-size: 1.125rem;
     color: #000000;
 }
 
@@ -91,8 +91,8 @@
 .contactsImageContainer{
     display: flex;
     justify-content: left;
-    width: 400px;
-    height: 300px;
+    width: 25rem;
+    height: 18.75rem;
 }
 
 .contactsImage{
@@ -100,10 +100,48 @@
     height: 100%;
 }
 
-@media all and (max-width: 35.9375rem) {
+@media all and (max-width: 992px){
     .contactsSubmitButton{
-      width: 11.0625rem;
-      height: 2.875rem;
-     font-size: 1rem;
+        width: 100%;
+    }
+}
+
+@media all and (max-width: 575px) {
+    .contactsSubmitButton{
+        margin: 0 auto;
+        width: 50%;
+        height: 6rem;
+        font-size: 1rem;
+    }
+    .contactsContent{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .contactsImageContainer{
+        justify-content: center;
+        width: 100%;
+    }
+    .contactsPara{
+        font-size: 1.85rem;
+        text-align: center;
+    }
+    .contactsForm{
+        width: 100%;
+    }
+    .contactsTextField,
+    .contactsTextArea,
+    .contactsSubmitButton{
+        font-size: 1.85rem;
+    }
+    .contactsTextField{
+        height: 4rem;
+    }
+    .contactsLabelContainer{
+        margin-top: 1rem;
+        display: flex;
+        justify-content: center;
+    }
+    .contactsLabel{
+        font-size: 2.5rem;
     }
   }
