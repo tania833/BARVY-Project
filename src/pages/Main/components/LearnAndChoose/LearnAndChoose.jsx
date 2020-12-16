@@ -14,7 +14,7 @@ const LearnAndChoose = () => {
             <img
               className={styles.infoIconImg}
               src="https://i.imgur.com/e24APXe.png"
-              alt="lady_in_armchair"
+              alt="lady in armchair"
             />
           </div>
         </div>
@@ -22,7 +22,7 @@ const LearnAndChoose = () => {
           <img
             className={styles.learn__cardImg}
             src="https://i.imgur.com/hZsqj2a.jpg"
-            alt="pomegranate_watercolor"
+            alt="pomegranate watercolor"
           />
         </div>
       </div>
@@ -44,7 +44,7 @@ const LearnAndChoose = () => {
             <img
               className={styles.infoIconImg}
               src="https://i.imgur.com/ghfNlh4.png"
-              alt="sitting_man"
+              alt="sitting man"
             />
           </div>
         </div>
