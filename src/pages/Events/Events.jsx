@@ -1,9 +1,9 @@
 import React from 'react';
 
 const Events = () => {
-  return <div>
+  return (<div>
     <h1>Це сторінка про події</h1>
-  </div>
+  </div>)
 }
 
 export default Events
