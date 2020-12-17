@@ -37,16 +37,19 @@
   cursor: pointer;
 }
 
+.techniquesButtonWhiteWrapper {
+  margin-top: 36px;
+  @include flex(center, center, row, nowrap);
+}
 
-// @media all and (max-width: 35.9375rem) {
-//   .button_block {
-//     width: 11.0625rem;
-//     height: 2.875rem;
-//   }
-//   .button_text {
-//    font-size: 1rem;
-//   }
-// }
+.textCardsRendered {
+  margin-top: 36px;
+  @include flex(center, center, row, nowrap);
+  font-family: 'OpenSans';
+  font-size: 14px;
+  font-weight: normal;
+  color: #958f8f;
+}
 
 .searchBlock {
   padding: 1.75rem 4.5625rem 4.5625rem 4.5625rem;

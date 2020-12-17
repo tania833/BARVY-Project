@@ -29,7 +29,7 @@ const AuthorInfo = (props) => {
       </a>
       <a href="/about">
         <div className={styles.courseCard__technique}>
-          {props.author_info.technique}
+          {props.author_info.technique}, {props.author_info.course_format}
         </div>
       </a>
     </div>

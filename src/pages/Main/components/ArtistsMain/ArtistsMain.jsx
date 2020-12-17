@@ -1,9 +1,9 @@
-import React from "react";
-import artists_info_main from "../../../../MOCKS/artist_main_MOCK";
-import MainTitle from "../../../../components/Title";
-import Button from "../../../../components/Button";
-import styles from "./ArtistsMain.module.scss";
-import TeachersCardViewerForMain from "./TeacherCard";
+import React from 'react';
+import artists_info_main from '../../../../MOCKS/artist_main_MOCK';
+import MainTitle from '../../../../components/Title';
+import ButtonWhite from '../../../../components/ButtonWhite';
+import styles from './ArtistsMain.module.scss';
+import TeachersCardViewerForMain from './TeacherCard';
 
 const ArtistsMain = () => {
   return (
@@ -11,7 +11,7 @@ const ArtistsMain = () => {
       <MainTitle title="митці" subtitle="наші викладачі" />
       <TeachersCardViewerForMain artists_info_main={artists_info_main} />
       <div className={styles.mainTeachers_buttonWrapper}>
-        <Button text="Усі викладачі" />
+        <ButtonWhite text="Усі викладачі" />
       </div>
     </section>
   );

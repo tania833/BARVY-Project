@@ -49,7 +49,7 @@ FilterIcon.propTypes = {
   click: PropTypes.event,
 };
 
-const TechniquesMarkUp = (props) => {
+const CourseMarkUp = (props) => {
   let width = window.innerWidth;
   let buttonSort;
   if (width < 768) {
@@ -88,8 +88,8 @@ const TechniquesMarkUp = (props) => {
   );
 };
 
-TechniquesMarkUp.propTypes = {
+CourseMarkUp.propTypes = {
   drawerClickHandler: PropTypes.func,
 };
 
-export default TechniquesMarkUp;
+export default CourseMarkUp;

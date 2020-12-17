@@ -60,7 +60,9 @@ const LinkToDetails = () => {
 const TeachersCardViewerForMain = (props) => {
   const teacherCardInfo = props.artists_info_main.map((teacher_card) => (
     <div className={styles.teacherCard__wrapper} key={teacher_card.id}>
-      <div  className={styles.teacherCard__component}>
+      <div
+        className={`${styles.teacherCard__component} teacherCard__newComponent`}
+      >
         <TeachersCardPhoto
           img_info={teacher_card.img}
           teacher_info={teacher_card.artist}
@@ -93,7 +95,7 @@ const TeachersCardViewerForMain = (props) => {
           slidesToScroll: 2,
           infinite: true,
           centerMode: false,
-        }
+        },
       },
       {
         breakpoint: 768,
@@ -101,7 +103,7 @@ const TeachersCardViewerForMain = (props) => {
           slidesToShow: 2,
           slidesToScroll: 2,
           centerMode: false,
-        }
+        },
       },
       {
         breakpoint: 575,
@@ -109,9 +111,9 @@ const TeachersCardViewerForMain = (props) => {
           slidesToShow: 1,
           slidesToScroll: 1,
           centerMode: false,
-        }
-      }
-    ]
+        },
+      },
+    ],
   };
 
   return <Slider {...settings}>{teacherCardInfo}</Slider>;
