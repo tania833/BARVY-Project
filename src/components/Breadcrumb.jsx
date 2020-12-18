@@ -14,9 +14,6 @@ const Breadcrumb = (props) => {
       <li>
         <a href="#">{props.technique_or_teacher}</a>
       </li>
-      {/* <li>
-        <a href="#">{props.course}</a>
-      </li> */}
     </ul>
   );
 };
