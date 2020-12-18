@@ -9,14 +9,21 @@ import Technologies from './components/Technologies/Technologies';
 import LearnAndChoose from './components/LearnAndChoose/LearnAndChoose';
 
 const Main = () => {
+  let width = window.innerWidth;
+  let renderedWannaTry;
+  if (width < 768) {
+    renderedWannaTry = "";
+  } else {
+    renderedWannaTry = <WannaTry />;
+  }
   return (
     <>
       <TopBar />
       <Technologies />
-      <HowItWorks />
+      <HowItWorks title="починаємо" subtitle="як це працює?"/>
       <CourseMain />
       <LearnAndChoose />
-      <WannaTry />
+      {renderedWannaTry}
       <ArtistsMain />
       <FooterMainBlue />
     </>

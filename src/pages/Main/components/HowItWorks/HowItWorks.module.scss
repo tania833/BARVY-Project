@@ -46,3 +46,73 @@
         padding-left: 1.25rem;
     }
 }
+
+@media all and (max-width: 992px) {
+    .letsStart__text {
+        font-size: 1.5rem;
+      } 
+}
+
+@media all and (max-width: 768px) {
+    .letsStart__container {
+      flex-wrap: wrap;
+    }
+    .letsStart__card {
+      width: 50%;
+    }
+      .letsStart__icon {
+      width: 100%;
+      position: relative;
+      height: 12.625rem;
+      margin-top: 2.5rem;
+    }
+    .letsStart__text {
+      font-size: 1.8rem;
+      margin-right: 1.8rem;
+    }
+  }
+  
+   @media all and (max-width: 576px) {
+    .letsStart__card {
+      margin-top: 1rem;
+      margin-bottom: 10rem;
+    }
+    .letsStart__number {
+      padding-left: 2rem;
+      font-size: 7.5rem;
+     }
+     .letsStart__icon {
+       width: 100%;
+       position: relative;
+       margin-top: 2.5rem;
+       padding-left: 1.875rem;
+     }
+       .letsStart__img {
+       max-width: 100%;
+       max-height: 100%;
+       margin-top: -0.3125rem;
+     }
+     .letsStart__text {
+       padding-left: 0;
+       line-height: 1.2;
+     }
+      .letsStart__card:nth-last-child(1) img {
+      margin-top: -5rem;
+            }
+
+      .letsStart__card:nth-last-child(2) img {
+        margin-top: -6.5rem;
+      }
+      .letsStart__card:first-child img {
+        padding-right: 3rem;
+      }
+      .letsStart__container {
+        margin-bottom: -5rem;
+      }
+   }
+
+   @media all and (max-width: 300px) {
+     .letsStart__card {
+      width: 100%;
+    }
+   }

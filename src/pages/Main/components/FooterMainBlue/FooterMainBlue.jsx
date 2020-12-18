@@ -5,7 +5,7 @@ import styles from './FooterMainBlue.module.scss';
 const FooterMainBlue = () => {
   return (
     <section className={styles.footerBlue__container}>
-      <div>
+      <div className={styles.footerBlue__photo_wrapper}>
         <img
           className={styles.footerBlue__photo}
           src="https://i.imgur.com/lQZRndB.png"

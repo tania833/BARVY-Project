@@ -2,52 +2,33 @@ import React from 'react';
 import Title from '../../../../components/Title';
 import Button from '../../../../components/Button';
 import styles from './Technologies.module.scss';
+import TechArtCard from './../../../../components/artCard';
+import TechArtCard_MOCKS from "./../../../../MOCKS/techArtCard_MOCK";
 
 const Technologies = () => {
+  const cards = TechArtCard_MOCKS.map( card => {
+    return <TechArtCard key={card.id} techImg={card.techImg} techTitle={card.techTitle} techLink={card.techLink} />
+  })
+
   return (
-    <section className={styles.mainTechnos}>
-      <Title title="Популярні" subtitle="техніки" />
-      <div className={styles.technoPic}>
-        <div className={styles.technoPic__ContBig}>
-          <img
-            className={styles.technoPic__Img}
-            src="https://imgur.com/HDj2wyy.png"
-            alt=""
-          />
+    <div>
+
+      <section className={styles.introText}>
+        <p>Це простір творчих курсів, уроків та майстер-класів українських художників, дизайнерів та митців у різних техніках і жанрах.</p>
+        <p>Ми впевнені, що творити може кожен, а ми допоможемо знайти своє та спробувати щось нове.</p>
+      </section>
+      <section className={styles.mainTechnos}>
+        <Title title="Популярні" subtitle="техніки" />
+        <div className={styles.technoPic}>
+      
+          {cards}
+
         </div>
-        <div className={styles.technoPic__ContBig}>
-          <img
-            className={styles.technoPic__Img}
-            src="https://imgur.com/fC68Wpl.png"
-            alt=""
-          />
+        <div className={styles.mainCourses_buttonWrapper}>
+          <Button text="до каталогу" />
         </div>
-        <div className={styles.technoPic__Cont}>
-          <img
-            className={styles.technoPic__Img}
-            src="https://imgur.com/70mHf8c.png"
-            alt=""
-          />
-        </div>
-        <div className={styles.technoPic__Cont}>
-          <img
-            className={styles.technoPic__Img}
-            src="https://imgur.com/sU4BbqC.png"
-            alt=""
-          />
-        </div>
-        <div className={styles.technoPic__Cont}>
-          <img
-            className={styles.technoPic__Img}
-            src="https://imgur.com/GQ4q46O.png"
-            alt=""
-          />
-        </div>
-      </div>
-      <div className={styles.mainCourses_buttonWrapper}>
-        <Button text="до каталогу" />
-      </div>
-    </section>
+      </section>
+    </div>
   );
 };
 

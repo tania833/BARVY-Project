@@ -1,12 +1,13 @@
 import React from 'react';
 import MainTitle from '../../../../components/Title';
 import styles from './HowItWorks.module.scss';
+import PropTypes from 'prop-types';
 
-const HowItWorks = () => {
+const HowItWorks = (props) => {
   return (
     <div className={styles.letsStart}>
       <div className={styles.letsStart__wrapper}>
-        <MainTitle title="починаємо" subtitle="як це працює?" />
+        <MainTitle title={props.title} subtitle={props.subtitle} />
         <div className={styles.letsStart__container}>
           <div className={styles.letsStart__card}>
             <div className={styles.letsStart__number}>1</div>
@@ -14,7 +15,7 @@ const HowItWorks = () => {
               <img
                 className={styles.letsStart__img}
                 src="https://i.imgur.com/hDb15qV.png"
-                alt="woman_with_drawing"
+                alt="woman with drawing"
               />
             </div>
             <div className={styles.letsStart__text}>
@@ -28,7 +29,7 @@ const HowItWorks = () => {
               <img
                 className={styles.letsStart__img}
                 src="https://i.imgur.com/nQJBboH.png"
-                alt="woman_at_the_desk"
+                alt="woman at the desk"
               />
             </div>
             <div className={styles.letsStart__text}>
@@ -41,7 +42,7 @@ const HowItWorks = () => {
               <img
                 className={styles.letsStart__img}
                 src="https://i.imgur.com/kFo5pPg.png"
-                alt="man_with_cart"
+                alt="man with cart"
               />
             </div>
             <div className={styles.letsStart__text}>
@@ -54,7 +55,7 @@ const HowItWorks = () => {
               <img
                 className={styles.letsStart__img}
                 src="https://i.imgur.com/VxI6XsL.png"
-                alt="woman_behind_an_easel"
+                alt="woman behind easel"
               />
             </div>
             <div className={styles.letsStart__text}>
@@ -65,6 +66,11 @@ const HowItWorks = () => {
       </div>
     </div>
   );
+};
+
+HowItWorks.propTypes = {
+  title: PropTypes.string,
+  subtitle: PropTypes.string,
 };
 
 export default HowItWorks;
