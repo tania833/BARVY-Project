@@ -33,11 +33,24 @@
   background-color: #e6f1f5;
   padding-top: 25px;
   padding-bottom: 25px;
-  transform: translateY(-25px);
+  transform: translateY(-20px);
 }
 
 .slick-center .teacherCard__newComponent {
   border:none !important;
+}
+
+.slick-center .teacherCard__worksSlider1 {
+  padding: 0;
+  padding-top: 14px;
+}
+
+.slick-center .teacherCard__worksSlider2 {
+  padding: 0;
+}
+
+.slick-center .teacherCard__worksSlider3 {
+  opacity: 1;
 }
 
 .slick-center .teacherCard__photo {
@@ -50,8 +63,8 @@
   padding-bottom: 94px;
 }
 
-
 .slick-slide {
   margin-top: 25px;
   margin-bottom: 25px;
 }
+

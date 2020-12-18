@@ -5,7 +5,7 @@ import card_info from '../../MOCKS/card_info_MOCK';
 import CourseCardViewerForMain from '../../components/CourseCard';
 import Slider from 'react-slick';
 import styles from './ArtistsPersonalPage.module.scss';
-import '../../components/css_modules/slider.scss';
+
 import Title from '../../components/TitleOnly';
 import Breadcrumb from '../../components/Breadcrumb';
 // import ArtistPersonalSlider from './ArtistPersonalSlider';
@@ -15,18 +15,20 @@ const ArtistPersonalPage = (props) => {
 
   const sliderWorks = Object.keys(teacher.works).map(function (key) {
     return (
-      <div key={key.index}>
-        <div className={styles.teacherCard__wrapper}>
-          <div
-            className={`${styles.teacherCard__component} teacherCard__personalSlider`}
-          >
-            <div className={styles.teacherCard__photo_wrapper}>
-              <img
-                className={styles.teacherCard__photo}
-                src={teacher.works[key]}
-              />
-            </div>
-          </div>
+      <div
+        key={key.index}
+        className={`${styles.teacherCard__wrapper} teacherCard__worksSlider3`}
+      >
+        <div
+          className={`${styles.teacherCard__component} teacherCard__worksSlider2`}
+        ></div>
+        <div
+          className={`${styles.teacherCard__photo_wrapper} teacherCard__worksSlider2`}
+        >
+          <img
+            className={`${styles.teacherCard__photo} teacherCard__worksSlider1`}
+            src={teacher.works[key]}
+          />
         </div>
       </div>
     );
@@ -38,7 +40,7 @@ const ArtistPersonalPage = (props) => {
     infinite: true,
     centerPadding: '0px',
     slidesToShow: 3,
-    speed: 500,
+    speed: 1000,
     responsive: [
       {
         breakpoint: 992,
@@ -96,11 +98,13 @@ const ArtistPersonalPage = (props) => {
       <div className={styles.authorCourseTitleWrapper}>
         <Title title="Мої" subtitle="Курси" />
       </div>
-      <CourseCardViewerForMain
-        card_info={card_info.filter(
-          (card) => card.author.name === teacher.name
-        )}
-      />
+      <div className={styles.cardWrapper}>
+        <CourseCardViewerForMain
+          card_info={card_info.filter(
+            (card) => card.author.name === teacher.name
+          )}
+        />
+      </div>
     </div>
   );
 };
