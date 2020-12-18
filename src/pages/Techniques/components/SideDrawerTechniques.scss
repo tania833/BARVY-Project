@@ -1,0 +1,153 @@
+@mixin flex($jc, $ai, $fd, $fw) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+  flex-direction: $fd;
+  flex-wrap: $fw;
+}
+
+.sideDrawer {
+  height: 100%;
+  overflow: auto;
+  padding-top: 3.3125rem;
+  padding-bottom: 4.2188rem;
+  box-shadow: 0.0625rem 0px 0.4375rem rgba(0, 0, 0, 0.5);
+  position: fixed;
+  background-color: rgb(255, 255, 255);
+  z-index: 200;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 16.5rem;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-out;
+
+  &Wrapper {
+    padding-left: 1.5625rem;
+    padding-right: 1.5625rem;
+  }
+
+  &Title {
+    display: block;
+    @include flex(center, center, row, nowrap);
+    text-transform: uppercase;
+    font-family: 'Open Sans';
+    font-size: 1.375rem;
+    font-weight: 300;
+    margin-bottom: 2.625rem;
+  }
+
+  &TechniqueList {
+    list-style: none;
+    padding-inline-start: 0;
+    @include flex(space-between, flex-start, column, nowrap);
+  }
+
+  &TechniqueItem {
+    width: 100%;
+    height: 45px;
+    @include flex(flex-start, center, row, nowrap);
+
+
+    &:hover {
+      background-color: #e7f4fa;
+    }
+
+    &Text {
+      padding-left: 15%;
+      font-family: 'Open Sans';
+      font-size: 1.125rem;
+      font-weight: 300;
+      line-height: 1.4;
+      color: #000000;
+    }
+  }
+
+  &ArtistList {
+    padding-bottom: 2.5625rem;
+  }
+
+  &ArtistItem {
+    margin-bottom: 1.5625rem;
+    font-family: 'Open Sans';
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.4;
+    color: #000000;
+    font-size: 1rem;
+    @include flex(flex-start, center, row, nowrap);
+  }
+}
+
+.sideDrawerTechniqueItem input {
+  display: none;
+}
+
+.sideDrawerTechniqueItem label {
+  @include flex(flex-start, center, row, nowrap);
+  width: 100%;
+  height: 40px;
+}
+
+.sideDrawerTechniqueItem input:checked + label {
+  background-color: #bdd9e4
+}
+
+.sideDrawerArtistItem input {
+  margin-right: 8px;
+  width: 1.375rem;
+  height: 1.375rem;
+}
+
+.sideDrawerLine {
+  margin-top: 28px;
+  margin-bottom: 44px;
+  width: 100%;
+  height: 2px;
+  background-color: #e7dfdf;
+}
+
+.sideDrawer.open {
+  transform: translateX(0);
+}
+.buttonWrapper {
+  margin-bottom: 4.0938rem;
+}
+
+.clearButton {
+  border: none;
+  margin: 0 auto;
+  @include flex(center, center, row, nowrap);
+  width: 179px;
+  height: 30px;
+  font-family: 'OpenSans';
+  font-size: 22px;
+  color: #7e7a7a;
+}
+
+// @media (min-width: 769px) {
+//   .side_drawer {
+//     display: none;
+//   }
+// }
+
+// @media all { 
+//   .sideDrawerItem {
+//       font-size: calc(18px + (5 + 11 * 0.7) *((100vw - 320px) / 1280)) ;
+//     }
+// }
+
+// @media (min-width: 500px) {
+//   .sideDrawer {
+//     max-width: 60vw;
+//   }
+// }
+
+// @media (min-width: 576px) {
+//   .sideDrawer {
+//     max-width: 50vw;
+//     &__item {
+//       font-size: 22px;
+//     }
+//   }
+// }

@@ -9,6 +9,7 @@ import Events from './pages/Events/Events';
 import About from './pages/About/About';
 import Techniques from './pages/Techniques/Techniques';
 import Footer from './components/Footer';
+// import TeachersFalse from './pages/ArtistsFalse/TeachersFalse';
 import { Contacts } from './pages/Contacts/Contacts';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
       <div className="container">
         <Switch>
           <Route component={Main} path="/" exact />
+          {/* <Route component={TeachersFalse} path="/artists" /> */}
           <Route component={OurTeachers} path="/artists" />
           <Route component={Techniques} path="/techniques" />
           <Route component={Events} path="/events" />

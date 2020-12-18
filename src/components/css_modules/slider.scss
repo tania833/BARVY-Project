@@ -31,13 +31,36 @@
 
 .slick-center {
   background-color: #e6f1f5;
-  padding-top: 1.5625rem;
-  padding-bottom: 1.5625rem;
-  transform: translateY(-1.5625rem);
+  padding-top: 25px;
+  padding-bottom: 25px;
+  transform: translateY(-20px);
 }
 
 .slick-center .teacherCard__newComponent {
   border:none !important;
+}
+
+.slick-center .teacherCard__worksSlider1 {
+  padding: 0;
+  padding-top: 14px;
+}
+
+.slick-center .teacherCard__worksSlider2 {
+  padding: 0;
+}
+
+.slick-center .teacherCard__worksSlider3 {
+  opacity: 1;
+}
+
+.slick-center .teacherCard__photo {
+  width: 473px;
+  height: 441px;
+}
+
+.slick-center .teacherCard__photo {
+  height: 300px;
+  padding-bottom: 94px;
 }
 
 .slick-slide {

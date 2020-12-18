@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import BackdropTechniques from './components/BackdropTechniques';
 import SideDrawerTechniques from './components/SideDrawerTechniques';
-import TechniquesMarkUp from './components/TechniquesMarkUp';
+import CourseMarkUp from './components/CourseMarkUp';
 
-class Techniques extends Component {
+class Course extends Component {
   state = {
     sideDrawerOpen: false,
   };
@@ -26,7 +26,7 @@ class Techniques extends Component {
     }
     return (
       <div style={{ height: '100%' }}>
-        <TechniquesMarkUp drawerClickHandler={this.drawerToggleClickHandler} />
+        <CourseMarkUp drawerClickHandler={this.drawerToggleClickHandler} />
         <SideDrawerTechniques show={this.state.sideDrawerOpen} />
         {backdrop}
       </div>
@@ -34,4 +34,4 @@ class Techniques extends Component {
   }
 }
 
-export default Techniques;
+export default Course;
