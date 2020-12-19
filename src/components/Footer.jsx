@@ -21,67 +21,85 @@ const Footer = () => {
                 <Link to="/about">Про нас</Link>
               </li>
               <li className={styles.footer__menu_item} href="/about">
-                <Link to="/about">Як це працює</Link>
+                <Link to="/">Як це працює</Link>
               </li>
               <li className={styles.footer__menu_item} href="/about">
-                <Link to="/about">Зв&apos;язатися з нами</Link>
+                <Link to="/contacts">Зв&apos;язатися з нами</Link>
               </li>
               <li className={styles.footer__menu_item} href="/about">
-                <Link to="/about">Контакти</Link>
+                <Link to="/contacts">Контакти</Link>
               </li>
             </ul>
             <ul className={styles.footer__menu_column}>
               <li className={styles.footer__menu_item} href="/about">
-                <Link to="/about">Співпраця</Link>
+                <Link to="/">Співпраця</Link>
               </li>
               <li className={styles.footer__menu_item} href="/about">
-                <Link to="/about">Умови використання</Link>
+                <Link to="/">Умови використання</Link>
               </li>
               <li className={styles.footer__menu_item} href="/about">
-                <Link to="/about">Конфіденційність</Link>
+                <Link to="/">Конфіденційність</Link>
               </li>
               <li className={styles.footer__menu_item} href="/about">
-                <Link to="/about">Партнерство</Link>
+                <Link to="/">Партнерство</Link>
               </li>
             </ul>
           </nav>
           <div className={styles.footer__socials}>
-            <a href="/about" className={styles.footer__socials_item_messenger}>
+            <a
+              href="https://www.facebook.com/messages"
+              className={styles.footer__socials_item_messenger}
+            >
               <img
                 className={styles.footer__socials_item}
                 src="../icons/messenger.svg"
                 alt="messenger"
               />
             </a>
-            <a href="/about" className={styles.footer__socials_item_telegram}>
+            <a
+              href="https://telegram.org/"
+              className={styles.footer__socials_item_telegram}
+            >
               <img
                 className={styles.footer__socials_item}
                 src="../icons/telegram.svg"
                 alt="telegram"
               />
             </a>
-            <a href="/about" className={styles.footer__socials_item_facebook}>
+            <a
+              href="https://www.facebook.com/"
+              className={styles.footer__socials_item_facebook}
+            >
               <img
                 className={styles.footer__socials_item}
                 src="../icons/facebook.svg"
                 alt="facebook"
               />
             </a>
-            <a href="/about" className={styles.footer__socials_item_instagram}>
+            <a
+              href="https://www.instagram.com/"
+              className={styles.footer__socials_item_instagram}
+            >
               <img
                 className={styles.footer__socials_item}
                 src="../icons/instagram.svg"
                 alt="instagram"
               />
             </a>
-            <a href="/about" className={styles.footer__socials_item_pinterest}>
+            <a
+              href="https://www.pinterest.com/"
+              className={styles.footer__socials_item_pinterest}
+            >
               <img
                 className={styles.footer__socials_item}
                 src="../icons/pinterest.svg"
                 alt="pinterest"
               />
             </a>
-            <a href="/about" className={styles.footer__socials_item_twitter}>
+            <a
+              href="https://www.twitter.com"
+              className={styles.footer__socials_item_twitter}
+            >
               <img
                 className={styles.footer__socials_item}
                 src="../icons/twitter.svg"
