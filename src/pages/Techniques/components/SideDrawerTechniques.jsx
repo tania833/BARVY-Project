@@ -37,7 +37,16 @@ const sideDrawerTechniques = (props) => {
     drawerClasses = ['sideDrawer', 'open'];
   }
 
-  const [technique, setTechnique] = useState('');
+  const [technique, setTechnique] = useState({
+    ['Акварель']: false,
+    ['Рисунок']: false,
+    ['Олійний живопис']: false,
+    ['Фотографія']: false,
+    ['Історія мистецтв']: false,
+    ['Ілюстрація']: false,
+    ['Декоративне']: false,
+    ['Дитячі']: false,
+  });
   const chooseTechnique = (event) => {
     setTechnique(event.target.innerText);
   };
@@ -54,82 +63,104 @@ const sideDrawerTechniques = (props) => {
       <div className="sideDrawerTitle">Категорії</div>
       <ul className="sideDrawerTechniqueList">
         <li className="sideDrawerTechniqueItem">
-          <input type="checkbox" id="Акварель" name="technique" />
-          <label
-            htmlFor="Акварель"
+          <input
+            type="checkbox"
+            id="Акварель"
+            name="technique"
+            checked={technique['Акварель']}
             onClick={chooseTechnique}
-            className="sideDrawerTechniqueItemText"
-          >
+          />
+          <label htmlFor="Акварель" className="sideDrawerTechniqueItemText">
             Акварель
           </label>
         </li>
         <li className="sideDrawerTechniqueItem">
-          <input type="checkbox" id="Рисунок" name="technique" />
-          <label
-            htmlFor="Рисунок"
+          <input
+            type="checkbox"
+            id="Рисунок"
+            name="technique"
+            checked={technique['Рисунок']}
             onClick={chooseTechnique}
-            className="sideDrawerTechniqueItemText"
-          >
+          />
+          <label htmlFor="Рисунок" className="sideDrawerTechniqueItemText">
             Рисунок
           </label>
         </li>
         <li className="sideDrawerTechniqueItem">
-          <input type="checkbox" id="Олійний живопис" name="technique" />
+          <input
+            type="checkbox"
+            id="Олійний живопис"
+            name="technique"
+            checked={technique['Олійний живопис']}
+            onClick={chooseTechnique}
+          />
           <label
             htmlFor="Олійний живопис"
-            onClick={chooseTechnique}
             className="sideDrawerTechniqueItemText"
           >
             Олійний живопис
           </label>
         </li>
         <li className="sideDrawerTechniqueItem">
-          <input type="checkbox" id="Фотографія" name="technique" />
-          <label
-            htmlFor="Фотографія"
+          <input
+            type="checkbox"
+            id="Фотографія"
+            name="technique"
+            checked={technique['Фотографія']}
             onClick={chooseTechnique}
-            className="sideDrawerTechniqueItemText"
-          >
+          />
+          <label htmlFor="Фотографія" className="sideDrawerTechniqueItemText">
             Фотографія
           </label>
         </li>
         <li className="sideDrawerTechniqueItem">
-          <input type="checkbox" id="Історія мистецтв" name="technique" />
+          <input
+            type="checkbox"
+            id="Історія мистецтв"
+            name="technique"
+            checked={technique['Історія мистецтв']}
+            onClick={chooseTechnique}
+          />
           <label
             htmlFor="Історія мистецтв"
-            onClick={chooseTechnique}
             className="sideDrawerTechniqueItemText"
           >
             Історія мистецтв
           </label>
         </li>
         <li className="sideDrawerTechniqueItem">
-          <input type="checkbox" id="Ілюстрація" name="technique" />
-          <label
-            htmlFor="Ілюстрація"
+          <input
+            type="checkbox"
+            id="Ілюстрація"
+            name="technique"
+            checked={technique['Ілюстрація']}
             onClick={chooseTechnique}
-            className="sideDrawerTechniqueItemText"
-          >
+          />
+          <label htmlFor="Ілюстрація" className="sideDrawerTechniqueItemText">
             Ілюстрація
           </label>
         </li>
         <li className="sideDrawerTechniqueItem">
-          <input type="checkbox" id="Декоративне" name="technique" />
-          <label
-            htmlFor="Декоративне"
+          <input
+            type="checkbox"
+            id="Декоративне"
+            name="technique"
+            checked={technique['Декоративне']}
             onClick={chooseTechnique}
-            className="sideDrawerTechniqueItemText"
-          >
+          />
+          <label htmlFor="Декоративне" className="sideDrawerTechniqueItemText">
             Декоративне
           </label>
         </li>
         <li className="sideDrawerTechniqueItem">
-          <input type="checkbox" id="Дитячі" name="technique" />
-          <label
-            htmlFor="Дитячі"
+          <input
+            type="checkbox"
+            id="Дитячі"
+            name="technique"
+            checked={technique['Дитячі']}
             onClick={chooseTechnique}
-            className="sideDrawerTechniqueItemText"
-          >
+          />
+          <label htmlFor="Дитячі" className="sideDrawerTechniqueItemText">
             Дитячі
           </label>
         </li>
