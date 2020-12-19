@@ -70,7 +70,7 @@ const CourseMarkUp = (props) => {
 
   const cards = props.cardsToRender.slice(0, size);
   const changeSize = () => {
-    setSize((size) => (size += 6));
+    setSize(size => (size += 6));
   };
 
   const showMore =

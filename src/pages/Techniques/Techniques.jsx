@@ -40,7 +40,7 @@ const Techniques = () => {
 
   const [techniqueCheckbox, setTechnique] = useState(techniqueCheckboxInit);
 
-  const [techniquesRender, setTechniquesRender] = useState([
+  const techniquesRenderInit = [
     'Акварель',
     'Рисунок',
     'Олійний живопис',
@@ -49,7 +49,9 @@ const Techniques = () => {
     'Ілюстрація',
     'Декоративне',
     'Дитячі',
-  ]);
+  ];
+
+  const [techniquesRender, setTechniquesRender] = useState(techniquesRenderInit);
 
   const chooseTechnique = (event) => {
     const checkedTypes = {
@@ -78,7 +80,7 @@ const Techniques = () => {
 
   const [teachersCheckBox, setTeachersCheckbox] = useState(teachersCheckBoxInit);
 
-  const [teachersToRender, setTeachersToRender] = useState([
+  const teachersToRenderInit = [
     'Христина Стринадюк',
     'Павло Бенедюк',
     'Наталя Брічук',
@@ -88,7 +90,9 @@ const Techniques = () => {
     'Кароліна Бундаш',
     'Олександр Бобришев',
     'Антон Філик',
-  ]);
+  ];
+
+  const [teachersToRender, setTeachersToRender] = useState(teachersToRenderInit);
 
   const chooseTeachers = (event) => {
     const checkedTeachers = {
