@@ -3,7 +3,7 @@ import RangeInput from './RangeInput';
 import './SideDrawerTechniques.scss';
 import Button from '../../../components/Button';
 import PropTypes from 'prop-types';
-import artists_info_personal from '../../../MOCKS/artist_personal_page_MOCK';
+import TeacherAPI from '../../../MOCKS/TeacherAPI';
 
 const ArtistName = (props) => {
   return (
@@ -18,10 +18,10 @@ ArtistName.propTypes = {
   author_name: PropTypes.string,
 };
 
-const ArtistListViewer = (props) => {
-  const artistList = props.artists_info_personal.map((card) => (
-    <div className="sideDrawerArtistItem" key={card.id}>
-      <ArtistName author_name={card.artist.name} />
+const ArtistListViewer = () => {
+  const artistList = TeacherAPI.all().map((card) => (
+    <div className="sideDrawerArtistItem" key={card.path}>
+      <ArtistName author_name={card.name} />
     </div>
   ));
   return <>{artistList}</>;
@@ -143,7 +143,7 @@ const sideDrawerTechniques = (props) => {
           <label htmlFor="teacher" className="sideDrawerTitle">
             За викладачем
           </label>
-          <ArtistListViewer artists_info_personal={artists_info_personal} />
+          <ArtistListViewer />
         </div>
         <div className="buttonWrapper">
           <Button text="Застосувати" />

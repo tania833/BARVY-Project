@@ -115,6 +115,7 @@
 }
 
 .clearButton {
+  cursor: pointer;
   border: none;
   margin: 0 auto;
   @include flex(center, center, row, nowrap);

@@ -46,7 +46,7 @@ const TeachersCardInfo = (props) => {
 };
 
 TeachersCardInfo.propTypes = {
-  children: PropTypes.string,
+  children: PropTypes.array,
 };
 
 const LinkToDetails = () => {
@@ -77,7 +77,7 @@ const TeachersCardViewerForMain = (props) => {
   ));
 
   TeachersCardViewerForMain.propTypes = {
-    artists_info_main: PropTypes.array,
+    artists_info_main: PropTypes.string,
   };
 
   const settings = {

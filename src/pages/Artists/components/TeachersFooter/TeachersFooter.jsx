@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './TeachersFooter.module.scss';
-import Button from './../../../../components/Button';
+import Button from '../../../../components/Button';
 
 const TeachersFooter = () => {
   return (

@@ -77,7 +77,7 @@ const CartInfo = (props) => {
 };
 
 CartInfo.propTypes = {
-  children: PropTypes.string,
+  children: PropTypes.array,
 };
 
 const CourseButton = () => {

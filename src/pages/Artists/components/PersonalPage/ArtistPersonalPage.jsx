@@ -1,14 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import TeacherAPI from '../../MOCKS/TeacherAPI';
-import card_info from '../../MOCKS/card_info_MOCK';
-import CourseCardViewerForMain from '../../components/CourseCard';
+import TeacherAPI from '../../../../MOCKS/TeacherAPI';
+import card_info from '../../../../MOCKS/card_info_MOCK';
+import CourseCardViewerForMain from '../../../../components/CourseCard';
 import Slider from 'react-slick';
 import styles from './ArtistsPersonalPage.module.scss';
-
-import Title from '../../components/TitleOnly';
-import Breadcrumb from '../../components/Breadcrumb';
-// import ArtistPersonalSlider from './ArtistPersonalSlider';
+import Title from '../../../../components/TitleOnly';
+import Breadcrumb from '../../../../components/Breadcrumb';
 
 const ArtistPersonalPage = (props) => {
   const teacher = TeacherAPI.get(props.match.params.path);
@@ -70,7 +68,7 @@ const ArtistPersonalPage = (props) => {
     ],
   };
 
-  if (!teacher) {
+  if (teacher.personal_title === '') {
     return <div>Sorry, but the teacher was not found</div>;
   }
   return (
@@ -80,11 +78,14 @@ const ArtistPersonalPage = (props) => {
         technique_or_teacher={teacher.name}
       />
       <div className={styles.authorTitleWrapper}>
-        <Title title={teacher.profession} subtitle={teacher.name} />
+        <Title title={teacher.personal_title} subtitle={teacher.name} />
       </div>
       <div className={styles.artistContainer}>
         <div>
-          <img src={teacher.photo} className={styles.teacherCard__photo} />
+          <img
+            src={teacher.personal_photo}
+            className={styles.teacherCard__photo}
+          />
         </div>
         <div className={styles.artistInfo}>
           <p>{teacher.profession}</p>
@@ -94,7 +95,9 @@ const ArtistPersonalPage = (props) => {
         </div>
       </div>
       <div className={styles.titleForSlider}>Роботи</div>
-      <Slider {...settings}>{sliderWorks}</Slider>
+      <div id="sliderContainer" className={styles.sliderContainer}>
+        <Slider {...settings}>{sliderWorks}</Slider>
+      </div>
       <div className={styles.authorCourseTitleWrapper}>
         <Title title="Мої" subtitle="Курси" />
       </div>
