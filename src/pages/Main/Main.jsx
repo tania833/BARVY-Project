@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import TopBar from './components/TopBar/TopBar';
 import CourseMain from './components/CourseMain/CourseMain';
 import WannaTry from './components/WannaTry/WannaTry';
@@ -9,10 +9,14 @@ import Technologies from './components/Technologies/Technologies';
 import LearnAndChoose from './components/LearnAndChoose/LearnAndChoose';
 
 const Main = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   let width = window.innerWidth;
   let renderedWannaTry;
   if (width < 768) {
-    renderedWannaTry = "";
+    renderedWannaTry = '';
   } else {
     renderedWannaTry = <WannaTry />;
   }
@@ -20,7 +24,7 @@ const Main = () => {
     <>
       <TopBar />
       <Technologies />
-      <HowItWorks title="починаємо" subtitle="як це працює?"/>
+      <HowItWorks title="починаємо" subtitle="як це працює?" />
       <CourseMain />
       <LearnAndChoose />
       {renderedWannaTry}

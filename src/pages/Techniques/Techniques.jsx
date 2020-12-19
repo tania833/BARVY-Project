@@ -4,6 +4,10 @@ import SideDrawerTechniques from './components/SideDrawerTechniques';
 import TechniquesMarkUp from './components/TechniquesMarkUp';
 
 class Techniques extends Component {
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   state = {
     sideDrawerOpen: false,
   };
