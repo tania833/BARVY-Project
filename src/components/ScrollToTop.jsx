@@ -10,14 +10,22 @@ const useStyles = makeStyles((theme) =>
   createStyles({
     root: {
       position: 'fixed',
-      bottom: theme.spacing(6),
+      bottom: theme.spacing(14),
       right: theme.spacing(6),
+      [theme.breakpoints.down('sm')]: {
+        bottom: theme.spacing(3),
+        right: theme.spacing(4),
+      },
 
     },
     button: {
       backgroundColor: "#bdd9e4",
-      width: '5rem',
-      height: '5rem'
+      width: '80px',
+      height: '80px',
+      [theme.breakpoints.down('sm')]: {
+        width: '50px',
+      height: '50px',
+      },
     },
     icon: {
       width: '3rem',
