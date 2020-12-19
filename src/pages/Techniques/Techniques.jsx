@@ -36,9 +36,7 @@ const Techniques = () => {
     ['Ілюстрація']: false,
     ['Декоративне']: false,
     ['Дитячі']: false,
-  } ;
-
-  const [techniqueCheckbox, setTechnique] = useState(techniqueCheckboxInit);
+  };
 
   const techniquesRenderInit = [
     'Акварель',
@@ -51,7 +49,35 @@ const Techniques = () => {
     'Дитячі',
   ];
 
-  const [techniquesRender, setTechniquesRender] = useState(techniquesRenderInit);
+  const teachersCheckBoxInit = {
+    ['Христина Стринадюк']: false,
+    ['Павло Бенедюк']: false,
+    ['Наталя Брічук']: false,
+    ['Степан Карпюк']: false,
+    ['Олександра Промська']: false,
+    ['Наталя Серветник']: false,
+    ['Кароліна Бундаш']: false,
+    ['Олександр Бобришев']: false,
+    ['Антон Філик']: false,
+  };
+
+  const teachersToRenderInit = [
+    'Христина Стринадюк',
+    'Павло Бенедюк',
+    'Наталя Брічук',
+    'Степан Карпюк',
+    'Олександра Промська',
+    'Наталя Серветник',
+    'Кароліна Бундаш',
+    'Олександр Бобришев',
+    'Антон Філик',
+  ];
+
+  const [techniqueCheckbox, setTechnique] = useState(techniqueCheckboxInit);
+
+  const [techniquesRender, setTechniquesRender] = useState(
+    techniquesRenderInit
+  );
 
   const chooseTechnique = (event) => {
     const checkedTypes = {
@@ -66,33 +92,13 @@ const Techniques = () => {
     setTechniquesRender(techniquesToRender);
   };
 
-  const teachersCheckBoxInit = {
-    ['Христина Стринадюк']: false,
-    ['Павло Бенедюк']: false,
-    ['Наталя Брічук']: false,
-    ['Степан Карпюк']: false,
-    ['Олександра Промська']: false,
-    ['Наталя Серветник']: false,
-    ['Кароліна Бундаш']: false,
-    ['Олександр Бобришев']: false,
-    ['Антон Філик']: false,
-  };
+  const [teachersCheckBox, setTeachersCheckbox] = useState(
+    teachersCheckBoxInit
+  );
 
-  const [teachersCheckBox, setTeachersCheckbox] = useState(teachersCheckBoxInit);
-
-  const teachersToRenderInit = [
-    'Христина Стринадюк',
-    'Павло Бенедюк',
-    'Наталя Брічук',
-    'Степан Карпюк',
-    'Олександра Промська',
-    'Наталя Серветник',
-    'Кароліна Бундаш',
-    'Олександр Бобришев',
-    'Антон Філик',
-  ];
-
-  const [teachersToRender, setTeachersToRender] = useState(teachersToRenderInit);
+  const [teachersToRender, setTeachersToRender] = useState(
+    teachersToRenderInit
+  );
 
   const chooseTeachers = (event) => {
     const checkedTeachers = {
@@ -121,9 +127,13 @@ const Techniques = () => {
       (card) =>
         techniquesRender.includes(card.author.technique) &&
         teachersToRender.includes(card.author.name) &&
-        (card.price > rangeValue.min && card.price < rangeValue.max)
+        card.price > rangeValue.min &&
+        card.price < rangeValue.max
     );
     setCardsRender(cardsToRender);
+    setState({
+      sideDrawerOpen: false,
+    });
   };
 
   const resetFilters = () => {
@@ -134,7 +144,10 @@ const Techniques = () => {
       max: 1000,
     });
     setCardsRender(card_info);
-  }
+    setState({
+      sideDrawerOpen: false,
+    });
+  };
 
   return (
     <div style={{ height: '100%' }}>
