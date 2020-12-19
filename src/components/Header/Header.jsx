@@ -25,7 +25,7 @@ class Header extends Component {
       backdrop = <Backdrop click={this.backdropClickHandler} />;
     }
     return (
-      <div style={{ height: '50%' }}>
+      <div style={{ height: '50%', position: 'relative' }}>
         <Toolbar drawerClickHandler={this.drawerToggleClickHandler} />
         <SideDrawer show={this.state.sideDrawerOpen} />
         {backdrop}

@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Title from '../../components/TitleOnly';
 import styles from './Contacts.module.scss';
 import { ContactsForm } from './ContactsForm';
 
 export const Contacts = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className={styles.contactsContainer}>
       <div className={styles.titleWrapper}>
@@ -11,8 +15,14 @@ export const Contacts = () => {
       </div>
       <div className={styles.contactsContent}>
         <div className={styles.textContainer}>
-          <p className={styles.contactsPara}><a href="tel:+380962722222">+38 (096) 272-22-22</a></p>
-          <p className={styles.contactsPara}><a href="emailto:barvy_courses@gmail.com">barvy_courses@gmail.com</a></p>
+          <p className={styles.contactsPara}>
+            <a href="tel:+380962722222">+38 (096) 272-22-22</a>
+          </p>
+          <p className={styles.contactsPara}>
+            <a href="emailto:barvy_courses@gmail.com">
+              barvy_courses@gmail.com
+            </a>
+          </p>
           <p className={styles.contactsPara}>
             Ми на зв’язку з: <br />
             9:00 до 20:00

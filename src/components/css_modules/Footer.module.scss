@@ -9,9 +9,19 @@
 .footer {
   &__wrapper {
     margin-top: auto;
-    height: 23.8vh;
+    height: 18vh;
+  }
+
+  &__position {
     @include flex(space-between, center, row, nowrap);
     padding: 2.5rem 2.4375rem 1.8125rem 5.4375rem;
+  }
+
+  &__line {
+    width: 93.7vw;
+    height: 2px;
+    background-color: #bdd9e4;
+    margin: 0 auto;
   }
 
   &__logo {
@@ -78,9 +88,17 @@
 
 @media screen and (max-width: 575px) {
   .footer {
+    &__line {
+      background-color: #aea9a9;
+      width: 100vw;
+    }
+
     &__wrapper {
       height: auto;
       background-color: #e6f1f5;
+    }
+
+    &__position {
       padding: 2.1875rem 2.3rem 2.5rem 2.3125rem;
       @include flex(space-between, stretch, column-reverse, nowrap);
     }

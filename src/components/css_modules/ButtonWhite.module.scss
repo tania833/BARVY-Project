@@ -1,0 +1,33 @@
+.button {
+  &_block {
+    width: 13rem;
+    height: 3.0625rem;
+    border-radius: 0.1875rem;
+    border-radius: 3px;
+    border: solid 1px #000000;
+    background-color: #ffffff;
+    cursor: pointer;
+  }
+
+  &_text {
+    font-family: "OpenSans";
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: #000000;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+  }
+}
+
+@media all and (max-width: 35.9375rem) {
+  .button_block {
+    width: 11.0625rem;
+    height: 2.875rem;
+  }
+  .button_text {
+   font-size: 1rem;
+  }
+}

@@ -10,6 +10,7 @@
   padding: 1rem 2.5rem 1rem 2.9375rem;
   height: 11vh;
   width: 100vw;
+  border-bottom: 1px solid #bdd9e4;
   @include flex(space-between, center, row, nowrap);
 
   &_logo {
@@ -135,5 +136,11 @@ nav {
   
   nav {
     width: 50vw;
+  }
+}
+
+@media (max-width: 575px) {
+  .header {
+    border-bottom: none;
   }
 }

@@ -29,7 +29,7 @@ const AuthorInfo = (props) => {
       </a>
       <a href="/about">
         <div className={styles.courseCard__technique}>
-          {props.author_info.technique}
+          {props.author_info.technique}, {props.author_info.course_format}
         </div>
       </a>
     </div>
@@ -77,7 +77,7 @@ const CartInfo = (props) => {
 };
 
 CartInfo.propTypes = {
-  children: PropTypes.string,
+  children: PropTypes.array,
 };
 
 const CourseButton = () => {
@@ -94,11 +94,15 @@ const CourseCardViewerForMain = (props) => {
   let courseCardInfo;
 
   if (width < 768 && width > 576) {
-    courseCardInfo = courseCardInfoProps.filter((card, index) => index <= 3);
+    courseCardInfo = courseCardInfoProps.filter(
+      (card, index, array) => index <= array.length / 2
+    );
   } else if (width <= 576) {
-    courseCardInfo = courseCardInfoProps.filter((card, index) => index <= 2);
+    courseCardInfo = courseCardInfoProps.filter(
+      (card, index, array) => index <= array.length / 3
+    );
   } else {
-    courseCardInfo = courseCardInfoProps.filter((card, index) => index <= 5);
+    courseCardInfo = courseCardInfoProps;
   }
 
   const courseCardInfoView = courseCardInfo.map((card) => (

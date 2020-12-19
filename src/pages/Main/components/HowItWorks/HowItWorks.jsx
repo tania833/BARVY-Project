@@ -8,6 +8,7 @@ const HowItWorks = (props) => {
     <div className={styles.letsStart}>
       <div className={styles.letsStart__wrapper}>
         <MainTitle title={props.title} subtitle={props.subtitle} />
+        <a name="howItWorks" />
         <div className={styles.letsStart__container}>
           <div className={styles.letsStart__card}>
             <div className={styles.letsStart__number}>1</div>
