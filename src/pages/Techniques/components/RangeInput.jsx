@@ -1,6 +1,7 @@
 import React from 'react';
 import InputRange from 'react-input-range';
 import 'react-input-range/lib/css/index.css';
+import PropTypes from 'prop-types';
 
 class RangeInput extends React.Component {
   constructor(props) {
@@ -17,10 +18,17 @@ class RangeInput extends React.Component {
         minValue={0}
         step={50}
         value={this.state.value}
-        onChange={(value) => this.setState({ value })}
+        onChange={(value) => {
+          this.setState({ value });
+          this.props.onRangeChange(value);
+        }}
       />
     );
   }
 }
+
+RangeInput.propTypes = {
+  onRangeChange: PropTypes.function,
+};
 
 export default RangeInput;

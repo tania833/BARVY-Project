@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './Techniques.module.scss';
-import card_info from '../../../MOCKS/card_info_MOCK';
 import Title from '../../../components/TitleOnly';
 import CourseCardViewer from '../../../components/CourseCard';
 import PropTypes from 'prop-types';
@@ -50,6 +49,8 @@ FilterIcon.propTypes = {
 };
 
 const CourseMarkUp = (props) => {
+  const [size, setSize] = useState(6);
+
   let width = window.innerWidth;
   let buttonSort;
   if (width < 768) {
@@ -67,6 +68,17 @@ const CourseMarkUp = (props) => {
     );
   }
 
+  const cards = props.cardsToRender.slice(0, size);
+  const changeSize = () => {
+    setSize((size) => (size += 6));
+  };
+
+  const showMore =
+    cards.length < props.cardsToRender.length ? (
+      <ButtonWhite text="ПОКАЗАТИ ЩЕ" onClick={changeSize} />
+    ) : (
+      ''
+    );
   return (
     <div className={styles.techniquesContainer}>
       <Breadcrumb main_menu_item="Курси" />
@@ -79,17 +91,18 @@ const CourseMarkUp = (props) => {
         <Form />
         {buttonSort}
       </div>
-      <CourseCardViewer card_info={card_info} />
+      <CourseCardViewer card_info={cards} />
       <div className={styles.techniquesButtonWhiteWrapper}>
-        <ButtonWhite text="ПОКАЗАТИ ЩЕ" />
+        {showMore}
       </div>
-      <p className={styles.textCardsRendered}>Показано 41 з 41</p>
+      <p className={styles.textCardsRendered}>Показано {cards.length} з {props.cardsToRender.length}</p>
     </div>
   );
 };
 
 CourseMarkUp.propTypes = {
   drawerClickHandler: PropTypes.func,
+  cardsToRender: PropTypes.array,
 };
 
 export default CourseMarkUp;
