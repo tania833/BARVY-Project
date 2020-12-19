@@ -9,15 +9,17 @@
     background-color: #e6f1f5;
     
     &__container {
-        width: 100vw;
+        display: flex;
         padding-top: 7.75rem;   
         padding-left: 7.5rem;    
     }
+
     &__row {
         @include flex(flex-start, stretch, row, nowrap);
         margin: 0 auto;
         width: 62.5rem;
     }
+
     &__logo{
         margin-right: 4rem;
         font-family: "Mak";
@@ -29,9 +31,11 @@
         color: #000000;
         text-transform: uppercase;
     }
+
     &__textContainer {
-        @include flex(flex-start, center, column, nowrap);  
+        @include flex(flex-start, center, column, wrap);  
     }
+
     &__text {
       margin-bottom: 3rem;
       width: 28rem;
@@ -40,15 +44,78 @@
       font-weight: 300;
       color: #000000;
     }
+
     &__button {
         padding-bottom: 4rem;
         margin-top: 1rem;   
     }
+
     &__imageBox {
-        width: 100%;          
+        width: 100%;                
     }
+
     &__image {
         max-width: 110%;
-        max-height: 100%;   
+        display: block;
+        height: auto;       
+    }
+}
+
+@media all and (max-width: 768px) {
+    .teachersFooter__row {
+        @include flex(flex-start, stretch, column, nowrap);   
+    }  
+    .teachersFooter__textContainer {
+        padding-left: 3.125rem;
+    }
+    .teachersFooter__text {
+        font-size: 1.5rem;
+        width: 35rem;
+    }
+    .teachersFooter__container {
+        position: relative;
+    }
+    .teachersFooter__imageBox {
+        position: absolute;
+        top: 150px;
+        left: 10px;
+    }
+    .teachersFooter__image {
+        max-width: 35%;
+    }
+}
+
+@media all and (max-width: 576px) {
+    .teachersFooter {
+        background-color: #ffffff;
+    }
+    .teachersFooter__logo {
+        display: none;
+    }
+    .teachersFooter__button {
+        padding-bottom: 5rem;
+        margin-top: 2rem;   
+    }
+    .teachersFooter__container {
+       padding-left: 0;
+       padding-top: 0;
+    }
+    .teachersFooter__text {
+        font-size: 1.8rem;
+        width: 45rem;
+    }
+    .teachersFooter__image {
+       display: none;
+    }
+}
+
+@media all and (max-width: 375px) {
+    .teachersFooter__textContainer {
+        padding-left: 1.875rem;
+        padding-right: 1.875rem;
+    }
+    .teachersFooter__text {
+        font-size: 1.8rem;
+        width: 35rem;
     }
 }

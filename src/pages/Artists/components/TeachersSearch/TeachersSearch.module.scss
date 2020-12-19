@@ -31,4 +31,15 @@
             cursor: pointer;
         }
     }
+
+    @media all and (max-width: 768px) {
+        &__input {
+            height: 4rem;
+        } 
+        &__submit {
+            height: 4rem;
+        }
+    }
 }
+
+

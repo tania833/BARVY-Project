@@ -7,13 +7,16 @@
 }
 
 .teachersRow__item {
-    width: 20%;
-    max-width: 14.375rem;
+    width: 19%;
     height: 21.25rem;
 }
 
 .teachersPhoto__wrapper {
     @include flex(space-between, center, column, wrap);
+}
+
+.teachersPhoto__photo {
+    max-width: 100%;
 }
 
 .teachersInfo__name {
@@ -33,4 +36,52 @@
     line-height: 1.5;
     max-width: 10.625rem;
     margin: 0 auto;
+}
+
+@media all and (max-width: 992px) {
+    .teachersRow__item {
+        width: 24%;
+        height: 23rem;
+        margin-bottom: 1.25rem;
+    }
+    .teachersInfo__name {
+        font-size: 1.3rem;
+    }
+    .teachersInfo__technique {
+        font-size: 1.125rem;  
+    }
+}
+
+@media all and (max-width: 768px) {      
+    .teachersRow__item {
+        width: 32%;
+        height: 27rem;
+    }
+    .teachersInfo__name {
+        font-size: 1.5rem;
+    }
+    .teachersInfo__technique {
+        font-size: 1.2rem;  
+    }
+}
+
+@media all and (max-width: 576px) {
+    .teachersRow__item {
+        width: 47%;
+        height: 32rem;
+        margin-bottom: 2.25rem;
+    }
+    .teachersInfo__name {
+        font-size: 1.9rem;
+    }
+    .teachersInfo__technique {
+        font-size: 1.4rem;  
+    }
+}
+
+@media all and (max-width: 375px) {
+    .teachersRow__item {
+        width: 100%;
+        height: 32rem;
+    }  
 }
