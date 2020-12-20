@@ -5,14 +5,14 @@ import WannaTry from './components/WannaTry/WannaTry';
 import ArtistsMain from './components/ArtistsMain/ArtistsMain';
 import FooterMainBlue from './components/FooterMainBlue/FooterMainBlue';
 import HowItWorks from './components/HowItWorks/HowItWorks';
-import Technologies from './components/Technologies/Technologies';
+import Technologies from './components/Technologies/FullTechnologies/FullTechnologies';
 import LearnAndChoose from './components/LearnAndChoose/LearnAndChoose';
 
 const Main = () => {
   let width = window.innerWidth;
   let renderedWannaTry;
   if (width < 768) {
-    renderedWannaTry = "";
+    renderedWannaTry = '';
   } else {
     renderedWannaTry = <WannaTry />;
   }
@@ -20,7 +20,7 @@ const Main = () => {
     <>
       <TopBar />
       <Technologies />
-      <HowItWorks title="починаємо" subtitle="як це працює?"/>
+      <HowItWorks title="починаємо" subtitle="як це працює?" />
       <CourseMain />
       <LearnAndChoose />
       {renderedWannaTry}

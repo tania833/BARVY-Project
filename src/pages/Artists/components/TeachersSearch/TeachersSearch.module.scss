@@ -1,5 +1,6 @@
 .teachersSearch {
     padding-top: 3.125rem;
+
     &__form {
         display: flex;
         justify-content: center;
@@ -23,12 +24,22 @@
     &__submit {
         width: 3.75rem;
         height: 2.5rem;
-        background: url("../../../../img_background/search.svg") center no-repeat
-            #000000;
+        background: url("../../../../img_background/search.svg") center no-repeat #000000;
         border: none;
         border-radius: 0.1875rem;
+
         &:hover {
             cursor: pointer;
         }
+    }
+}
+
+@media all and (max-width: 768px) {
+    &__input {
+        height: 4rem;
+    }
+
+    &__submit {
+        height: 4rem;
     }
 }

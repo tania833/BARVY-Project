@@ -77,7 +77,7 @@ const TeachersCardViewerForMain = (props) => {
   ));
 
   TeachersCardViewerForMain.propTypes = {
-    artists_info_main: PropTypes.string,
+    artists_info_main: PropTypes.array,
   };
 
   const settings = {

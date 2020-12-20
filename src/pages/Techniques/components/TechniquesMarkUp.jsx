@@ -37,16 +37,16 @@ const FilterIcon = (props) => {
 
 ButtonFilter.propTypes = {
   text: PropTypes.string,
-  click: PropTypes.event,
+  click: PropTypes.func,
 };
 
 ButtonSort.propTypes = {
   text: PropTypes.string,
-  click: PropTypes.event,
+  click: PropTypes.func,
 };
 
 FilterIcon.propTypes = {
-  click: PropTypes.event,
+  click: PropTypes.func,
 };
 
 const TechniquesMarkUp = (props) => {
@@ -69,7 +69,7 @@ const TechniquesMarkUp = (props) => {
 
   return (
     <div className={styles.techniquesContainer}>
-      <Breadcrumb main_menu_item="Курси" />
+      <Breadcrumb main_menu_item="Курси" main_menu_item_link="/techniques" />
       <div className={styles.titleWrapper}>
         <Title title="Усі" subtitle="Курси" />
       </div>
