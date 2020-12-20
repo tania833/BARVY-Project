@@ -7,8 +7,9 @@ import FooterMainBlue from './components/FooterMainBlue/FooterMainBlue';
 import HowItWorks from './components/HowItWorks/HowItWorks';
 import Technologies from './components/Technologies/FullTechnologies/FullTechnologies';
 import LearnAndChoose from './components/LearnAndChoose/LearnAndChoose';
+import PropTypes from 'prop-types';
 
-const Main = () => {
+const Main = (props) => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -25,7 +26,7 @@ const Main = () => {
       <TopBar />
       <Technologies />
       <HowItWorks title="починаємо" subtitle="як це працює?" />
-      <CourseMain />
+      <CourseMain likes={props.likes} setLikes={props.setLikes}/>
       <LearnAndChoose />
       {renderedWannaTry}
       <ArtistsMain />
@@ -33,5 +34,10 @@ const Main = () => {
     </>
   );
 };
+
+Main.propTypes = {
+  likes: PropTypes.array,
+  setLikes: PropTypes.function,
+}
 
 export default Main;

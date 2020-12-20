@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import TeacherAPI from '../../../../MOCKS/TeacherAPI';
 import card_info from '../../../../MOCKS/card_info_MOCK';
@@ -9,6 +9,8 @@ import Title from '../../../../components/TitleOnly';
 import Breadcrumb from '../../../../components/Breadcrumb';
 
 const ArtistPersonalPage = (props) => {
+  const [likes, setLikes] = useState([]);
+
   const teacher = TeacherAPI.get(props.match.params.path);
 
   const sliderWorks = Object.keys(teacher.works).map((key) => {
@@ -108,6 +110,8 @@ const ArtistPersonalPage = (props) => {
           card_info={card_info.filter(
             (card) => card.author.name === teacher.name
           )}
+          likes={likes}
+          setLikes={setLikes}
         />
       </div>
     </div>
