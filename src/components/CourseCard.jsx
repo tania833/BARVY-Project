@@ -40,7 +40,18 @@ AuthorInfo.propTypes = {
   author_info: PropTypes.object,
 };
 
+const addLike = (id) => {
+  const idsWeHave = JSON.parse(localStorage.getItem('likes'));
+  console.log(idsWeHave);
+  let idList = [];
+  if ( idsWeHave.includes(id)) {
+     idList = idsWeHave.filter( idInList => idInList != id);
+  } else idList = idsWeHave.push(id);
+  localStorage.setItem('likes', JSON.stringify(idList));
+}
+
 const TitleInfo = (props) => {
+  const { id } = props;
   return (
     <div className={styles.courseCard__title_info}>
       <div className={styles.courseCard__title}>{props.title_info}</div>
@@ -48,6 +59,7 @@ const TitleInfo = (props) => {
         className={styles.courseCard__like_icon}
         src="../icons/heart.svg"
         alt="like_icon"
+        onClick={() => addLike(id)}
       />
     </div>
   );
@@ -55,6 +67,7 @@ const TitleInfo = (props) => {
 
 TitleInfo.propTypes = {
   title_info: PropTypes.string,
+  id: PropTypes.number,
 };
 
 const PriceInfo = (props) => {
@@ -112,7 +125,7 @@ const CourseCardViewerForMain = (props) => {
       </div>
       <div className={styles.courseCard__info}>
         <AuthorInfo author_info={card.author} />
-        <TitleInfo title_info={card.title} />
+        <TitleInfo title_info={card.title} id={card.id}/>
 
         <CartInfo>
           <PriceInfo price_info={card.price} />

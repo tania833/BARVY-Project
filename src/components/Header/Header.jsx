@@ -3,6 +3,7 @@ import Backdrop from './Backdrop';
 import SideDrawer from './SideDrawer';
 import Toolbar from './Toolbar';
 
+localStorage.setItem('likes', JSON.stringify([0]));
 class Header extends Component {
   state = {
     sideDrawerOpen: false,
