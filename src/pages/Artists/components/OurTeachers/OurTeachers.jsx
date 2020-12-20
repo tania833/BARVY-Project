@@ -5,10 +5,12 @@ import styles from './OurTeachers.module.scss';
 import Title from '../../../../components/TitleOnly';
 import TeachersSearch from '../TeachersSearch/TeachersSearch';
 import TeachersFooter from '../TeachersFooter/TeachersFooter';
+import Breadcrumb from '../../../../components/Breadcrumb';
 
 const OurTeachers = () => {
   return (
     <div className={styles.teachersContainer}>
+      <Breadcrumb main_menu_item="Викладачі" main_menu_item_link="/artists" />
       <div className={styles.teachersTitle}>
         <Title title="Митці" />
       </div>

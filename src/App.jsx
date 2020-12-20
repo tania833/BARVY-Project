@@ -10,6 +10,7 @@ import Techniques from './pages/Techniques/Techniques';
 import Footer from './components/Footer';
 import Teachers from './pages/Artists/Teachers';
 import { Contacts } from './pages/Contacts/Contacts';
+import Technologies from './pages/Main/components/Technologies/Technologies';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route component={Events} path="/events" />
           <Route component={About} path="/about" />
           <Route component={Contacts} path="/contacts" />
+          <Route component={Technologies} path="/technologies" />
         </Switch>
         <Footer />
       </div>
