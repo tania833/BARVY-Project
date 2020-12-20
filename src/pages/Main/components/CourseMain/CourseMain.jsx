@@ -4,6 +4,7 @@ import MainTitle from '../../../../components/Title';
 import Button from '../../../../components/Button';
 import CourseCardViewerForMain from '../../../../components/CourseCard';
 import styles from './CourseMain.module.scss';
+import { Link } from 'react-router-dom';
 
 const CourseMain = () => {
   return (
@@ -13,7 +14,9 @@ const CourseMain = () => {
         card_info={card_info.filter((card, index) => index <= 5)}
       />
       <div className={styles.mainCourses_buttonWrapper}>
-        <Button text="до каталогу" />
+        <Link to="/techniques">
+          <Button text="до каталогу" />
+        </Link>
       </div>
     </section>
   );
