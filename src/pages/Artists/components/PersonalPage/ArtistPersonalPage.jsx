@@ -11,10 +11,10 @@ import Breadcrumb from '../../../../components/Breadcrumb';
 const ArtistPersonalPage = (props) => {
   const teacher = TeacherAPI.get(props.match.params.path);
 
-  const sliderWorks = Object.keys(teacher.works).map(function (key) {
+  const sliderWorks = Object.keys(teacher.works).map((key) => {
     return (
       <div
-        key={key.index}
+        key={teacher.path}
         className={`${styles.teacherCard__wrapper} teacherCard__worksSlider3`}
       >
         <div
@@ -75,7 +75,9 @@ const ArtistPersonalPage = (props) => {
     <div className={styles.artistsContainer}>
       <Breadcrumb
         main_menu_item="Викладачі"
+        main_menu_item_link="/artists"
         technique_or_teacher={teacher.name}
+        technique_or_teacher_link={`/artists/${teacher.path}`}
       />
       <div className={styles.authorTitleWrapper}>
         <Title title={teacher.personal_title} subtitle={teacher.name} />
@@ -113,7 +115,7 @@ const ArtistPersonalPage = (props) => {
 };
 
 ArtistPersonalPage.propTypes = {
-  match: PropTypes.string,
+  match: PropTypes.object,
 };
 
 export default ArtistPersonalPage;
