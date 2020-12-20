@@ -53,7 +53,7 @@ export const ContactsForm = () => {
     if (response.status === 200) {
       event.target.reset();
       setMessage(
-        'Ми отримали Ваше повідомлення! Звʼяжемось найближчим часом :)'
+        'Ми отримали Ваше повідомлення! Сконтактуємо найближчим часом :)'
       );
       setOpen(true);
     } else {
