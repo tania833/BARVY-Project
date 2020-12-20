@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './normalize.css';
 import './App.css';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
@@ -12,14 +12,27 @@ import Teachers from './pages/Artists/Teachers';
 import { Contacts } from './pages/Contacts/Contacts';
 
 function App() {
+  const [likes, setLikes] = useState([]);
   return (
     <BrowserRouter>
-      <Header />
+      <Header likes={likes} setLikes={setLikes} />
       <div className="container">
         <Switch>
-          <Route component={Main} path="/" exact />
+          <Route
+            path="/"
+            exact
+            render={(props) => (
+              <Main {...props} likes={likes} setLikes={setLikes} />
+            )}
+          />
           <Route component={Teachers} path="/artists" />
-          <Route component={Techniques} path="/techniques" />
+          <Route
+            path="/techniques"
+            exact
+            render={(props) => (
+              <Techniques {...props} likes={likes} setLikes={setLikes} />
+            )}
+          />
           <Route component={Events} path="/events" />
           <Route component={About} path="/about" />
           <Route component={Contacts} path="/contacts" />
