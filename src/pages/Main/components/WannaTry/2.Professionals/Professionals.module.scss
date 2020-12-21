@@ -48,6 +48,18 @@
   }
   .professionals__para {
     max-width: 40rem;
-    font-size: 1.25rem;
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .professionals__title {
+    font-size: 2.2rem;
+    line-height: 2.5rem;
+  }
+  .professionals__para {
+    font-size: 1.6rem;
+    line-height: 2.35rem;
   }
 }

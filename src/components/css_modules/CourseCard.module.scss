@@ -118,8 +118,21 @@
   .courseCard__info {
     height: 130px;
   }
+  .courseCard__title_info {
+    font-size: 1.25rem;
+  }
+  .courseCard__cart {
+    font-size: 1.5rem;
+  }
+  .courseCard__price_number {
+    font-size: 2rem;
+  }
 }
-
+@media all and (max-width: 767px) {
+  .courseCard__title_info {
+    font-size: 1.5rem;
+  }
+}
 @media all and (max-width: 575px) {
   .courseCard__wrapper {
     @include flex(space-between, center, column, nowrap);
