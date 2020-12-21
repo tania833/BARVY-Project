@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import BackdropTechniques from './components/BackdropTechniques';
 import SideDrawerTechniques from './components/SideDrawerTechniques';
 import CourseMarkUp from './components/CourseMarkUp';
@@ -6,6 +6,10 @@ import card_info from '../../MOCKS/card_info_MOCK';
 import PropTypes from 'prop-types';
 
 const Techniques = (props) => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const [cardsRender, setCardsRender] = useState(card_info);
 
   const [state, setState] = useState({
@@ -157,6 +161,8 @@ const Techniques = (props) => {
         cardsToRender={cardsRender}
         likes={props.likes}
         setLikes={props.setLikes}
+        buy={props.buy}
+        setBuy={props.setBuy}
       />
       <SideDrawerTechniques
         show={state.sideDrawerOpen}
@@ -176,6 +182,8 @@ const Techniques = (props) => {
 Techniques.propTypes = {
   likes: PropTypes.array,
   setLikes: PropTypes.function,
+  buy: PropTypes.array,
+  setBuy: PropTypes.function,
 };
 
 export default Techniques;

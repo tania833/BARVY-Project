@@ -16,39 +16,45 @@ import Technologies from './pages/Main/components/Technologies/Technologies';
 
 function App() {
   const [likes, setLikes] = useState([]);
+  const [buy, setBuy] = useState([]);
   return (
     <BrowserRouter>
-      <Header likes={likes} setLikes={setLikes} />
+      <Header likes={likes} setLikes={setLikes} buy={buy} setBuy={setBuy} />
       <div className="container">
         <Switch>
           <Route
             path="/"
             exact
             render={(props) => (
-              <Main {...props} likes={likes} setLikes={setLikes} />
+              <Main
+                {...props}
+                likes={likes}
+                setLikes={setLikes}
+                buy={buy}
+                setBuy={setBuy}
+              />
             )}
           />
-          <Route component={Teachers} path="/artists" />
+          <Route path="/artists" component={Teachers} />
           <Route
             path="/techniques"
             exact
             render={(props) => (
-              <Techniques {...props} likes={likes} setLikes={setLikes} />
+              <Techniques
+                {...props}
+                likes={likes}
+                setLikes={setLikes}
+                buy={buy}
+                setBuy={setBuy}
+              />
             )}
           />
           <Route component={Events} path="/events" />
           <Route component={About} path="/about" />
-          <Route
-            path="/course"
-            exact
-            render={(props) => (
-              <Course {...props} likes={likes} setLikes={setLikes} />
-            )}
-          />
+          <Route path="/course" exact component={Course} />
           <Route component={page404} path="/404" />
           <Route component={Contacts} path="/contacts" />
-          <Route component={Technologies} path="/technologies" />
-          <Route component={Course} path="/course" />
+          <Route path="/technologies" component={Technologies} />
         </Switch>
         <Footer />
       </div>

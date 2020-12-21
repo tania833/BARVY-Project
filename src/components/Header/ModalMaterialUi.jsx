@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
     left: '20%',
     textAlign: 'center',
     width: '60%',
-    maxHeight: '600px',
+    // maxHeight: '600px',
     backgroundColor: theme.palette.background.paper,
     border: '2px solid #000',
     boxShadow: theme.shadows[5],
@@ -26,17 +26,16 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SimpleModal(props) {
   const classes = useStyles();
-  // getModalStyle is not a pure function, we roll the style only on the first render
+ 
   const [modalStyle] = React.useState(getModalStyle);
 
   const ComponentTorender = props.component;
 
   const body = (
     <div style={modalStyle} className={classes.paper}>
-      <ComponentTorender likes={props.likes}/>
+      <ComponentTorender likes={props.likes} setBuy={props.setBuy}/>
       <SimpleModal />
-    </div>
-  );
+    </div>);
 
   return (
     <div>
@@ -54,8 +53,9 @@ export default function SimpleModal(props) {
 }
 
 SimpleModal.propTypes = {
-  openModal: PropTypes.boolean,
-  handleClose: PropTypes.function,
+  openModal: PropTypes.func,
+  handleClose: PropTypes.func,
   component: PropTypes.string,
   likes: PropTypes.array,
+  setBuy: PropTypes.func,
 };
