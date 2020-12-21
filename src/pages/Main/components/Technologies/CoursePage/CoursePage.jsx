@@ -32,6 +32,10 @@ const CoursePage = (props) => {
           card_info={card_info.filter(
             (card) => card.author.technique === course.techTitle
           )}
+          likes={props.likes}
+        setLikes={props.setLikes}
+        buy={props.buy}
+        setBuy={props.setBuy}
         />
       </div>
     </div>
@@ -40,6 +44,10 @@ const CoursePage = (props) => {
 
 CoursePage.propTypes = {
   match: PropTypes.object,
+  likes: PropTypes.array,
+  buy: PropTypes.array,
+  setLikes: PropTypes.function,
+  setBuy: PropTypes.function,
 };
 
 export default CoursePage;

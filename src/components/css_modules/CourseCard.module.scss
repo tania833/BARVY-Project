@@ -67,16 +67,13 @@
   color: #000000;
 }
 
-.courseCard_button_block {
+.courseCard_button_text {
   width: 8.4375rem;
-  height: 2.6875rem;
+  line-height: 2.6875rem;
   border-radius: 0.1875rem;
   border: none;
   background-color: #000000;
   cursor: pointer;
-}
-
-.courseCard_button_text {
   font-family: "OpenSans";
   font-size: 1.125rem;
   font-weight: 600;
@@ -103,6 +100,10 @@
   align-content: center;
   align-self: center;
 }
+
+.black{
+  background-color: #bdd9e4!important;
+  color: black;}
 
 @media all and (max-width: 1200px) {
   .courseCard__info {

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import TeacherAPI from '../../../../MOCKS/TeacherAPI';
 import card_info from '../../../../MOCKS/card_info_MOCK';
@@ -9,7 +9,6 @@ import Title from '../../../../components/TitleOnly';
 import Breadcrumb from '../../../../components/Breadcrumb';
 
 const ArtistPersonalPage = (props) => {
-  const [likes, setLikes] = useState([]);
 
   const teacher = TeacherAPI.get(props.match.params.path);
 
@@ -110,8 +109,10 @@ const ArtistPersonalPage = (props) => {
           card_info={card_info.filter(
             (card) => card.author.name === teacher.name
           )}
-          likes={likes}
-          setLikes={setLikes}
+          likes={props.likes}
+          setLikes={props.setLikes}
+          buy={props.buy}
+          setBuy={props.setBuy}
         />
       </div>
     </div>
@@ -120,6 +121,10 @@ const ArtistPersonalPage = (props) => {
 
 ArtistPersonalPage.propTypes = {
   match: PropTypes.object,
+  likes: PropTypes.array,
+  buy: PropTypes.array,
+  setLikes: PropTypes.function,
+  setBuy: PropTypes.function,
 };
 
 export default ArtistPersonalPage;

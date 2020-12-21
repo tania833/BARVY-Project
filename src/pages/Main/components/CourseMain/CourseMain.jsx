@@ -12,6 +12,7 @@ const CourseMain = (props) => {
       <MainTitle title="курси" subtitle="нові уроки" />
       <CourseCardViewerForMain
         card_info={card_info.filter((card, index) => index <= 5)} likes={props.likes} setLikes={props.setLikes}
+        buy={props.buy} setBuy={props.setBuy}
       />
       <div className={styles.mainCourses_buttonWrapper}>
         <Button text="до каталогу" />
@@ -23,6 +24,8 @@ const CourseMain = (props) => {
 CourseMain.propTypes = {
   likes: PropTypes.array,
   setLikes: PropTypes.function,
+  buy: PropTypes.array,
+  setBuy: PropTypes.function,
 }
 
 export default CourseMain;

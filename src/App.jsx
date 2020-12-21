@@ -14,30 +14,68 @@ import Technologies from './pages/Main/components/Technologies/Technologies';
 
 function App() {
   const [likes, setLikes] = useState([]);
+  const [buy, setBuy] = useState([]);
   return (
     <BrowserRouter>
-      <Header likes={likes} setLikes={setLikes} />
+      <Header likes={likes} setLikes={setLikes} buy={buy} setBuy={setBuy} />
       <div className="container">
         <Switch>
           <Route
             path="/"
             exact
             render={(props) => (
-              <Main {...props} likes={likes} setLikes={setLikes} />
+              <Main
+                {...props}
+                likes={likes}
+                setLikes={setLikes}
+                buy={buy}
+                setBuy={setBuy}
+              />
             )}
           />
-          <Route component={Teachers} path="/artists" />
+
+          <Route
+            path="/artists"
+            exact
+            render={(props) => (
+              <Teachers
+                {...props}
+                likes={likes}
+                setLikes={setLikes}
+                buy={buy}
+                setBuy={setBuy}
+              />
+            )}
+          />
           <Route
             path="/techniques"
             exact
             render={(props) => (
-              <Techniques {...props} likes={likes} setLikes={setLikes} />
+              <Techniques
+                {...props}
+                likes={likes}
+                setLikes={setLikes}
+                buy={buy}
+                setBuy={setBuy}
+              />
             )}
           />
           <Route component={Events} path="/events" />
           <Route component={About} path="/about" />
           <Route component={Contacts} path="/contacts" />
-          <Route component={Technologies} path="/technologies" />
+          <Route
+            path="/technologies"
+            exact
+            render={(props) => (
+              <Technologies
+                {...props}
+                likes={likes}
+                setLikes={setLikes}
+                buy={buy}
+                setBuy={setBuy}
+              />
+            )}
+          />
         </Switch>
         <Footer />
       </div>

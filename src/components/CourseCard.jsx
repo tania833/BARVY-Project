@@ -101,12 +101,31 @@ CartInfo.propTypes = {
   children: PropTypes.array,
 };
 
-const CourseButton = () => {
+const CourseButton = (props) => {
+  const { id, buy, setBuy } = props;
+
+  const addToBasket = () => {
+    const storeToBuy = buy.slice(0, buy.length);
+    const toBuyArray = storeToBuy.includes(id)
+      ? [...storeToBuy.filter((el) => el != id)]
+      : [...buy, id];
+    setBuy(toBuyArray);
+  };
   return (
-    <div className={styles.courseCard_button_block}>
-      <div className={styles.courseCard_button_text}>КУПИТИ</div>
-    </div>
+    <button className={
+      buy.includes(id) ?
+      `${styles.courseCard_button_text} ${styles.black}` :
+      styles.courseCard_button_text} 
+      onClick={addToBasket}>
+      КУПИТИ
+    </button>
   );
+};
+
+CourseButton.propTypes = {
+  buy: PropTypes.array,
+  setBuy: PropTypes.function,
+  id: PropTypes.number,
 };
 
 const CourseCardViewerForMain = (props) => {
@@ -139,10 +158,9 @@ const CourseCardViewerForMain = (props) => {
           likes={props.likes}
           setLikes={props.setLikes}
         />
-
         <CartInfo>
           <PriceInfo price_info={card.price} />
-          <CourseButton />
+          <CourseButton buy={props.buy} setBuy={props.setBuy} id={card.id} />
         </CartInfo>
       </div>
     </div>
@@ -154,6 +172,8 @@ CourseCardViewerForMain.propTypes = {
   card_info: PropTypes.array,
   likes: PropTypes.array,
   setLikes: PropTypes.function,
+  buy: PropTypes.array,
+  setBuy: PropTypes.function,
 };
 
 export default CourseCardViewerForMain;

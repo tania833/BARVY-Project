@@ -91,7 +91,7 @@ const CourseMarkUp = (props) => {
         <Form />
         {buttonSort}
       </div>
-      <CourseCardViewer card_info={cards} likes={props.likes} setLikes={props.setLikes}/>
+      <CourseCardViewer card_info={cards} likes={props.likes} setLikes={props.setLikes}  buy={props.buy} setBuy={props.setBuy}/>
       <div className={styles.techniquesButtonWhiteWrapper}>
         {showMore}
       </div>
@@ -105,6 +105,8 @@ CourseMarkUp.propTypes = {
   cardsToRender: PropTypes.array,
   likes: PropTypes.array,
   setLikes: PropTypes.function,
+  buy: PropTypes.array,
+  setBuy: PropTypes.function,
 };
 
 export default CourseMarkUp;

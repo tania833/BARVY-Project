@@ -157,6 +157,8 @@ const Techniques = (props) => {
         cardsToRender={cardsRender}
         likes={props.likes}
         setLikes={props.setLikes}
+        buy={props.buy}
+        setBuy={props.setBuy}
       />
       <SideDrawerTechniques
         show={state.sideDrawerOpen}
@@ -176,6 +178,8 @@ const Techniques = (props) => {
 Techniques.propTypes = {
   likes: PropTypes.array,
   setLikes: PropTypes.function,
+  buy: PropTypes.array,
+  setBuy: PropTypes.function,
 };
 
 export default Techniques;
