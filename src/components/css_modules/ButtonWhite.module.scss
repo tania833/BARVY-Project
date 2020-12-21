@@ -7,6 +7,11 @@
     border: solid 1px #000000;
     background-color: #ffffff;
     cursor: pointer;
+    transition: .3s;
+    &:hover {
+      transition: .3s;
+      background-color: #0000005c;
+    }    
   }
 
   &_text {
@@ -19,6 +24,11 @@
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
+    transition: .3s;
+    &:hover {
+      transition: .3s;
+      color: #ffffff;
+    }
   }
 }
 

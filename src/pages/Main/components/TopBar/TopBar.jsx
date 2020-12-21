@@ -22,7 +22,6 @@ const TopBar = () => {
         <form
           onSubmit={(e) => {
             e.preventDefault();
-            // search will come here
             setValue('');
           }}
           className={styles.topbar__form}

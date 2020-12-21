@@ -65,11 +65,14 @@
     padding-top: 30vh;
   }
   .topbar__title {
-    font-size: 6.5rem;
+    font-size: 7.5rem;
     line-height: 6rem;
   }
   .topbar__subtitle {
     margin-bottom: 20vh;
+  }
+  .topbar__subtitle {
+    font-size: 1.725rem;
   }
   .topbar__input{
     width: 24rem;
@@ -113,7 +116,7 @@
     padding-top: 22vh;
   }
   .topbar__title {
-    font-size: 9rem;
+    font-size: 11rem;
     line-height: 5rem;
   }
   .topbar__input {
@@ -123,6 +126,7 @@
   .topbar__subtitle {
     margin-bottom: 35vh;
     font-size: 3.5rem;
+    line-height: 1.5;
     padding-top: 3rem;
   }
   .topbar__submit {
