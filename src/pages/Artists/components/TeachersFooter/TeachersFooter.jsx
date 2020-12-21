@@ -1,13 +1,16 @@
 import React from 'react';
 import styles from './TeachersFooter.module.scss';
 import Button from '../../../../components/Button';
+import { Link } from 'react-router-dom';
 
 const TeachersFooter = () => {
   return (
     <section className={styles.teachersFooter}>
       <div className={styles.teachersFooter__container}>
         <div className={styles.teachersFooter__row}>
-          <div className={styles.teachersFooter__logo}>барви</div>
+          <Link to="/" className={styles.teachersFooter__logo}>
+            барви
+          </Link>
           <div className={styles.teachersFooter__textContainer}>
             <p className={styles.teachersFooter__text}>
               Нам важливо підтримати та заявити про талановитих митців,
@@ -19,7 +22,9 @@ const TeachersFooter = () => {
               технікою
             </p>
             <div className={styles.teachersFooter__button}>
-              <Button text="Подати заявку" />
+              <Link to="/contacts">
+                <Button text="Написати нам" />
+              </Link>
             </div>
           </div>
           <div className={styles.teachersFooter__imageBox}>
