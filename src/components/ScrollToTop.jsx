@@ -16,31 +16,30 @@ const useStyles = makeStyles((theme) =>
         bottom: theme.spacing(3),
         right: theme.spacing(4),
       },
-
     },
     button: {
-      backgroundColor: "#bdd9e4",
+      backgroundColor: '#bdd9e4',
       width: '80px',
       height: '80px',
       [theme.breakpoints.down('sm')]: {
         width: '50px',
-      height: '50px',
+        height: '50px',
       },
     },
     icon: {
       width: '3rem',
       height: '3rem',
       color: 'rgba(0, 0, 0, 0.53)',
-    }
-  }),
+    },
+  })
 );
 
-export const  ScrollTop = (props) => {
+export const ScrollTop = (props) => {
   const { children } = props;
   const classes = useStyles();
 
   const trigger = useScrollTrigger({
-    target:  window,
+    target: window,
     disableHysteresis: true,
     threshold: 100,
   });
@@ -56,22 +55,26 @@ export const  ScrollTop = (props) => {
       </div>
     </Zoom>
   );
-}
+};
 
 export const BackToTop = (props) => {
   const classes = useStyles();
   return (
-      <ScrollTop {...props}>
-        <Fab size="large" aria-label="scroll back to top" className={classes.button}>
-          <KeyboardArrowUpIcon className={classes.icon}/>
-        </Fab>
-      </ScrollTop>
+    <ScrollTop {...props}>
+      <Fab
+        size="large"
+        aria-label="scroll back to top"
+        className={classes.button}
+      >
+        <KeyboardArrowUpIcon className={classes.icon} />
+      </Fab>
+    </ScrollTop>
   );
-}
+};
 
 ScrollTop.propTypes = {
-    children: PropTypes.ReactElement,
-    window: PropTypes.Window,
-}
+  children: PropTypes.func,
+  window: PropTypes.func,
+};
 
 export default BackToTop;

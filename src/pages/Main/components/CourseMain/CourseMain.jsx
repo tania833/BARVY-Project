@@ -4,6 +4,7 @@ import MainTitle from '../../../../components/Title';
 import Button from '../../../../components/Button';
 import CourseCardViewerForMain from '../../../../components/CourseCard';
 import styles from './CourseMain.module.scss';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 const CourseMain = (props) => {
@@ -15,7 +16,9 @@ const CourseMain = (props) => {
         buy={props.buy} setBuy={props.setBuy}
       />
       <div className={styles.mainCourses_buttonWrapper}>
-        <Button text="до каталогу" />
+        <Link to="/techniques">
+          <Button text="до каталогу" />
+        </Link>
       </div>
     </section>
   );

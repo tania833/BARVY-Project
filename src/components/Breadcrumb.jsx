@@ -1,16 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './css_modules/Breadcrumb.module.scss';
+import { Link } from 'react-router-dom';
 
 const Breadcrumb = (props) => {
   if (props.technique_or_teacher === '') {
     return (
       <ul className={styles.breadcrumb}>
         <li>
-          <a href="/">Головна</a>
+          <Link to="/">Головна</Link>
         </li>
         <li>
-          <a href={props.main_menu_item_link}>{props.main_menu_item}</a>
+          <Link to={props.main_menu_item_link}>{props.main_menu_item}</Link>
         </li>
       </ul>
     );
@@ -18,15 +19,15 @@ const Breadcrumb = (props) => {
   return (
     <ul className={styles.breadcrumb}>
       <li>
-        <a href="/">Головна</a>
+        <Link to="/">Головна</Link>
       </li>
       <li>
-        <a href={props.main_menu_item_link}>{props.main_menu_item}</a>
+        <Link to={props.main_menu_item_link}>{props.main_menu_item}</Link>
       </li>
       <li>
-        <a href={props.technique_or_teacher_link}>
+        <Link to={props.technique_or_teacher_link}>
           {props.technique_or_teacher}
-        </a>
+        </Link>
       </li>
     </ul>
   );

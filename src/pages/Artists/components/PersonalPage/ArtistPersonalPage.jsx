@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import TeacherAPI from '../../../../MOCKS/TeacherAPI';
 import card_info from '../../../../MOCKS/card_info_MOCK';
@@ -9,6 +9,9 @@ import Title from '../../../../components/TitleOnly';
 import Breadcrumb from '../../../../components/Breadcrumb';
 
 const ArtistPersonalPage = (props) => {
+
+  const [likes, setLikes] = useState([]);
+  const [buy, setBuy] = useState([]);
 
   const teacher = TeacherAPI.get(props.match.params.path);
 
@@ -72,14 +75,25 @@ const ArtistPersonalPage = (props) => {
   if (teacher.personal_title === '') {
     return <div>Sorry, but the teacher was not found</div>;
   }
-  return (
-    <div className={styles.artistsContainer}>
+
+  let width = window.innerWidth;
+  let breadcrumbs;
+  if (width < 768) {
+    breadcrumbs = '';
+  } else {
+    breadcrumbs = (
       <Breadcrumb
         main_menu_item="Викладачі"
         main_menu_item_link="/artists"
         technique_or_teacher={teacher.name}
         technique_or_teacher_link={`/artists/${teacher.path}`}
       />
+    );
+  }
+
+  return (
+    <div className={styles.artistsContainer}>
+      {breadcrumbs}
       <div className={styles.authorTitleWrapper}>
         <Title title={teacher.personal_title} subtitle={teacher.name} />
       </div>
@@ -109,10 +123,10 @@ const ArtistPersonalPage = (props) => {
           card_info={card_info.filter(
             (card) => card.author.name === teacher.name
           )}
-          likes={props.likes}
-          setLikes={props.setLikes}
-          buy={props.buy}
-          setBuy={props.setBuy}
+          likes={likes}
+          setLikes={setLikes}
+          buy={buy}
+          setBuy={setBuy}
         />
       </div>
     </div>
@@ -121,10 +135,6 @@ const ArtistPersonalPage = (props) => {
 
 ArtistPersonalPage.propTypes = {
   match: PropTypes.object,
-  likes: PropTypes.array,
-  buy: PropTypes.array,
-  setLikes: PropTypes.function,
-  setBuy: PropTypes.function,
 };
 
 export default ArtistPersonalPage;

@@ -35,11 +35,10 @@
 }
 
 @media all and (max-width: 768px) {
-    &__input {
+    .teachersSearch__input {
         height: 4rem;
     }
-
-    &__submit {
+    .teachersSearch__submit {
         height: 4rem;
     }
 }

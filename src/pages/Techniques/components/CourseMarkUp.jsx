@@ -70,7 +70,7 @@ const CourseMarkUp = (props) => {
 
   const cards = props.cardsToRender.slice(0, size);
   const changeSize = () => {
-    setSize(size => (size += 6));
+    setSize((size) => (size += 6));
   };
 
   const showMore =
@@ -79,9 +79,16 @@ const CourseMarkUp = (props) => {
     ) : (
       ''
     );
+
+  let breadcrumbs;
+  if (width < 768) {
+    breadcrumbs = '';
+  } else {
+    breadcrumbs = <Breadcrumb main_menu_item="Курси" />;
+  }
   return (
     <div className={styles.techniquesContainer}>
-      <Breadcrumb main_menu_item="Курси" />
+      {breadcrumbs}
       <div className={styles.titleWrapper}>
         <Title title="Усі" subtitle="Курси" />
       </div>

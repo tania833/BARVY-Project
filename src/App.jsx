@@ -5,9 +5,11 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Header from './components/Header/Header';
 import Main from './pages/Main/Main';
 import Events from './pages/Events/Events';
+import Course from './pages/Course/Course';
 import About from './pages/About/About';
 import Techniques from './pages/Techniques/Techniques';
 import Footer from './components/Footer';
+import page404 from './pages/404/page404';
 import Teachers from './pages/Artists/Teachers';
 import { Contacts } from './pages/Contacts/Contacts';
 import Technologies from './pages/Main/components/Technologies/Technologies';
@@ -34,19 +36,7 @@ function App() {
             )}
           />
 
-          <Route
-            path="/artists"
-            exact
-            render={(props) => (
-              <Teachers
-                {...props}
-                likes={likes}
-                setLikes={setLikes}
-                buy={buy}
-                setBuy={setBuy}
-              />
-            )}
-          />
+          <Route path="/artists" exact component={Teachers} />
           <Route
             path="/techniques"
             exact
@@ -62,6 +52,20 @@ function App() {
           />
           <Route component={Events} path="/events" />
           <Route component={About} path="/about" />
+          <Route
+            path="/course"
+            exact
+            render={(props) => (
+              <Course
+                {...props}
+                likes={likes}
+                setLikes={setLikes}
+                buy={buy}
+                setBuy={setBuy}
+              />
+            )}
+          />
+          <Route component={page404} path="/404" />
           <Route component={Contacts} path="/contacts" />
           <Route
             path="/technologies"

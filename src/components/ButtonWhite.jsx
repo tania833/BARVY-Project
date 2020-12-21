@@ -12,7 +12,7 @@ const ButtonWhite = (props) => {
 
 ButtonWhite.propTypes = {
   text: PropTypes.string,
-  onClick: PropTypes.function,
+  onClick: PropTypes.func,
 };
 
 export default ButtonWhite;

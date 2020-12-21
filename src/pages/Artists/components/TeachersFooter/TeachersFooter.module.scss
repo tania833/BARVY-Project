@@ -42,7 +42,8 @@
     }
     &__button {
         padding-bottom: 4rem;
-        margin-top: 1rem;   
+        margin-top: 1rem; 
+        z-index: 5;  
     }
     &__imageBox {
         width: 100%;          
@@ -111,5 +112,15 @@
     .teachersFooter__text {
         font-size: 1.8rem;
         width: 35rem;
+    }
+}
+@media all and (max-width: 290px) {
+    .teachersFooter__textContainer {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+    .teachersFooter__text {
+        font-size: 1.8rem;
+        width: 25rem;
     }
 }

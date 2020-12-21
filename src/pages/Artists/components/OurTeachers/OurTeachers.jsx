@@ -8,9 +8,18 @@ import TeachersFooter from '../TeachersFooter/TeachersFooter';
 import Breadcrumb from '../../../../components/Breadcrumb';
 
 const OurTeachers = () => {
+  let width = window.innerWidth;
+  let breadcrumbs;
+  if (width < 768) {
+    breadcrumbs = '';
+  } else {
+    breadcrumbs = (
+      <Breadcrumb main_menu_item="Викладачі" main_menu_item_link="/artists" />
+    );
+  }
   return (
     <div className={styles.teachersContainer}>
-      <Breadcrumb main_menu_item="Викладачі" main_menu_item_link="/artists" />
+      {breadcrumbs}
       <div className={styles.teachersTitle}>
         <Title title="Митці" />
       </div>

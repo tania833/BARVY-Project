@@ -23,10 +23,10 @@ const sideDrawer = (props) => {
           <Link to="/about">Про нас</Link>
         </li>
         <li className="side_drawer__item">
-          <Link to="/">Контакти</Link>
+          <Link to="/contacts">Контакти</Link>
         </li>
         <li className="side_drawer__item">
-          <Link to="/">Як це працює</Link>
+          <Link to="/#howItWorks">Як це працює</Link>
         </li>
       </ul>
     </nav>
