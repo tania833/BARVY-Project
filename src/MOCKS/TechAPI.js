@@ -25,6 +25,36 @@ const TechAPI = {
       techTitle: 'Історія Мистецтв',
       techImg: 'https://imgur.com/GQ4q46O.png',
     },
+    {
+      path: 'pastel',
+      techTitle: 'Пастель',
+      techImg: '',
+    },
+    {
+      path: 'oil',
+      techTitle: 'Олійний живопис',
+      techImg: '',
+    },
+    {
+      path: 'decor',
+      techTitle: 'Декоративне',
+      techImg: '',
+    },
+    {
+      path: 'kids',
+      techTitle: 'Дитяче',
+      techImg: '',
+    },
+    {
+      path: 'graphics',
+      techTitle: 'Графіка',
+      techImg: '',
+    },
+    {
+      path: 'digital',
+      techTitle: 'Діджитал',
+      techImg: '',
+    },
   ],
   all: function () {
     return this.courses;

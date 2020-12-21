@@ -21,18 +21,22 @@ const FullTechnologies = () => {
       <section className={styles.mainTechnos}>
         <Title title="Популярні" subtitle="техніки" />
         <div className={styles.technoPic}>
-          {TechAPI.all().map((tech) => (
-            <a className={styles.technoPic__Cont} key={tech.path}>
-              <Link to={`/technologies/${tech.path}`}>
-                <div className={styles.technoPic__title}>{tech.techTitle}</div>
-                <img
-                  className={styles.technoPic__Img}
-                  src={tech.techImg}
-                  alt={tech.techTitle}
-                />
-              </Link>
-            </a>
-          ))}
+          {TechAPI.all()
+            .filter((card, index) => index < 5)
+            .map((tech) => (
+              <a className={styles.technoPic__Cont} key={tech.path}>
+                <Link to={`/technologies/${tech.path}`}>
+                  <div className={styles.technoPic__title}>
+                    {tech.techTitle}
+                  </div>
+                  <img
+                    className={styles.technoPic__Img}
+                    src={tech.techImg}
+                    alt={tech.techTitle}
+                  />
+                </Link>
+              </a>
+            ))}
         </div>
         <div className={styles.mainCourses_buttonWrapper}>
           <Link to="/techniques">

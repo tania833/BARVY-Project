@@ -36,32 +36,25 @@ const Toolbar = (props) => {
           <a href="/">
             <img
               className={styles.header_icon_left}
-              src="../icons/search.svg"
-              alt="like_icon"
-            />
-          </a>
-          <a href="/">
-            <img
-              className={styles.header_icon_left}
               src="../icons/heart.svg"
               alt="like_icon"
             />
           </a>
         </div>
-        <a href="/">
+        <Link to="/">
           <img
             className={styles.header_cart}
             src="../icons/empty_cart.svg"
             alt="like_icon"
           />
-        </a>
+        </Link>
         <div className={styles.header_localization}>
-          <a href="/">
-            <p className={styles.header_icon_right}>Укр</p>
-          </a>
-          <a href="/">
+          <Link to="/">
+            <p className={styles.header_icon_right_ua}>Укр</p>
+          </Link>
+          <Link to="/">
             <p className={styles.header_icon_right}>Eng</p>
-          </a>
+          </Link>
         </div>
       </div>
     </header>

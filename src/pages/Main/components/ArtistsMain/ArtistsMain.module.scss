@@ -45,6 +45,7 @@
     min-width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: -15px;
   }
 
   &__info {
@@ -81,6 +82,11 @@
 
 @media all and (max-width: 992px) {
   .teacherCard {
+    &__photo {
+      object-position: 10px;
+
+    }
+
     &__artist {
       font-size: calc(16px + (8 + 11 * 0.7) * ((100vw - 320px) / 1280));
       margin-bottom: 1rem;
@@ -138,6 +144,13 @@
   }
 }
 
+// @media all and (max-width: 576px) {
+//   &__component {
+//     @include flex(space-between, center, row, nowrap);
+//     padding: 0.5rem;
+//   }
+// }
+
 @media all and (min-width: 992px) {
   .teacherCard {
     &__component {
@@ -162,10 +175,6 @@
   }
 
   .teacherCard {
-    &__info {
-    height: 12.375rem;
-    }
-
     &__artist {
       margin-bottom: 1rem;
     }
@@ -183,7 +192,7 @@
     }
 
     &__component {
-      @include flex(space-between, center, column, wrap);
+      @include flex(space-between, center, row, nowrap);
       padding: 0.5rem;
     }
 
@@ -216,6 +225,11 @@
   .teacherCard {
     &_link_to_details {
       margin: 0;
+    }
+
+    &__component {
+      @include flex(space-between, center, column, wrap);
+      padding: 0.5rem;
     }
   }
 }

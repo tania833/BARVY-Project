@@ -11,9 +11,19 @@ const About = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  let width = window.innerWidth;
+  let breadcrumbs;
+  if (width < 768) {
+    breadcrumbs = '';
+  } else {
+    breadcrumbs = (
+      <Breadcrumb main_menu_item="Про нас" main_menu_item_link="/about" />
+    );
+  }
   return (
     <>
-      <Breadcrumb main_menu_item="Про нас" main_menu_item_link="/about" />
+      {breadcrumbs}
       <TitleBarvy />
       <Barvy barvyProps={BarvyProps[0]} />
       <Ship />

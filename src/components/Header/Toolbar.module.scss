@@ -37,11 +37,16 @@
   }
 
   &_icon_left {
-    margin-right: 4vw;
+    margin-right: 1vw;
   }
 
   &_icon_right {
     margin-left: 1vw;
+  }
+
+  &_icon_right_ua {
+    margin-left: 1vw;
+    font-weight: bold;
   }
 
   &_cart {
@@ -51,6 +56,7 @@
 
   &_localization {
     @include flex(space-between, center, row, nowrap);
+    
   }
 }
 
@@ -72,6 +78,10 @@ nav {
     text-align: left;
     color: #000000;
     text-transform: uppercase;
+
+    :hover {
+      font-weight: bold;
+    }
   }
 }
 
