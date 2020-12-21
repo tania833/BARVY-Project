@@ -3,8 +3,13 @@
 ##Our team:
 
 #1. Alex Kolesnik - project manager
-#1. Tetiana Polishchuk - team lead
-#2. Tetiana Dzhyhar
-#3. Svitlana Kalmutska
-#4. Anton Demydov
-#5. Olga Novitska - design of the project
+
+#2. Tetiana Polishchuk - team lead
+
+#3. Tetiana Dzhyhar
+
+#4. Svitlana Kalmutska
+
+#5. Anton Demydov
+
+#6. Olga Novitska - design of the project
