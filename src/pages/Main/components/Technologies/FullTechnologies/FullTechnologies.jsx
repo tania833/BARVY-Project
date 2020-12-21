@@ -22,8 +22,7 @@ const FullTechnologies = () => {
         <Title title="Популярні" subtitle="техніки" />
         <div className={styles.technoPic}>
           {TechAPI.all().map((tech) => (
-            <a className={styles.technoPic__Cont} key={tech.path}>
-              <Link to={`/technologies/${tech.path}`}>
+              <Link className={styles.technoPic__Cont} key={tech.path} to={`/technologies/${tech.path}`}>
                 <div className={styles.technoPic__title}>{tech.techTitle}</div>
                 <img
                   className={styles.technoPic__Img}
@@ -31,7 +30,6 @@ const FullTechnologies = () => {
                   alt={tech.techTitle}
                 />
               </Link>
-            </a>
           ))}
         </div>
         <div className={styles.mainCourses_buttonWrapper}>
