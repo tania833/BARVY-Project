@@ -21,12 +21,13 @@ const Main = (props) => {
   } else {
     renderedWannaTry = <WannaTry />;
   }
+
   return (
     <>
       <TopBar />
       <Technologies />
       <HowItWorks title="починаємо" subtitle="як це працює?" />
-      <CourseMain likes={props.likes} setLikes={props.setLikes}/>
+      <CourseMain likes={props.likes} setLikes={props.setLikes} />
       <LearnAndChoose />
       {renderedWannaTry}
       <ArtistsMain />
@@ -38,6 +39,6 @@ const Main = (props) => {
 Main.propTypes = {
   likes: PropTypes.array,
   setLikes: PropTypes.function,
-}
+};
 
 export default Main;
