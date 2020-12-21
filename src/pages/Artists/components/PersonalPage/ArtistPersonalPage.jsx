@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import TeacherAPI from '../../../../MOCKS/TeacherAPI';
 import card_info from '../../../../MOCKS/card_info_MOCK';
@@ -10,7 +10,9 @@ import Breadcrumb from '../../../../components/Breadcrumb';
 import Page404 from '../../../404/page404';
 
 const ArtistPersonalPage = (props) => {
+
   const [likes, setLikes] = useState([]);
+  const [buy, setBuy] = useState([]);
 
   const teacher = TeacherAPI.get(props.match.params.path);
 
@@ -128,6 +130,8 @@ const ArtistPersonalPage = (props) => {
           )}
           likes={likes}
           setLikes={setLikes}
+          buy={buy}
+          setBuy={setBuy}
         />
       </div>
     </div>

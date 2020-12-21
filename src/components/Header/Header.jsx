@@ -4,12 +4,13 @@ import SideDrawer from './SideDrawer';
 import Toolbar from './Toolbar';
 import PropTypes from 'prop-types';
 import SimpleModal from './ModalMaterialUi';
-import {ListLikes} from './ListLikes';
-
+import { ListLikes } from './ListLikes';
+import Modals from '../Modules';
 class Header extends Component {
   state = {
     sideDrawerOpen: false,
     openModal: false,
+    openBasket: false,
   };
 
   handleOpen = () => {
@@ -18,6 +19,14 @@ class Header extends Component {
 
   handleClose = () => {
     this.setState({ openModal: false });
+  };
+
+  handleBasketOpen = () => {
+    this.setState({ openBasket: true });
+  };
+
+  handleBasketClose = () => {
+    this.setState({ openBasket: false });
   };
   drawerToggleClickHandler = () => {
     this.setState((prevState) => {
@@ -42,8 +51,21 @@ class Header extends Component {
           likes={this.props.likes}
           setLikes={this.props.setLikes}
           openModal={this.handleOpen}
+          openBasket={this.handleBasketOpen}
         />
-        <SimpleModal openModal={this.state.openModal} handleClose={this.handleClose} component={ListLikes} likes={this.props.likes}/>
+        <SimpleModal
+          openModal={this.state.openModal}
+          handleClose={this.handleClose}
+          component={ListLikes}
+          likes={this.props.likes}
+        />
+        <SimpleModal
+          openModal={this.state.openBasket}
+          handleClose={this.handleBasketClose}
+          likes={this.props.buy}
+          component={Modals}
+          setBuy={this.props.setBuy}
+        />
         <SideDrawer show={this.state.sideDrawerOpen} />
         {backdrop}
       </div>
@@ -53,7 +75,9 @@ class Header extends Component {
 
 Header.propTypes = {
   likes: PropTypes.array,
-  setLikes: PropTypes.function,
+  setLikes: PropTypes.func,
+  buy: PropTypes.array,
+  setBuy: PropTypes.func,
 };
 
 export default Header;
