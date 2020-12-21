@@ -11,7 +11,7 @@
   <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="full_cart">
     <path d="M9 22a1 1 0 100-2 1 1 0 000 2zm11 0a1 1 0 100-2 1 1 0 000 2zM1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
   </symbol>
-  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 21" id="heart">
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 21" id="heart">
     <path d="M19.458 2.68a5.257 5.257 0 00-1.708-1.243A4.89 4.89 0 0015.736 1a4.89 4.89 0 00-2.014.437 5.258 5.258 0 00-1.708 1.243L11 3.784 9.986 2.68C8.998 1.605 7.66 1 6.264 1s-2.735.605-3.722 1.68C1.555 3.755 1 5.213 1 6.734c0 1.52.555 2.978 1.542 4.053l1.014 1.105L11 20l7.444-8.108 1.014-1.104a5.79 5.79 0 001.141-1.86A6.171 6.171 0 0021 6.734c0-.753-.136-1.499-.4-2.194a5.79 5.79 0 00-1.142-1.86v0z" stroke="#000" stroke-linecap="round" stroke-linejoin="round"></path>
   </symbol>
   <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" id="instagram">

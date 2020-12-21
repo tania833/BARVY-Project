@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from '../../../../components/Button';
 import styles from './FooterMainBlue.module.scss';
+import { Link } from 'react-router-dom';
 
 const FooterMainBlue = () => {
   return (
@@ -24,7 +25,9 @@ const FooterMainBlue = () => {
           </p>
         </div>
         <div className={styles.footerBlue__buttonWrapper}>
-          <Button text="Написати нам" />
+          <Link to="/contacts">
+            <Button text="Написати нам" />
+          </Link>
         </div>
       </div>
     </section>

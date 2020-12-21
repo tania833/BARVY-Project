@@ -33,13 +33,15 @@ const Toolbar = (props) => {
       </nav>
       <div className={styles.header_icons}>
         <div className={styles.header_icons_items}>
-          <a href="/">
-            <img
-              className={styles.header_icon_left}
-              src="../icons/heart.svg"
-              alt="like_icon"
-            />
-          </a>
+          <img
+            className={styles.header_icon_left}
+            src="../icons/heart.svg"
+            alt="like_icon"
+            onClick={(event) => {
+              event.preventDefault();
+              props.openModal();
+            }}
+          />
         </div>
         <Link to="/">
           <img
@@ -63,6 +65,9 @@ const Toolbar = (props) => {
 
 Toolbar.propTypes = {
   drawerClickHandler: PropTypes.func,
+  likes: PropTypes.array,
+  setLikes: PropTypes.function,
+  openModal: PropTypes.function,
 };
 
 export default Toolbar;

@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Barvy.module.scss';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const Barvy = (props) => {
   const { alt, src, para1, para2, para3 } = props.barvyProps;
@@ -8,7 +9,9 @@ const Barvy = (props) => {
     <div className={styles.generalContainer}>
       <div className={styles.subContainer}>
         <div className={styles.textContainer}>
-          <div className={styles.logo}>Барви</div>
+          <Link to="/" className={styles.logo}>
+            Барви
+          </Link>
           <div className={styles.textBlock}>
             <p className={styles.textBlock__para}>{para1}</p>
             <p className={styles.textBlock__para}>{para2}</p>

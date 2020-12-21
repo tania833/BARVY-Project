@@ -98,7 +98,11 @@ const CourseMarkUp = (props) => {
         <Form />
         {buttonSort}
       </div>
-      <CourseCardViewer card_info={cards} />
+      <CourseCardViewer
+        card_info={cards}
+        likes={props.likes}
+        setLikes={props.setLikes}
+      />
       <div className={styles.techniquesButtonWhiteWrapper}>{showMore}</div>
       <p className={styles.textCardsRendered}>
         Показано {cards.length} з {props.cardsToRender.length}
@@ -110,6 +114,8 @@ const CourseMarkUp = (props) => {
 CourseMarkUp.propTypes = {
   drawerClickHandler: PropTypes.func,
   cardsToRender: PropTypes.array,
+  likes: PropTypes.array,
+  setLikes: PropTypes.function,
 };
 
 export default CourseMarkUp;

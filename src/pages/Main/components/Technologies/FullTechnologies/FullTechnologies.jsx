@@ -24,18 +24,18 @@ const FullTechnologies = () => {
           {TechAPI.all()
             .filter((card, index) => index < 5)
             .map((tech) => (
-              <a className={styles.technoPic__Cont} key={tech.path}>
-                <Link to={`/technologies/${tech.path}`}>
-                  <div className={styles.technoPic__title}>
-                    {tech.techTitle}
-                  </div>
-                  <img
-                    className={styles.technoPic__Img}
-                    src={tech.techImg}
-                    alt={tech.techTitle}
-                  />
-                </Link>
-              </a>
+              <Link
+                className={styles.technoPic__Cont}
+                key={tech.path}
+                to={`/technologies/${tech.path}`}
+              >
+                <div className={styles.technoPic__title}>{tech.techTitle}</div>
+                <img
+                  className={styles.technoPic__Img}
+                  src={tech.techImg}
+                  alt={tech.techTitle}
+                />
+              </Link>
             ))}
         </div>
         <div className={styles.mainCourses_buttonWrapper}>

@@ -3,8 +3,9 @@ import BackdropTechniques from './components/BackdropTechniques';
 import SideDrawerTechniques from './components/SideDrawerTechniques';
 import CourseMarkUp from './components/CourseMarkUp';
 import card_info from '../../MOCKS/card_info_MOCK';
+import PropTypes from 'prop-types';
 
-const Techniques = () => {
+const Techniques = (props) => {
   const [cardsRender, setCardsRender] = useState(card_info);
 
   const [state, setState] = useState({
@@ -154,6 +155,8 @@ const Techniques = () => {
       <CourseMarkUp
         drawerClickHandler={drawerToggleClickHandler}
         cardsToRender={cardsRender}
+        likes={props.likes}
+        setLikes={props.setLikes}
       />
       <SideDrawerTechniques
         show={state.sideDrawerOpen}
@@ -168,6 +171,11 @@ const Techniques = () => {
       {backdrop}
     </div>
   );
+};
+
+Techniques.propTypes = {
+  likes: PropTypes.array,
+  setLikes: PropTypes.function,
 };
 
 export default Techniques;

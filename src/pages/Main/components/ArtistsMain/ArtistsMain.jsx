@@ -4,6 +4,7 @@ import MainTitle from '../../../../components/Title';
 import ButtonWhite from '../../../../components/ButtonWhite';
 import styles from './ArtistsMain.module.scss';
 import TeachersCardViewerForMain from './TeacherCard';
+import { Link } from 'react-router-dom';
 
 const ArtistsMain = () => {
   return (
@@ -11,7 +12,9 @@ const ArtistsMain = () => {
       <MainTitle title="митці" subtitle="наші викладачі" />
       <TeachersCardViewerForMain artists_info_main={artists_info_main} />
       <div className={styles.mainTeachers_buttonWrapper}>
-        <ButtonWhite text="Усі викладачі" />
+        <Link to="/artists">
+          <ButtonWhite text="Усі викладачі" />
+        </Link>
       </div>
     </section>
   );
