@@ -8,13 +8,36 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 const CourseMain = (props) => {
-  return (
-    <section className={styles.main_courses}>
-      <MainTitle title="курси" subtitle="нові уроки" />
+  const width = window.innerWidth;
+  let viewerForMain;
+  if (width < 768 && width > 576) {
+    viewerForMain = (
+      <CourseCardViewerForMain
+        card_info={card_info.filter((card, index) => index <= 3)}
+        likes={props.likes}
+        setLikes={props.setLikes}
+      />
+    );
+  } else if (width <= 576) {
+    viewerForMain = (
+      <CourseCardViewerForMain
+        card_info={card_info.filter((card, index) => index <= 2)}
+        likes={props.likes}
+        setLikes={props.setLikes}
+      />
+    );
+  } else {
+    viewerForMain = (
       <CourseCardViewerForMain
         card_info={card_info.filter((card, index) => index <= 5)} likes={props.likes} setLikes={props.setLikes}
         buy={props.buy} setBuy={props.setBuy}
       />
+    );
+  }
+  return (
+    <section className={styles.main_courses}>
+      <MainTitle title="курси" subtitle="нові уроки" />
+      {viewerForMain}
       <div className={styles.mainCourses_buttonWrapper}>
         <Link to="/techniques">
           <Button text="до каталогу" />

@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './css_modules/CourseCard.module.scss';
 import PropTypes from 'prop-types';
 import sprite from '../sprite.svg';
+import { Link } from 'react-router-dom';
 
 const CardPhoto = (props) => {
   return (
@@ -129,24 +130,8 @@ CourseButton.propTypes = {
 };
 
 const CourseCardViewerForMain = (props) => {
-  const width = window.innerWidth;
-  const courseCardInfoProps = props.card_info;
-  let courseCardInfo;
-
-  if (width < 768 && width > 576) {
-    courseCardInfo = courseCardInfoProps.filter(
-      (card, index, array) => index <= array.length / 2
-    );
-  } else if (width <= 576) {
-    courseCardInfo = courseCardInfoProps.filter(
-      (card, index, array) => index <= array.length / 3
-    );
-  } else {
-    courseCardInfo = courseCardInfoProps;
-  }
-
-  const courseCardInfoView = courseCardInfo.map((card) => (
-    <div key={card.id} className={styles.courseCard__component}>
+  const courseCardInfoView = props.card_info.map((card) => (
+    <Link to="/course" key={card.id} className={styles.courseCard__component}>
       <div>
         <CardPhoto img_info={card.img} />
       </div>
@@ -163,7 +148,7 @@ const CourseCardViewerForMain = (props) => {
           <CourseButton buy={props.buy} setBuy={props.setBuy} id={card.id} />
         </CartInfo>
       </div>
-    </div>
+    </Link>
   ));
   return <div className={styles.courseCard__wrapper}>{courseCardInfoView}</div>;
 };

@@ -15,7 +15,24 @@ const Breadcrumb = (props) => {
         </li>
       </ul>
     );
+  } else if (props.course === '') {
+    return (
+      <ul className={styles.breadcrumb}>
+        <li>
+          <Link to="/">Головна</Link>
+        </li>
+        <li>
+          <Link to={props.main_menu_item_link}>{props.main_menu_item}</Link>
+        </li>
+        <li>
+          <Link to={props.technique_or_teacher_link}>
+            {props.technique_or_teacher}
+          </Link>
+        </li>
+      </ul>
+    );
   }
+
   return (
     <ul className={styles.breadcrumb}>
       <li>
@@ -28,6 +45,9 @@ const Breadcrumb = (props) => {
         <Link to={props.technique_or_teacher_link}>
           {props.technique_or_teacher}
         </Link>
+      </li>
+      <li>
+        <Link to={props.course_link}>{props.course}</Link>
       </li>
     </ul>
   );
@@ -44,6 +64,7 @@ Breadcrumb.propTypes = {
   technique_or_teacher: PropTypes.string,
   technique_or_teacher_link: PropTypes.string,
   course: PropTypes.string,
+  course_link: PropTypes.string,
 };
 
 export default Breadcrumb;

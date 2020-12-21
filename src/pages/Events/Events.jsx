@@ -1,15 +1,8 @@
 import React from 'react';
-import Breadcrumb from '../../components/Breadcrumb';
+import Page404 from '../404/page404';
 
 const Events = () => {
-  return (
-    <div>
-      <Breadcrumb main_menu_item="Події" main_menu_item_link="/events" />
-      <h1>
-        Сторінка в процесі заповнення контентом. Перепрошуємо за незручності
-      </h1>
-    </div>
-  );
+  return <Page404 />;
 };
 
 export default Events;
