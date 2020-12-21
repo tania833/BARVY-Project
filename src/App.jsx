@@ -35,8 +35,7 @@ function App() {
               />
             )}
           />
-
-          <Route path="/artists" exact component={Teachers} />
+          <Route path="/artists" component={Teachers} />
           <Route
             path="/techniques"
             exact
@@ -55,7 +54,7 @@ function App() {
           <Route path="/course" exact component={Course} />
           <Route component={page404} path="/404" />
           <Route component={Contacts} path="/contacts" />
-          <Route path="/technologies" exact component={Technologies} />
+          <Route path="/technologies" component={Technologies} />
         </Switch>
         <Footer />
       </div>

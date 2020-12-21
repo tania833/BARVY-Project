@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import PropTypes from 'prop-types';
 import TechAPI from '../../../../../MOCKS/TechAPI';
 import card_info from '../../../../../MOCKS/card_info_MOCK';
@@ -9,6 +9,10 @@ import Breadcrumb from '../../../../../components/Breadcrumb';
 import ButtonWhite from '../../../../../components/ButtonWhite';
 
 const CoursePage = (props) => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const [likes, setLikes] = useState([]);
   const [buy, setBuy] = useState([]);
 
