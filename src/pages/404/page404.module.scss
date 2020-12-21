@@ -1,0 +1,77 @@
+.page404 {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    margin: auto;
+    &__logo {
+        display: flex;
+        position: relative;
+        justify-content: flex-start;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 20px 0;
+        &_brandname {
+            font-family: 'Mak', serif;
+            font-weight: 300;
+            font-size: 3.75rem;
+            line-height: 1;
+            text-transform: uppercase;
+        }
+        &_description {
+            font-family: 'OpenSans', serif;
+            font-weight: 300;
+            font-size: 1rem;
+        }
+    }
+    &__header {
+        font-family: 'Mak', serif;
+        font-weight: bold;
+        font-size: 7.5rem;
+        line-height: 0;
+        color: #BDD9E4;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    &__text {
+        font-family: 'Montserrat', serif;
+        font-weight: 300;
+        font-size: 1.25rem;
+        text-align: center;
+        width: 100%;
+    }
+    &__link {
+        display: flex;
+        justify-content: center;
+        font-family: 'Montserrat', serif;
+        font-weight: 300;
+        font-size: 1.625rem;
+        text-align: center;
+        text-decoration: underline;
+        margin: 1.875rem auto;
+        transition: .3s;
+        &:hover {
+            text-decoration: none;
+            transition: .3s;
+        }
+    }
+    &__picture {
+        display: flex;
+        position: relative;
+        justify-content: flex-end;
+        max-width: 50%;
+        &_img {
+            max-width: 100%;
+        }
+    }
+}
+.page404Container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+    padding-left: 2.3125rem;
+    padding-right: 2.3125rem;
+}
