@@ -98,15 +98,11 @@ const CourseMarkUp = (props) => {
         <Form />
         {buttonSort}
       </div>
-      <CourseCardViewer
-        card_info={cards}
-        likes={props.likes}
-        setLikes={props.setLikes}
-      />
-      <div className={styles.techniquesButtonWhiteWrapper}>{showMore}</div>
-      <p className={styles.textCardsRendered}>
-        Показано {cards.length} з {props.cardsToRender.length}
-      </p>
+      <CourseCardViewer card_info={cards} likes={props.likes} setLikes={props.setLikes}  buy={props.buy} setBuy={props.setBuy}/>
+      <div className={styles.techniquesButtonWhiteWrapper}>
+        {showMore}
+      </div>
+      <p className={styles.textCardsRendered}>Показано {cards.length} з {props.cardsToRender.length}</p>
     </div>
   );
 };
@@ -116,6 +112,8 @@ CourseMarkUp.propTypes = {
   cardsToRender: PropTypes.array,
   likes: PropTypes.array,
   setLikes: PropTypes.function,
+  buy: PropTypes.array,
+  setBuy: PropTypes.function,
 };
 
 export default CourseMarkUp;

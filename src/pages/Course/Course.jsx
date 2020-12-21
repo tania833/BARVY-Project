@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import Title from '../../components/TitleOnly';
 import Button from '../../components/Button';
 import styles from './Course.module.scss';
@@ -7,7 +7,10 @@ import CourseCardImport from '../../components/CourseCard';
 import card_info from '../../MOCKS/card_info_MOCK';
 import PropTypes from 'prop-types';
 
-const Course = (props) => {
+const Course = () => {
+  const [likes, setLikes] = useState([]);
+  const [buy, setBuy] = useState([]);
+
   return (
     <div className={styles.courseSingle}>
       <Breadcrumb
@@ -240,8 +243,10 @@ const Course = (props) => {
           card_info={card_info
             .filter((card) => card.author.name === 'Христина Стринадюк')
             .filter((card, index) => index < 3)}
-          likes={props.likes}
-          setLikes={props.setLikes}
+          likes={likes}
+          setLikes={setLikes}
+          buy={buy}
+          setBuy={setBuy}
         />
       </div>
     </div>
@@ -250,8 +255,6 @@ const Course = (props) => {
 
 Course.propTypes = {
   card_info: PropTypes.array,
-  likes: PropTypes.array,
-  setLikes: PropTypes.function,
 };
 
 export default Course;

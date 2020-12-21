@@ -31,7 +31,7 @@ const Toolbar = (props) => {
           </ul>
         </div>
       </nav>
-      <div className={styles.header_icons}>
+        <div className={styles.header_icons}>
         <div className={styles.header_icons_items}>
           <img
             className={styles.header_icon_left}
@@ -43,13 +43,16 @@ const Toolbar = (props) => {
             }}
           />
         </div>
-        <Link to="/">
+
           <img
             className={styles.header_cart}
             src="../icons/empty_cart.svg"
             alt="like_icon"
+            onClick={(event) => {
+              event.preventDefault();
+              props.openBasket();
+            }}
           />
-        </Link>
         <div className={styles.header_localization}>
           <Link to="/">
             <p className={styles.header_icon_right_ua}>Укр</p>
@@ -66,8 +69,9 @@ const Toolbar = (props) => {
 Toolbar.propTypes = {
   drawerClickHandler: PropTypes.func,
   likes: PropTypes.array,
-  setLikes: PropTypes.function,
-  openModal: PropTypes.function,
+  setLikes: PropTypes.func,
+  openModal: PropTypes.func,
+  openBasket: PropTypes.func,
 };
 
 export default Toolbar;

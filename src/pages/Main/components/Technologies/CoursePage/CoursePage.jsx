@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import PropTypes from 'prop-types';
 import TechAPI from '../../../../../MOCKS/TechAPI';
 import card_info from '../../../../../MOCKS/card_info_MOCK';
@@ -9,6 +9,13 @@ import Breadcrumb from '../../../../../components/Breadcrumb';
 import ButtonWhite from '../../../../../components/ButtonWhite';
 
 const CoursePage = (props) => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  const [likes, setLikes] = useState([]);
+  const [buy, setBuy] = useState([]);
+
   const [size, setSize] = useState(6);
   const course = TechAPI.get(props.match.params.path);
   const card_techniques = card_info.filter(
@@ -56,7 +63,13 @@ const CoursePage = (props) => {
         <Title title="Техніки" subtitle={course.techTitle} />
       </div>
       <div className={styles.cardWrapper}>
-        <CourseCardViewerForMain card_info={cards} />
+        <CourseCardViewerForMain
+          card_info={cards}
+          likes={likes}
+          setLikes={setLikes}
+          buy={buy}
+          setBuy={setBuy}
+        />
       </div>
       <div className={styles.techniquesButtonWhiteWrapper}>{showMore}</div>
       <p className={styles.textCardsRendered}>
@@ -71,29 +84,5 @@ CoursePage.propTypes = {
   drawerClickHandler: PropTypes.func,
   cardsToRender: PropTypes.array,
 };
-
-// const Course = () => {
-//   const [cardsRender, setCardsRender] = useState(card_info);
-
-//   return (
-//     <div style={{ height: '100%' }}>
-//       <CoursePage
-//         drawerClickHandler={drawerToggleClickHandler}
-//         cardsToRender={cardsRender}
-//       />
-//       <SideDrawerTechniques
-//         show={state.sideDrawerOpen}
-//         technique={techniqueCheckbox}
-//         chooseTechnique={chooseTechnique}
-//         setChanges={setChanges}
-//         chooseTeachers={chooseTeachers}
-//         teachersCheckBox={teachersCheckBox}
-//         onRangeChange={onRangeChange}
-//         resetFilters={resetFilters}
-//       />
-//       {backdrop}
-//     </div>
-//   );
-// };
 
 export default CoursePage;

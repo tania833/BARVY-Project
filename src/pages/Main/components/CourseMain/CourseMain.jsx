@@ -12,9 +12,8 @@ const CourseMain = (props) => {
     <section className={styles.main_courses}>
       <MainTitle title="курси" subtitle="нові уроки" />
       <CourseCardViewerForMain
-        card_info={card_info.filter((card, index) => index <= 5)}
-        likes={props.likes}
-        setLikes={props.setLikes}
+        card_info={card_info.filter((card, index) => index <= 5)} likes={props.likes} setLikes={props.setLikes}
+        buy={props.buy} setBuy={props.setBuy}
       />
       <div className={styles.mainCourses_buttonWrapper}>
         <Link to="/techniques">
@@ -28,6 +27,8 @@ const CourseMain = (props) => {
 CourseMain.propTypes = {
   likes: PropTypes.array,
   setLikes: PropTypes.function,
-};
+  buy: PropTypes.array,
+  setBuy: PropTypes.function,
+}
 
 export default CourseMain;
