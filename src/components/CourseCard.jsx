@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './css_modules/CourseCard.module.scss';
 import PropTypes from 'prop-types';
 import sprite from '../sprite.svg';
+import { Link } from 'react-router-dom';
 
 const CardPhoto = (props) => {
   return (
@@ -127,7 +128,7 @@ const CourseCardViewerForMain = (props) => {
   }
 
   const courseCardInfoView = courseCardInfo.map((card) => (
-    <div key={card.id} className={styles.courseCard__component}>
+    <Link to="/course" key={card.id} className={styles.courseCard__component}>
       <div>
         <CardPhoto img_info={card.img} />
       </div>
@@ -145,7 +146,7 @@ const CourseCardViewerForMain = (props) => {
           <CourseButton />
         </CartInfo>
       </div>
-    </div>
+    </Link>
   ));
   return <div className={styles.courseCard__wrapper}>{courseCardInfoView}</div>;
 };

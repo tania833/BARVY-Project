@@ -169,7 +169,7 @@ const sideDrawerTechniques = (props) => {
       <div className="sideDrawerWrapper">
         <div className="sideDrawerLine"></div>
         <div className="sideDrawerTitle">Ціна</div>
-        <RangeInput onRangeChange={props.onRangeChange}/>
+        <RangeInput onRangeChange={props.onRangeChange} />
         <div className="sideDrawerLine"></div>
         <div className="sideDrawerArtistList">
           <label htmlFor="teacher" className="sideDrawerTitle">
@@ -181,7 +181,7 @@ const sideDrawerTechniques = (props) => {
           />
         </div>
         <div className="buttonWrapper" onClick={props.setChanges}>
-          <Button text="Застосувати" />
+          <Button className="buttonWrapperInner" text="Застосувати" />
         </div>
       </div>
       <input

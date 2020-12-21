@@ -110,6 +110,7 @@
 .sideDrawer.open {
   transform: translateX(0);
 }
+
 .buttonWrapper {
   margin-bottom: 4.0938rem;
 }
@@ -126,29 +127,45 @@
   color: #7e7a7a;
 }
 
-// @media (min-width: 769px) {
-//   .side_drawer {
-//     display: none;
-//   }
-// }
 
-// @media all { 
-//   .sideDrawerItem {
-//       font-size: calc(18px + (5 + 11 * 0.7) *((100vw - 320px) / 1280)) ;
-//     }
-// }
+@media all { 
+  .clearButton {
+      font-size: calc(9px + (6 + 11 * 0.7) *((100vw - 320px) / 1280)) ;
+    }
+}
 
-// @media (min-width: 500px) {
-//   .sideDrawer {
-//     max-width: 60vw;
-//   }
-// }
+@media (max-width: 768px) {
+  .sideDrawer {
+    max-width: 212px;
+  }
 
-// @media (min-width: 576px) {
-//   .sideDrawer {
-//     max-width: 50vw;
-//     &__item {
-//       font-size: 22px;
-//     }
-//   }
-// }
+  .sideDrawerLine {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .sideDrawerTechniqueItem {
+    height: 30px;
+  }
+
+  .clearButton {
+    width: 130px
+  }
+
+  .buttonWrapper .button_block__5EMz2{
+    width: 50px;
+  }
+}
+
+@media (max-width: 576px) {
+  .sideDrawer {
+    max-width: 180px;
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  } 
+
+  .clearButton {
+    width: 100px
+  }
+}
