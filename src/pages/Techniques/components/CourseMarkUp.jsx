@@ -49,8 +49,6 @@ FilterIcon.propTypes = {
 };
 
 const CourseMarkUp = (props) => {
-  const [size, setSize] = useState(6);
-
   let width = window.innerWidth;
   let buttonSort;
   if (width < 768) {
@@ -68,10 +66,35 @@ const CourseMarkUp = (props) => {
     );
   }
 
-  const cards = props.cardsToRender.slice(0, size);
-  const changeSize = () => {
-    setSize((size) => (size += 6));
-  };
+  const [size, setSize] = useState(6);
+  const [sizeP, setSizeP] = useState(4);
+  const [sizeM, setSizeM] = useState(3);
+
+  let cards;
+  if (width < 768 && width > 576) {
+    cards = props.cardsToRender.slice(0, sizeP);
+  } else if (width < 576) {
+    cards = props.cardsToRender.slice(0, sizeM);
+  } else {
+    cards = props.cardsToRender.slice(0, size);
+  }
+
+  // const cards = props.cardsToRender.slice(0, size);
+  let changeSize;
+
+  if (width < 768 && width > 576) {
+    changeSize = () => {
+      setSizeP((sizeP) => (sizeP += 4));
+    };
+  } else if (width < 576) {
+    changeSize = () => {
+      setSizeM((sizeM) => (sizeM += 2));
+    };
+  } else {
+    changeSize = () => {
+      setSize((size) => (size += 6));
+    };
+  }
 
   const showMore =
     cards.length < props.cardsToRender.length ? (
