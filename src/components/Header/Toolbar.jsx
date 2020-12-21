@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import DrawerToggleButton from './DrawerToggleButton';
 import PropTypes from 'prop-types';
-
 import styles from './Toolbar.module.scss';
 
 const Toolbar = (props) => {
@@ -41,13 +40,15 @@ const Toolbar = (props) => {
               alt="like_icon"
             />
           </a>
-          <a href="/">
             <img
               className={styles.header_icon_left}
               src="../icons/heart.svg"
               alt="like_icon"
+              onClick={(event) => {
+                event.preventDefault();
+                props.openModal();
+              }}
             />
-          </a>
         </div>
         <a href="/">
           <img
@@ -70,7 +71,10 @@ const Toolbar = (props) => {
 };
 
 Toolbar.propTypes = {
-  drawerClickHandler: PropTypes.object,
+  drawerClickHandler: PropTypes.func,
+  likes: PropTypes.array,
+  setLikes: PropTypes.function,
+  openModal: PropTypes.function,
 };
 
 export default Toolbar;

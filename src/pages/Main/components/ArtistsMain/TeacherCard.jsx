@@ -46,7 +46,7 @@ const TeachersCardInfo = (props) => {
 };
 
 TeachersCardInfo.propTypes = {
-  children: PropTypes.string,
+  children: PropTypes.array,
 };
 
 const LinkToDetails = () => {
@@ -61,7 +61,6 @@ const TeachersCardViewerForMain = (props) => {
   const teacherCardInfo = props.artists_info_main.map((teacher_card) => (
     <div className={styles.teacherCard__wrapper} key={teacher_card.id}>
       <div
-        key={teacher_card.id}
         className={`${styles.teacherCard__component} teacherCard__newComponent`}
       >
         <TeachersCardPhoto

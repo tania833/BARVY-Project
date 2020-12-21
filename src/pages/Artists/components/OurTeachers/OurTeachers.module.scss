@@ -1,0 +1,109 @@
+@mixin flex($jc, $ai, $fd, $fw) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+    flex-direction: $fd;
+    flex-wrap: $fw;
+}
+
+.teachersTitle {
+   margin-left: 17.5rem;
+   padding-top: 1.25rem;
+ }
+
+.teachersSubTitle {
+    font-family: "Montserrat";
+    font-size: 2.5rem;
+    font-weight: 300;
+    text-align: center;
+    color: #000000;
+    text-transform: uppercase;
+    margin-top: -1.25rem;
+} 
+   
+.teachersRow {
+    display: block;
+    @include flex(space-around, center, row, wrap);
+    padding: 5.1875rem 7.3125rem 3rem;
+}
+
+.teachersRow__item {
+    width: 19%;
+    max-width: 14.375rem;
+    height: 21.25rem;
+}
+
+.teachersPhoto__wrapper {
+    @include flex(space-between, center, column, wrap);
+}
+
+.teachersPhoto__photo {
+    max-width: 100%;
+}
+
+.teachersInfo__name {
+    padding-top: 2.3125rem;
+    text-align: center;
+    font-family: "Montserrat";
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+.teachersInfo__technique {
+    padding-top: 1.0625rem;
+    text-align: center;
+    font-family: "OpenSans";
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5;
+    max-width: 10.625rem;
+    margin: 0 auto;
+}
+
+@media all and (max-width: 992px) {
+    .teachersRow__item {
+        width: 24%;
+        height: 23rem;
+        margin-bottom: 1.25rem;
+    }
+    .teachersInfo__name {
+        font-size: 1.3rem;
+    }
+    .teachersInfo__technique {
+        font-size: 1.125rem;  
+    }
+}
+
+@media all and (max-width: 768px) {      
+    .teachersRow__item {
+        width: 32%;
+        height: 27rem;
+    }
+    .teachersInfo__name {
+        font-size: 1.5rem;
+    }
+    .teachersInfo__technique {
+        font-size: 1.2rem;  
+    }
+}
+
+@media all and (max-width: 576px) {
+    .teachersRow__item {
+        width: 47%;
+        height: 32rem;
+        margin-bottom: 2.25rem;
+    }
+    .teachersInfo__name {
+        font-size: 1.9rem;
+    }
+    .teachersInfo__technique {
+        font-size: 1.4rem;  
+    }
+}
+
+@media all and (max-width: 375px) {
+    .teachersRow__item {
+        width: 100%;
+        height: 32rem;
+    }  
+}

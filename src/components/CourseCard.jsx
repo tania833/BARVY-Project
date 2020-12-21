@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './css_modules/CourseCard.module.scss';
 import PropTypes from 'prop-types';
+import sprite from '../sprite.svg';
 
 const CardPhoto = (props) => {
   return (
@@ -27,9 +28,9 @@ const AuthorInfo = (props) => {
           {props.author_info.name}
         </div>
       </a>
-      <a href="/about">
+      <a href="/">
         <div className={styles.courseCard__technique}>
-          {props.author_info.technique}
+          {props.author_info.technique}, {props.author_info.course_format}
         </div>
       </a>
     </div>
@@ -41,20 +42,40 @@ AuthorInfo.propTypes = {
 };
 
 const TitleInfo = (props) => {
-  return (
+  const { id, setLikes, likes } = props;
+
+  const addLikes = () => {
+    const storeLikes = likes.slice(0, likes.length);
+    const likesArray = storeLikes.includes(id)
+      ? [...storeLikes.filter((el) => el != id)]
+      : [...likes, id];
+    setLikes(likesArray);
+  };
+
+  const card = (
     <div className={styles.courseCard__title_info}>
       <div className={styles.courseCard__title}>{props.title_info}</div>
-      <img
-        className={styles.courseCard__like_icon}
-        src="../icons/heart.svg"
-        alt="like_icon"
-      />
+      <svg
+        onClick={addLikes}
+        className={
+          likes.includes(id)
+            ? `${styles.courseCard__like_icon} ${styles.active}`
+            : styles.courseCard__like_icon
+        }
+      >
+        <use href={sprite + '#heart'} />
+      </svg>
     </div>
   );
+
+  return card;
 };
 
 TitleInfo.propTypes = {
   title_info: PropTypes.string,
+  id: PropTypes.number,
+  likes: PropTypes.array,
+  setLikes: PropTypes.function,
 };
 
 const PriceInfo = (props) => {
@@ -77,7 +98,7 @@ const CartInfo = (props) => {
 };
 
 CartInfo.propTypes = {
-  children: PropTypes.string,
+  children: PropTypes.array,
 };
 
 const CourseButton = () => {
@@ -94,11 +115,15 @@ const CourseCardViewerForMain = (props) => {
   let courseCardInfo;
 
   if (width < 768 && width > 576) {
-    courseCardInfo = courseCardInfoProps.filter((card, index) => index <= 3);
+    courseCardInfo = courseCardInfoProps.filter(
+      (card, index, array) => index <= array.length / 2
+    );
   } else if (width <= 576) {
-    courseCardInfo = courseCardInfoProps.filter((card, index) => index <= 2);
+    courseCardInfo = courseCardInfoProps.filter(
+      (card, index, array) => index <= array.length / 3
+    );
   } else {
-    courseCardInfo = courseCardInfoProps.filter((card, index) => index <= 5);
+    courseCardInfo = courseCardInfoProps;
   }
 
   const courseCardInfoView = courseCardInfo.map((card) => (
@@ -108,7 +133,12 @@ const CourseCardViewerForMain = (props) => {
       </div>
       <div className={styles.courseCard__info}>
         <AuthorInfo author_info={card.author} />
-        <TitleInfo title_info={card.title} />
+        <TitleInfo
+          title_info={card.title}
+          id={card.id}
+          likes={props.likes}
+          setLikes={props.setLikes}
+        />
 
         <CartInfo>
           <PriceInfo price_info={card.price} />
@@ -122,6 +152,8 @@ const CourseCardViewerForMain = (props) => {
 
 CourseCardViewerForMain.propTypes = {
   card_info: PropTypes.array,
+  likes: PropTypes.array,
+  setLikes: PropTypes.function,
 };
 
 export default CourseCardViewerForMain;

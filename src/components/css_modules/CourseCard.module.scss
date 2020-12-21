@@ -14,6 +14,7 @@
   border: solid 0.0625rem #bdd9e4;
   width: 32%;
   margin-bottom: 1.875rem;
+  margin: auto;
 }
 
 .courseCard_photo_wrapper {
@@ -86,6 +87,23 @@
   text-transform: uppercase;
 }
 
+.courseCard__like_icon{
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  fill: none;
+}
+
+.active{
+  fill: #bdd9e4;
+}
+
+.likesList{
+  @include flex(space-between, center, row, wrap);
+  align-content: center;
+  align-self: center;
+}
+
 @media all and (max-width: 1200px) {
   .courseCard__info {
     height: 170px;
@@ -154,7 +172,6 @@
   }
 
   .courseCard__info {
-    // height: 150px;
     padding: 0.9375rem 1rem 0.8125rem 0.875rem;
     @include flex(space-between, stretch, column, nowrap);
   }
