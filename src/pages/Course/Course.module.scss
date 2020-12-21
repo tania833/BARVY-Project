@@ -1,0 +1,395 @@
+.courseSingle {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    padding-left: 2.3125rem;
+    padding-right: 2.3125rem;
+}
+.courseTitle {
+    width: 100%;
+    margin: 3.125rem auto;
+}
+.courseContainer {
+    width: 75rem;
+    margin: auto;
+}
+.courseInfoContainer {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.courseInfoSubContainer {
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.courseInfoWrapper {
+    display: flex;
+    position: relative;
+    width: 60%;
+}
+.courseVideo {
+    max-width: 100%;
+    iframe {
+        max-width: 100%;
+        height: 23.75rem;
+    }
+    &_mob {
+        display: none;
+    }
+}
+.courseInfo {
+    display: flex;
+    position: relative;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.courseText {
+    margin-top: 4.375rem;
+    p{
+        font-family: "OpenSans", serif;
+        font-weight: 300;
+        font-size: 1.125rem;
+        line-height: 1.4;
+        margin-bottom: 0.9375rem;
+    }
+}
+.courseTasksList, .courseTasksListOl {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    flex-direction: column;
+    font-family: "OpenSans", serif;
+    font-weight: 300;
+    font-size: 1.125rem;
+    margin: 3.125rem 0;
+    padding-left: 0.9375rem;
+    &__span {
+        font-family: "Montserrat", serif;
+        font-weight: 500;
+        margin-bottom: 1.25rem;
+    }
+    li {
+        font-family: "OpenSans", serif;
+        font-weight: 300;
+        font-size: 1.125rem;
+        line-height: 1.4;
+        margin-left: 5.625rem;
+        margin-bottom: 0.375rem;
+    }
+    li::before{
+        content: "";
+        display: flex;
+        position: absolute;
+        width: 0.625rem;
+        height: 0.625rem;
+        border-radius: 50%;
+        background: #BDD9E4;
+        margin-top: 6px;
+        margin-left: -20px;
+    }
+    &__list{
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: column;
+        &_itemRow{
+            display: flex;
+            position: relative;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-direction: row;
+            margin-left: 4.375rem;
+            margin-bottom: 1.125rem;
+        }
+        &_itemL{
+            font-family: "OpenSans", serif;
+            font-weight: 300;
+            font-size: 1.125rem;            
+            line-height: 1.4;
+            width: 8.4375rem;
+            margin-right: 0.9375rem;
+        }
+        &_itemR{
+            font-family: "OpenSans", serif;
+            font-weight: 300;
+            font-size: 1.125rem;            
+            line-height: 1.4;
+            width: calc(100% - 9.375rem);
+        }
+        &_spanList{
+            font-family: "OpenSans", serif;
+            font-weight: 300;
+            font-size: 1rem;            
+            line-height: 1.4;
+        }
+    }
+
+}
+.courseTasksList {
+    margin-left: 1.875rem;
+}
+.courseInfo .courseTasksList {
+    margin-left: 0;
+}
+.courseTasksListOl {
+    li::before {
+        display: none;
+    }
+}
+
+.teacherWrapper {
+    display: flex;
+    position: relative;
+    width: 30%;
+}
+.teacherCard {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    border: #BDD9E4 1px solid;
+    border-radius: 3px;
+    &__pic {
+        display: flex;
+        position: relative;
+        width: 10rem;
+        height: 11.875rem;
+        margin: 3.125rem auto;
+        border-radius: 3px;
+        overflow: hidden;
+    }
+    &__img {
+        width: 100%;
+        object-fit: cover;
+    }
+    &__items {
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 0 1.875rem;
+        // margin-bottom: 1.875rem;
+    }
+    &_itemRow{
+        display: flex;
+        position: relative;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: row;
+        width: 100%;
+        text-align: left;
+        margin-bottom: 1.125rem;
+    }
+    &_itemL{
+        font-family: "OpenSans", serif;
+        font-weight: 300;
+        font-size: 1rem;            
+        line-height: 1.4;
+        width: 35%;
+        margin-right: 0.9375rem;
+    }
+    &_itemR{
+        font-family: "OpenSans", serif;
+        font-weight: 300;
+        font-size: 1rem;            
+        line-height: 1.4;
+        width: 65%;
+    }
+    &_strong {
+        font-family: "OpenSans", serif;
+        font-size: 1rem;
+        line-height: 1.4;
+        font-weight: 600;
+    }
+    &_bold {
+        font-family: "OpenSans", serif;
+        font-size: 1rem;
+        line-height: 1.4;
+        font-weight: 800;
+    }
+    &__buy {
+        margin: 3.125rem auto;
+        &_mob {
+            display: none;
+        }
+    }
+}
+
+.courseResults {
+    width: 100%;
+    &__header {
+        font-family: "Montserrat", serif;
+        font-weight: 600;
+        font-size: 1.375rem;
+        text-align: center;
+        margin-top: 1.25rem;
+        margin-bottom: 2.5rem;
+    }
+    &__projects {
+        display: flex;
+        position: relative;
+        justify-content: space-around;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+    &__project {
+        display: flex;
+        position: relative;
+        max-width: 265px;
+        width: 265px;
+        flex-direction: column;
+        margin-bottom: 1.875rem;
+        &_pic {
+            display: flex;
+            position: relative;
+            width: 100%;
+            height: 14.0625rem;
+            margin-bottom: 2.5rem;
+        }
+        &_img {
+            min-width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        &_desc {
+            font-family: "OpenSans", serif;
+            font-size: 1.125rem;
+            line-height: 1.5;
+            width: 11.875rem;
+            text-align: center;
+            margin: auto;
+        }
+    }
+}
+
+.recommends {
+    width: 100%;
+    margin: 6.875rem 0;
+    &__header {
+        font-family: "Montserrat", serif;
+        font-weight: 500;
+        font-size: 1.375rem;
+        text-align: center;
+        margin-top: 1.25rem;
+        margin-bottom: 2.5rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .courseInfoSubContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+    .courseInfoWrapper {
+        order: 2;
+    }
+    .courseVideo {
+        display: none;
+        &_mob {
+            display: flex;
+            width: 100%;
+        }
+    }
+    .teacherWrapper {
+        width: 60%;
+    }
+    .teacherCard {
+        &__pic {
+            display: none;
+        }
+        &__items {
+            margin-top: 1.875rem;
+        }
+        &__buy {
+            display: none;
+            &_mob {
+                display: flex;
+            }
+        }
+        &_itemRow {
+            &:last-child {
+                align-items: center;
+                .teacherCard_itemL {
+                    display: none;
+                }
+                .teacherCard_itemR {
+                    justify-content: flex-end;
+                    text-align: right;
+                    margin-right: 0.9375rem;
+                }
+            }
+        }
+    }
+    .courseText {
+        p {
+            font-size: 1.5rem;
+        }
+    }
+    .courseTasksList {
+        &__span {
+            font-size: 1.55rem;
+        }
+    }
+    .teacherWrapper {
+        order: 1;
+    }
+    .courseTasksList, .courseTasksListOl {
+        width: 100%;
+        margin: 3.125rem auto;
+        li {
+            font-size: 1.3rem;
+        }
+        &__list {
+            &_itemL {
+                font-size: 1.3rem;
+            }
+            &_itemR {
+                font-size: 1.3rem;
+            }
+            &_spanList {
+                font-size: 1.25rem;
+            }
+        }
+    }
+    .courseTasksList {
+        width: 60%;
+        margin: 3.125rem auto;
+    }
+    .courseInfo .courseTasksList {
+        width: 100%;
+    }
+    .courseResults {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        &__project {
+            width: 26rem;
+        }
+    }
+}
+
+@media (max-width: 549px) {
+    .courseInfoWrapper {
+        width: 100%;
+    }
+    .teacherWrapper {
+        width: 100%;
+    }
+    .courseTasksList {
+        width: 100%;
+    }
+    .courseResults{
+        &__project {
+            width: 20rem;
+        }
+    }
+}
