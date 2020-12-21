@@ -3,6 +3,7 @@ import styles from './ArtistsMain.module.scss';
 import '../../../../components/css_modules/slider.scss';
 import Slider from 'react-slick';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const TeachersCardPhoto = (props) => {
   return (
@@ -51,9 +52,9 @@ TeachersCardInfo.propTypes = {
 
 const LinkToDetails = () => {
   return (
-    <a href="/about" className={styles.teacherCard_link_to_details}>
+    <Link to="/artists" className={styles.teacherCard_link_to_details}>
       Детальніше
-    </a>
+    </Link>
   );
 };
 
