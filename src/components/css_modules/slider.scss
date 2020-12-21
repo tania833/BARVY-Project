@@ -36,6 +36,30 @@
   transform: translateY(-20px);
 }
 
+#sliderContainer .slick-center {
+  background-color: rgb(255, 255, 255);
+  padding: 0;
+  margin: 0;
+}
+
+#sliderContainer .slick-center .teacherCard__worksSlider3 {
+  padding: 0;
+}
+
+#sliderContainer .teacherCard__worksSlider3 {
+  padding: 20px;
+}
+
+#sliderContainer .slick-center .teacherCard__worksSlider2 {
+  overflow: visible;
+}
+
+#sliderContainer .slick-center .teacherCard__worksSlider1 {
+  height: 160%;
+  width: 100%;
+  object-position: 0px;
+}
+
 .slick-center .teacherCard__newComponent {
   border:none !important;
 }

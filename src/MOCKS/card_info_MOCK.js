@@ -200,7 +200,7 @@ const card_info = [
       url: 'https://i.imgur.com/OOyg8xx.jpg',
     },
     author: {
-      name: 'Христина Стриналюк',
+      name: 'Христина Стринадюк',
       technique: 'Акварель',
       course_format: 'урок',
     },

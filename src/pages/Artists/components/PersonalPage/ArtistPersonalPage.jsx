@@ -73,14 +73,25 @@ const ArtistPersonalPage = (props) => {
   if (teacher.personal_title === '') {
     return <div>Sorry, but the teacher was not found</div>;
   }
-  return (
-    <div className={styles.artistsContainer}>
+
+  let width = window.innerWidth;
+  let breadcrumbs;
+  if (width < 768) {
+    breadcrumbs = '';
+  } else {
+    breadcrumbs = (
       <Breadcrumb
         main_menu_item="Викладачі"
         main_menu_item_link="/artists"
         technique_or_teacher={teacher.name}
         technique_or_teacher_link={`/artists/${teacher.path}`}
       />
+    );
+  }
+
+  return (
+    <div className={styles.artistsContainer}>
+      {breadcrumbs}
       <div className={styles.authorTitleWrapper}>
         <Title title={teacher.personal_title} subtitle={teacher.name} />
       </div>

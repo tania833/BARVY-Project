@@ -38,7 +38,7 @@ const artists_info_main = [
   {
     id: 4,
     img: {
-      url: 'https://i.imgur.com/Kqshzf2.jpg',
+      url: 'https://i.imgur.com/AlRVTM7.jpg',
     },
     artist: {
       name: 'Христина Стринадюк',
