@@ -8,12 +8,25 @@ import card_info from '../../MOCKS/card_info_MOCK';
 import PropTypes from 'prop-types';
 
 const Course = (props) => {
+  let width = window.innerWidth;
+  let breadcrumbs;
+  if (width < 768) {
+    breadcrumbs = '';
+  } else {
+    breadcrumbs = (
+      <Breadcrumb
+        main_menu_item="Викладачі"
+        main_menu_item_link="/artists"
+        technique_or_teacher="Христина Стринадюк"
+        technique_or_teacher_link={`artists/strynadyuk`}
+        course="Основи Акварельної техніки"
+        course_link="/base_of_watercolor_technique"
+      />
+    );
+  }
   return (
     <div className={styles.courseSingle}>
-      <Breadcrumb
-        main_menu_item="Основи акварельної техніки"
-        main_menu_item_link="/course"
-      />
+      {breadcrumbs}
       <div className={styles.courseTitle}>
         <Title title="курс" subtitle="Основи акварельної техніки" />
       </div>

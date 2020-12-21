@@ -6,12 +6,7 @@ const page404 = () => {
   return (
     <div className={styles.page404}>
       <div className={styles.page404Container}>
-        <div className={styles.page404__logo}>
-          <div className={styles.page404__logo_brandname}>Барви</div>
-          <div className={styles.page404__logo_description}>
-            сайт про українських митців
-          </div>
-        </div>
+        <div className={styles.page404__logo}></div>
         <h1 className={styles.page404__header}>Ой-йой!</h1>
         <p className={styles.page404__text}>Сторінка не знайдена</p>
         <Link className={styles.page404__link} to="/">

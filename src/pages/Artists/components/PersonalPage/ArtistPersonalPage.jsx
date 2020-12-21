@@ -7,7 +7,7 @@ import Slider from 'react-slick';
 import styles from './ArtistsPersonalPage.module.scss';
 import Title from '../../../../components/TitleOnly';
 import Breadcrumb from '../../../../components/Breadcrumb';
-import page404 from '../../../404/page404';
+import Page404 from '../../../404/page404';
 
 const ArtistPersonalPage = (props) => {
   const [likes, setLikes] = useState([]);
@@ -72,7 +72,11 @@ const ArtistPersonalPage = (props) => {
   };
 
   if (teacher.personal_title === '') {
-    return <page404 />;
+    return (
+      <div>
+        <Page404 />
+      </div>
+    );
   }
 
   let width = window.innerWidth;
