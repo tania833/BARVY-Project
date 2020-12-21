@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './page404.module.scss';
+import { Link } from 'react-router-dom';
 
 const page404 = () => {
   return (
@@ -13,9 +14,9 @@ const page404 = () => {
         </div>
         <h1 className={styles.page404__header}>Ой-йой!</h1>
         <p className={styles.page404__text}>Сторінка не знайдена</p>
-        <a className={styles.page404__link} href="/">
+        <Link className={styles.page404__link} to="/">
           повернутися на Головну
-        </a>
+        </Link>
         <picture className={styles.page404__picture}>
           <img
             className={styles.page404__picture_img}
