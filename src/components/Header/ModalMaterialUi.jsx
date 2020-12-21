@@ -53,9 +53,9 @@ export default function SimpleModal(props) {
 }
 
 SimpleModal.propTypes = {
-  openModal: PropTypes.boolean,
-  handleClose: PropTypes.function,
+  openModal: PropTypes.func,
+  handleClose: PropTypes.func,
   component: PropTypes.string,
   likes: PropTypes.array,
-  setBuy: PropTypes.function,
+  setBuy: PropTypes.func,
 };

@@ -52,34 +52,10 @@ function App() {
           />
           <Route component={Events} path="/events" />
           <Route component={About} path="/about" />
-          <Route
-            path="/course"
-            exact
-            render={(props) => (
-              <Course
-                {...props}
-                likes={likes}
-                setLikes={setLikes}
-                buy={buy}
-                setBuy={setBuy}
-              />
-            )}
-          />
+          <Route path="/course" exact component={Course} />
           <Route component={page404} path="/404" />
           <Route component={Contacts} path="/contacts" />
-          <Route
-            path="/technologies"
-            exact
-            render={(props) => (
-              <Technologies
-                {...props}
-                likes={likes}
-                setLikes={setLikes}
-                buy={buy}
-                setBuy={setBuy}
-              />
-            )}
-          />
+          <Route path="/technologies" exact component={Technologies} />
         </Switch>
         <Footer />
       </div>

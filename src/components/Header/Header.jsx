@@ -75,9 +75,9 @@ class Header extends Component {
 
 Header.propTypes = {
   likes: PropTypes.array,
-  setLikes: PropTypes.function,
+  setLikes: PropTypes.func,
   buy: PropTypes.array,
-  setBuy: PropTypes.function,
+  setBuy: PropTypes.func,
 };
 
 export default Header;

@@ -171,9 +171,9 @@ const CourseCardViewerForMain = (props) => {
 CourseCardViewerForMain.propTypes = {
   card_info: PropTypes.array,
   likes: PropTypes.array,
-  setLikes: PropTypes.function,
+  setLikes: PropTypes.func,
   buy: PropTypes.array,
-  setBuy: PropTypes.function,
+  setBuy: PropTypes.func,
 };
 
 export default CourseCardViewerForMain;

@@ -9,6 +9,9 @@ import Breadcrumb from '../../../../../components/Breadcrumb';
 import ButtonWhite from '../../../../../components/ButtonWhite';
 
 const CoursePage = (props) => {
+  const [likes, setLikes] = useState([]);
+  const [buy, setBuy] = useState([]);
+
   const [size, setSize] = useState(6);
   const course = TechAPI.get(props.match.params.path);
   const card_techniques = card_info.filter(
@@ -58,10 +61,10 @@ const CoursePage = (props) => {
       <div className={styles.cardWrapper}>
         <CourseCardViewerForMain
           card_info={cards}
-          likes={props.likes}
-          setLikes={props.setLikes}
-          buy={props.buy}
-          setBuy={props.setBuy}
+          likes={likes}
+          setLikes={setLikes}
+          buy={buy}
+          setBuy={setBuy}
         />
       </div>
       <div className={styles.techniquesButtonWhiteWrapper}>{showMore}</div>
@@ -74,10 +77,6 @@ const CoursePage = (props) => {
 
 CoursePage.propTypes = {
   match: PropTypes.object,
-  likes: PropTypes.array,
-  buy: PropTypes.array,
-  setLikes: PropTypes.function,
-  setBuy: PropTypes.function,
   drawerClickHandler: PropTypes.func,
   cardsToRender: PropTypes.array,
 };

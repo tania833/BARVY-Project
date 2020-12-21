@@ -97,7 +97,7 @@ const Modals = (props) => {
 
 Modals.propTypes = {
   likes: PropTypes.array,
-  setBuy: PropTypes.function,
+  setBuy: PropTypes.func,
 };
 
 export default Modals;
