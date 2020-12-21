@@ -32,16 +32,16 @@ const Footer = () => {
             </ul>
             <ul className={styles.footer__menu_column}>
               <li className={styles.footer__menu_item} href="/about">
-                <Link to="/">Співпраця</Link>
+                <Link to="/404">Співпраця</Link>
               </li>
               <li className={styles.footer__menu_item} href="/about">
-                <Link to="/">Умови використання</Link>
+                <Link to="/404">Умови використання</Link>
               </li>
               <li className={styles.footer__menu_item} href="/about">
-                <Link to="/">Конфіденційність</Link>
+                <Link to="/404">Конфіденційність</Link>
               </li>
               <li className={styles.footer__menu_item} href="/about">
-                <Link to="/">Партнерство</Link>
+                <Link to="/404">Партнерство</Link>
               </li>
             </ul>
           </nav>

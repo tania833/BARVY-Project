@@ -99,8 +99,16 @@
           right: 0;
       }
   }
+  .introText {
+    font-size: 1.6rem;
+    width: 60%;
+  }
 }
 @media (max-width: 767px) {
+  .introText {
+    font-size: 1.8rem;
+    width: 60%;
+  }
   .technoPic {
       &__Cont {
           width: 100%;
