@@ -13,6 +13,7 @@ import page404 from './pages/404/page404';
 import Teachers from './pages/Artists/Teachers';
 import { Contacts } from './pages/Contacts/Contacts';
 import Technologies from './pages/Main/components/Technologies/Technologies';
+import Course from './pages/Course/Course';
 
 function App() {
   const [likes, setLikes] = useState([]);
@@ -36,6 +37,13 @@ function App() {
               <Techniques {...props} likes={likes} setLikes={setLikes} />
             )}
           />
+          <Route
+            path="/course"
+            exact
+            render={(props) => (
+              <Course {...props} likes={likes} setLikes={setLikes} />
+            )}
+          />
           <Route component={Events} path="/events" />
           <Route component={About} path="/about" />
           <Route
@@ -48,6 +56,7 @@ function App() {
           <Route component={page404} path="/404" />
           <Route component={Contacts} path="/contacts" />
           <Route component={Technologies} path="/technologies" />
+          <Route component={Course} path="/course" />
         </Switch>
         <Footer />
       </div>
