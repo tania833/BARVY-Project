@@ -131,10 +131,12 @@ CourseButton.propTypes = {
 
 const CourseCardViewerForMain = (props) => {
   const courseCardInfoView = props.card_info.map((card) => (
-    <Link to="/course" key={card.id} className={styles.courseCard__component}>
+    <div key={card.id} className={styles.courseCard__component}>
+      <Link to="/course">
       <div>
         <CardPhoto img_info={card.img} />
       </div>
+      </Link>
       <div className={styles.courseCard__info}>
         <AuthorInfo author_info={card.author} />
         <TitleInfo
@@ -148,7 +150,8 @@ const CourseCardViewerForMain = (props) => {
           <CourseButton buy={props.buy} setBuy={props.setBuy} id={card.id} />
         </CartInfo>
       </div>
-    </Link>
+      </div>
+    
   ));
   return <div className={styles.courseCard__wrapper}>{courseCardInfoView}</div>;
 };
